@@ -49,21 +49,23 @@ namespace Projectlotto
                     }
                 } // Console.WriteLine(arr[i]);
             }
-            int nTemp;
-            //int nCount = 0;
+            Array.Sort(lottoN);
 
-            for (int i = 0; i < lottoN.Length - 2; i++)
-            {
-                for (int j = 0; j < lottoN.Length - 2; j++)
-                {
-                    if (lottoN[j] > lottoN[j + 1])
-                    {
-                        nTemp = lottoN[j + 1];
-                        lottoN[j + 1] = lottoN[j];
-                        lottoN[j] = nTemp;
-                    }
-                }
-            }
+            //int nTemp;
+            ////int nCount = 0;
+
+            //for (int i = 0; i < lottoN.Length - 1; i++)
+            //{
+            //    for (int j = 0; j < lottoN.Length - 1; j++)
+            //    {
+            //        if (lottoN[j] > lottoN[j + 1])
+            //        {
+            //            nTemp = lottoN[j + 1];
+            //            lottoN[j + 1] = lottoN[j];
+            //            lottoN[j] = nTemp;
+            //        }
+            //    }
+            //}
 
 
 
