@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>AutoCampingReserve</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		
+	<style type="text/css">
+	/*초기화*/
+		*{margin:0; padding:0;}
+		body{font-family:'Helvetica',sans-serif;}
+		li{list-style:none;}
+		a{text-decoration:none;}
+	
+	/*해더*/
+			#main_header{
+				overflow:inherit;
+				height:300px;
+				color:white;
+			}
+			#header_title{
+				width:100%; 
+				height:240px;
+				padding:100px 10px;
+				padding-bottom:0px;
+				text-align:center;
+				background-color:#008046;
+			}	
+		/*내비*/
+			#main_header #main_gnb{
+				width:100%;
+				margin:0 auto;
+				position:static;
+				vertical-align: middle;
+				overflow:visible;
+				line-height:60px;
+				text-align:center;
+				background-color:#006638;
+				height:60px;
+			}
+			
+				
+			#main_header #main_gnb>ul>li {
+				display: inline-block;
+				width:150px; height:60px;
+			}
+			#main_gnb>ul>li>a{ 
+				display : block;
+				padding: 2px 10px;
+				text-decoration: none;
+				color:white;
+			}
+			#check{
+				background-color:#2d8659;
+			}
+			
+		/*컨텐츠*/
+	#wrap {
+		overflow:hidden;
+		background-color:#FFFFFF;
+		width: 100%; height:700px;
+	}
+	#content{
+		width:1350px;height:700px;
+		padding:15px 0px;
+		padding-top:20px;
+		margin: 0px auto;
+	}
+	.price_box{
+		display:block;
+		float:left;
+		width:200px; height:120px;
+	}
+	.price_day_box b1{
+		display:block;
+		float:left;
+	}
+	
+	.price_day_box>ul>li{
+		display:block;
+		width:180px;height:120px;
+		float:left;
+	}
+	
+	/*푸터*/
+		#main_footer{
+			width:100%; height:200px;
+			background-color: #f2f2f2;
+			text-align:center;
+			padding:20px 0px;
+		}
+		#footer_info>ul{
+			float:right;
+			text-align:right;
+			font-style: italic;
+			font-size: 1rem;
+  			font-weight: 400;
+  			line-height: 1.5;
+    		color: #212529;
+		}
+		
+		#footer_info>ul>li{
+			list-style : none;
+			display:block;				
+		}
+			
+	</style>
+</head>
+<body>
+	<header id="main_header">
+		<div id="header_title">
+			<h1>A</h1>
+			<h2>GlamPing</h2>
+		</div>
+		<nav id="main_gnb" class="menu">
+			<ul >
+				<li><a href="./Frontdoor.html#">우리글램핑</a></li>
+				<li><a href="./Room.html#">객실정보</a></li>
+				<li><a href="./Around.html" >주변 볼거리</a>	</li>
+				<li id= "check"><a href="./Reserve.html">예약안내</a></li>
+				<li><a href="#">주의사항</a></li>
+				<li><a href="#">고객게시판</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="wrap">
+		<div id="content">
+		<h2>객실요금안내</h2>
+		<p>- 성수기 기간 및 객실 요금은 기간에 따라 차등이 있을 수 있으니 반드시 실시간 예약을 참고해 주세요.</p>
+		<p>- 입실~22:00까지 제공 (현장당일결제)/사용후 쓰래기는 버리고 가주세요.</p>
+		<div class="price_box b1">
+			<div class="roomname t1">객실명
+			<br />
+				<div class="person">(기준/최대)</div>
+			</div>
+		<div class="price_day_box">
+			<ul class="price_day clearfix">
+				<li style="color:black"> 
+				<p class="y1">(월)</p>
+				<p class="y1">6/27</p>
+				<p class="y1">주중</p>
+				</li>
+				<li style="color:black"> 
+				<p class="y1">(화)</p>
+				<p class="y1">6/28</p>
+				<p class="y1">주중</p>
+				</li >
+				<li style="color:black"> 
+				<p class="y1">(수)</p>
+				<p class="y1">6/29</p>
+				<p class="y1">주중</p>
+				</li>
+				<li style="color:black"> 
+				<p class="y1">(목)</p>
+				<p class="y1">6/30</p>
+				<p class="y1">주중</p>
+				</li>
+				<li style="color:black"> 
+				<p class="y1">(금)</p>
+				<p class="y1">6/31</p>
+				<p class="y1">금요일</p>
+				</li>
+				<li style="color:blue"> 
+				<p class="y1">(토)</p>
+				<p class="y1">7/1</p>
+				<p class="y1">준성수기(토요일)</p>
+				</li>
+				<li style="color:red"> 
+				<p class="y1">(일)</p>
+				<p class="y1">7/2</p>
+				<p class="y1">준성수기(주중)</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	
+		
+		</div>
+	</div>
+	<footer id="main_footer">
+		<div class = "terms">
+				<a href = "#">이용약관</a>
+				<span>|</span>
+				<span><a href = "#">개인정보취급방침</a></span>
+				<span>|</span>
+				<span><a href = "#">이메일 무단수집거부</a></span>
+				<span>|</span>
+				<span><a href = "#">책임의 한계와 법적고지</a></span>
+				<span>|</span>
+				<span><a href = "#">이용안내</a></span>
+				<span>|</span>
+				<span><a href = "#">모바일버전</a></span>
+				
+			</div>
+		 	<div id= "footer_info" class="terms" style="font-size:18px">
+		 		<ul>
+		 			<li>상호: 합천 우리 글램핑</li>
+			 		<li>대표: 박창민</li>
+			 		<li>사업자번호: 875-35-68894</li>
+			 		<li>메일: hapG@naver.com</li>
+			 		<li>전화: 010-0000-1111</li>
+			 		<li>주소 : 경남 합천시 00면 00리 12-5</li>
+		 		</ul>
+			</div>
+	
+	</footer>
+	
+	
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	
+	
+
+</body>
+</html>
