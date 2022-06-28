@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*초기화*/
+	*{margin:0; padding:0;}
+	body{font-family:'Helvetica',sans-serif;}
+	li{list-style:none;}
+	a{text-decoration:none;}
+
+/*해더*/
+	input[type="checkbox" i] {
+	    background-color: initial;
+	    cursor: default;
+	    appearance: auto;
+	 }
+	#main_header{
+		overflow:hidden;
+		height:60px;
+		line-height:20px;
+		color:white;
+	}
+	#header_title{
+		width:300px; height:60px;
+		padding:0px 10px;
+		line-height:60px;
+		text-align:center;
+		float:left;
+		background-color:#008046;
+
+	}
+	#header_nav{
+		width:100%; height:60px;
+		background-color:#00a65a;
+		margin-right:-320px;
+	}
+	#main_header #header_nav{padding-right:320px;}
+	
+	#header_nav>ul{
+		overflow:hidden;
+		float:right;
+	}
+	#header_nav>ul>li{float:left;}
+	
+	#main_header #header_nav a{
+		display:block;
+		height: 40px;
+		line-height:40px;
+		padding:10px 20px;
+		border-left:1px solid #00a65a;
+		border-right:1px solid #00a65a;
+		color:white;
+		font-weight:bold;
+	}
+	
+	
+/*내비*/
+	.button:ul{
+		height : 0;
+		color: black;
+	}
+	#div-hidden{
+		height : 0;
+		color: black;
+	}
+/*컨텐츠*/
+	#wrap {
+		overflow:hidden;
+		background-color:#FFFFFF;
+	}
+	#wrap_nav{
+		width :150px;
+		float:left;
+	}
+	#content_wrap{
+		width:100%;
+		margin-right:-150px;		
+		float:left;
+	}
+	#wrap #content_wrap #subcontent{padding-right:150px;}
+	article{
+		padding:15px 15px;
+	}
+/*수직목록*/
+	.button{
+		background-color :  #e6e6e6;
+		border:3px solid #FFFFFF;
+		border-radius:0px 0px 5px 5px;
+		box-shadow : 5px 5px 5px #a9a9a9;
+	}
+/*푸터*/
+
+
+</style>
+</head>
+<body>
+	<header id="main_header">
+		<div id="header_title">
+			<h1>농산물 직거래장터!</h1>
+		</div>
+		<div id="header_nav">
+			<div id="ticker_issue">
+			</div>
+			<ul id= "basic icon">
+				<li><a href="#">검색</a></li>
+				<li><a href="#">로그인</a></li>
+				<li><a href="#">북마크</a></li>
+			</ul>
+		</div>
+	</header>
+	<div id="wrap">
+		<div id="wrap_nav">
+			<nav id="main_lnb1" class="button" type="checkbox">과일
+			 <ul>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 </ul>
+			</nav>
+			<nav id="main_lnb2" class="button">채소
+			 <ul>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 </ul>
+			</nav>
+			<nav id="main_lnb3" class="button">나물,버섯
+			 <ul>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 </ul>
+			</nav>
+			<nav id="main_lnb4" class="button">곡물,견과
+			 <ul>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 </ul>
+			</nav>
+			<nav id="main_lnb5" class="button">뿌리상품
+			 <ul>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 	<li><a href="#">Button</a></li>
+			 </ul>
+			</nav>
+		</div>
+		<div id="content_wrap">
+			<div id="subcontent">
+				<article>
+				<h1>내용</h1>
+				<p>Maecenas ultrices odio eu orci dapibus porttitor. Donec fringilla risus ac arcu interdum, sit amet aliquet nisi varius. Proin nec massa risus. Nulla blandit ultricies porta. Fusce sodales, nisi tincidunt pharetra semper, turpis lorem venenatis nunc, accumsan rhoncus tortor lorem id orci. Aenean aliquet quis odio vitae commodo. Mauris enim eros, aliquam quis ipsum eu, pretium tempor justo. Praesent id tincidunt turpis. Ut et pharetra odio, vitae molestie ex. Duis suscipit lacinia faucibus. Donec tincidunt nibh euismod ligula interdum mollis. Mauris libero ipsum, posuere sit amet ullamcorper sit amet, consectetur ac libero. Suspendisse viverra, lorem sed laoreet pretium, tellus erat mattis sem, vel scelerisque elit lectus eget lorem.</p>
+				</article>
+				<article>
+				<h1>내용</h1>
+				<p>Maecenas ultrices odio eu orci dapibus porttitor. Donec fringilla risus ac arcu interdum, sit amet aliquet nisi varius. Proin nec massa risus. Nulla blandit ultricies porta. Fusce sodales, nisi tincidunt pharetra semper, turpis lorem venenatis nunc, accumsan rhoncus tortor lorem id orci. Aenean aliquet quis odio vitae commodo. Mauris enim eros, aliquam quis ipsum eu, pretium tempor justo. Praesent id tincidunt turpis. Ut et pharetra odio, vitae molestie ex. Duis suscipit lacinia faucibus. Donec tincidunt nibh euismod ligula interdum mollis. Mauris libero ipsum, posuere sit amet ullamcorper sit amet, consectetur ac libero. Suspendisse viverra, lorem sed laoreet pretium, tellus erat mattis sem, vel scelerisque elit lectus eget lorem.</p>
+				</article>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

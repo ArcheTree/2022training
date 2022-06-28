@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Front door</title>
+	<style type="text/css">
+	
+	input[type="checkbox"] {
+	    background-color: initial;
+	    cursor: default;
+	    appearance: auto;
+    }
+	#root{
+		width : 100%;
+		height : 1300px;
+	}
+	#top{
+		width : 100%;
+		height : 100px;
+		margin:0 auto;
+		background-color : #49eb46;
+		text-align : center;
+		font-size : 30px; 
+
+	}
+	#menu {
+		width : 13%;
+		height : 1200px;
+		background-color : #FF6A00;
+		float:left;
+	}
+	#main{
+		width : 87%;
+		height:1200px;
+		background-color : #ebe850;
+		float:left;
+		text-align:center;
+	}
+	#bottom{
+		width : 100%;
+		height : 200px;
+		margin:0 auto;
+		float:left;
+		background-color :gray;
+		text-align: center;
+	}
+	#c-input:checked~div{
+		height : 0;
+		color: black;
+	}
+	#div-hidden{
+		height : 0;
+		color: black;
+	}
+	
+	.div-class{
+		overflow :hidden;
+		-webkit-transition-duration:2s;
+		-ms-transition-duration:2s;
+		-moz-transition-duration:2s;
+		transition-duration:2s;
+		background-color:red;
+		border-radius:0px 0px 5px 5px;
+	}
+	.button{
+			background-color : #FF6A00;
+			border:3px solid #FFFFFF;
+			border-radius:0px 0px 5px 5px;
+			box-shadow : 5px 5px 5px #a9a9a9;
+		}
+	#footzoon{
+		width: 85%;
+		height: 170px;
+		background-color :gray;
+		padding: 15px 20px;
+		transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+    	margin-left: 13%;
+    	z-index: 820;
+		}
+	
+	.terms{
+		color:white;
+		text-align: center;
+	}
+	.terms a{
+		color:white;
+		text-decoration-line: none;
+	}
+
+	#footer_info>ul>li::after{
+		
+		content:" |";
+	}
+	#footer_info>ul>li{
+		list-style : none;
+		display:block;
+		float:left;
+	}
+	
+			
+	
+	</style>
+</head>
+<body>
+	<div id=root>
+		<div id="top">농수산물 직거래 장터
+		</div>
+		<div id="menu">선택 메뉴
+			<div>
+				<div class="button">
+					<input id = "c-input" type="checkbox" checked="checked" /> 과일
+					<div id="fruit-apple" class="div-class">
+						<ul>
+							<li><a href = "#">사과, 배</a></li>
+							<li><a href = "#">귤 유자, 감</a></li>
+							<li><a href = "#">토마토, 복숭아</a></li>
+							<li><a href = "#">포토, 망고</a></li>
+							<li><a href = "#">멜론, 수박</a></li>
+							<li><a href = "#">딸기, 키위, 다래</a></li>
+							<li><a href = "#">기타 과일</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div>
+				<div class="button">
+					<input id = "c-input" type="checkbox" checked="checked"/> 채소
+					<div id="fruit-apple" class="div-class">
+						<ul>
+							<li><a href = "#">감자, 고구마</a></li>
+							<li><a href = "#">마늘, 양파</a></li>
+							<li><a href = "#">고추, 건고추</a></li>
+							<li><a href = "#">배추, 절인배추, 무</a></li>
+							<li><a href = "#">호박, 상추, 깻잎</a></li>
+							<li><a href = "#">비트, 콜라비</a></li>
+							<li><a href = "#">당근, 오이, 가지</a></li>
+							<li><a href = "#">기타 채소</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+			<div>
+				<div class="button">
+					<input id = "c-input" type="checkbox" checked="checked"/> 나물, 버섯
+					<div id="fruit-apple" class="div-class">
+						<ul>
+							<li><a href = "#">감자, 고구마</a></li>
+							<li><a href = "#">마늘, 양파</a></li>
+							<li><a href = "#">고추, 건고추</a></li>
+							<li><a href = "#">배추, 절인배추, 무</a></li>
+							<li><a href = "#">호박, 상추, 깻잎</a></li>
+							<li><a href = "#">비트, 콜라비</a></li>
+							<li><a href = "#">당근, 오이, 가지</a></li>
+							<li><a href = "#">기타 나물</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+			<div>
+				<div class="button">
+					<input id = "c-input" type="checkbox" checked="checked"/> 곡물, 견과
+					<div id="fruit-apple" class="div-class">
+						<ul>
+							<li><a href = "#">옥수수</a></li>
+							<li><a href = "#">참깨, 들깨</a></li>
+							<li><a href = "#">쌀, 보리, 찹쌀</a></li>
+							<li><a href = "#">밭, 현미, 귀리</a></li>
+							<li><a href = "#">콩, 서리태</a></li>
+							<li><a href = "#">백태, 흑태</a></li>
+							<li><a href = "#">땅콩, 호두</a></li>
+							<li><a href = "#">기타 곡류</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+			<div>
+				<div class="button">
+					<input id = "c-input" type="checkbox" checked="checked"/> 뿌리상품	
+					<div id="fruit-apple" class="div-class">
+						<ul>
+							<li><a href = "#">마, 칡</a></li>
+							<li><a href = "#">돼지감자, 토란</a></li>
+							<li><a href = "#">도라지, 더덕</a></li>
+							<li><a href = "#">인삼, 홍삼, 산삼</a></li>
+							<li><a href = "#">기타뿌리</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="main">메인 텍	
+		</div>
+
+	</div>
+	<footer id = "footzoon" class = "main-footer"> 
+		<div class = "terms">
+			<a href = "#">이용약관</a>
+			<span>|</span>
+			<span><a href = "#">개인정보취급방침</a></span>
+			<span>|</span>
+			<span><a href = "#">이메일 무단수집거부</a></span>
+			<span>|</span>
+			<span><a href = "#">책임의 한계와 법적고지</a></span>
+			<span>|</span>
+			<span><a href = "#">이용안내</a></span>
+			<span>|</span>
+			<span><a href = "#">모바일버전</a></span>
+			
+		</div>
+		<p>농직은 통신판매중개자일 뿐 통신판매의 당사자가 아니며 상품·판매정보·배송·환불 및 거래에 대하여 책임을 지지 않습니다.</p>
+	 	<p>농직. All rights reserved.</p>
+	 	<div id= "footer_info" class="terms" style="font-size:12px">
+	 		<ul>
+	 			<li>상호: 농산물직거래장터</li>
+		 		<li>대표: 김형묵</li>
+		 		<li>운영자: 임현승</li>
+		 		<li>개인정보관리자: 임현승</li>
+		 		<li>사업자번호: 211-32-61194</li>
+		 		<li>통신판매번호: 2019-서울구로-1531</li>
+		 		<li>메일: ceo1984m@naver.com</li>
+		 		<li>전화: 010-9967-7511</li>
+		 		<li>주소: 서울 구로 부일로9길 127, 116</li>
+	 		</ul>
+		</div>
+	</footer>
+	
+
+</body>
+</html>

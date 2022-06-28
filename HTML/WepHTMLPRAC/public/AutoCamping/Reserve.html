@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>AutoCampingReserve</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		
+	<style type="text/css">
+	/*초기화*/
+		*{margin:0; padding:0;}
+		body{font-family:'Helvetica',sans-serif;}
+		li{list-style:none;}
+		a{text-decoration:none;}
+	
+	/*해더*/
+			#main_header{
+				overflow:inherit;
+				height:300px;
+				color:white;
+			}
+			#header_title{
+				width:100%; 
+				height:240px;
+				padding:100px 10px;
+				padding-bottom:0px;
+				text-align:center;
+				background-color:#008046;
+			}	
+		/*내비*/
+			#main_header #main_gnb{
+				width:100%;
+				margin:0 auto;
+				position:static;
+				vertical-align: middle;
+				overflow:visible;
+				line-height:60px;
+				text-align:center;
+				background-color:#006638;
+				height:60px;
+			}
+			
+				
+			#main_header #main_gnb>ul>li {
+				display: inline-block;
+				width:150px; height:60px;
+			}
+			#main_gnb>ul>li>a{ 
+				display : block;
+				padding: 2px 10px;
+				text-decoration: none;
+				color:white;
+			}
+			#check{
+				background-color:#2d8659;
+			}
+			
+		/*컨텐츠*/
+	#wrap {
+		overflow:hidden;
+		background-color:#FFFFFF;
+		width: 100%; height:2250px;
+	}
+	#content{
+		width:1350px;height:1450px;
+		padding:15px 0px;
+		padding-top:20px;
+		margin: 0px auto;
+	}
+	.price_box{
+		display:block;
+		float:left;
+		background-color:#ffffff;
+		width:100%; height:120px;
+		border: 1px solid black;
+	
+	
+	}
+	.price_day_box {
+		float:right;
+		width:85%; height:120px;
+		text-align:center;
+
+
+	}
+	.roomname{
+		width:14.285%; height:118px;
+		margin-right:0px;
+		float:left;
+		text-align:center;	
+		border-right:1px dashed black;
+		padding:35px 0px;
+		background-color:#f2f2f2;
+	}
+	.price_day_box>ul>li{
+		display:block;
+		width:14.285%;height:120px;
+		float:left;
+		border-right:1px dashed black;
+		padding:14px 0px;
+	}
+	.price_day_box>ul>li>p{
+		margin-bottom:10px;
+	
+	}
+	.price_day_box>ul>li:last-child{
+		border-right:none;
+	}
+	.button_reg{
+		display:blcok;
+		width:100%; height:10px;	
+		box-sizing: border-box;
+		position: relative;
+	}
+	.button_reg>a{
+		padding: 0 10px;
+   		background: #78bb67;
+   		color: #fff;
+	}
+	.coment{
+		display:block;
+		border:1px solid black;
+		margin-bottom:10px;
+		padding:15px;
+	}
+
+	#Basic_coment{
+		float:left;
+		width:100%; height:40px;
+		padding : 10px 0px;
+		margin-top:20px;
+	}
+	#Basic_coment>h4{
+		padding-left:30px;
+	}
+
+	
+	
+	/*푸터*/
+		#main_footer{
+			width:100%; height:200px;
+			background-color: #f2f2f2;
+			text-align:center;
+			padding:20px 0px;
+		}
+		#footer_info>ul{
+			float:right;
+			text-align:right;
+			font-style: italic;
+			font-size: 1rem;
+  			font-weight: 400;
+  			line-height: 1.5;
+    		color: #212529;
+		}
+		
+		#footer_info>ul>li{
+			list-style : none;
+			display:block;	
+			float:left;			
+		}
+			
+	</style>
+</head>
+<body>
+	<header id="main_header">
+		<div id="header_title">
+			<h1>A</h1>
+			<h2>GlamPing</h2>
+		</div>
+		<nav id="main_gnb" class="menu">
+			<ul >
+				<li><a href="./Frontdoor.html#">우리글램핑</a></li>
+				<li><a href="./Room.html#">객실정보</a></li>
+				<li><a href="./Around.html" >주변 볼거리</a>	</li>
+				<li id= "check"><a href="./Reserve.html">예약안내</a></li>
+				<li><a href="#">주의사항</a></li>
+				<li><a href="#">고객게시판</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="wrap">
+		<div id="content">
+			<h2>객실요금안내</h2>
+			<p>- 성수기 기간 및 객실 요금은 기간에 따라 차등이 있을 수 있으니 반드시 실시간 예약을 참고해 주세요.</p>
+			<p>- 입실~22:00까지 제공 (현장당일결제)/사용후 쓰래기는 버리고 가주세요.</p>
+			<div class="price_box b1">
+				<div class="roomname t1">객실명
+				<br />
+					<div class="person">(기준/최대)</div>
+				</div>
+				<div class="price_day_box">
+					<ul class="price_day clearfix">
+						<li style="color:black"> 
+						<p class="y1">(월)</p>
+						<p class="y1">6/27</p>
+						<p class="y1">주중</p>
+						</li>
+						<li style="color:black"> 
+						<p class="y1">(화)</p>
+						<p class="y1">6/28</p>
+						<p class="y1">주중</p>
+						</li >
+						<li style="color:black"> 
+						<p class="y1">(수)</p>
+						<p class="y1">6/29</p>
+						<p class="y1">주중</p>
+						</li>
+						<li style="color:black"> 
+						<p class="y1">(목)</p>
+						<p class="y1">6/30</p>
+						<p class="y1">주중</p>
+						</li>
+						<li style="color:black"> 
+						<p class="y1">(금)</p>
+						<p class="y1">6/31</p>
+						<p class="y1">금요일</p>
+						</li>
+						<li style="color:blue"> 
+						<p class="y1">(토)</p>
+						<p class="y1">7/1</p>
+						<p class="y1">준성수기(토요일)</p>
+						</li>
+						<li style="color:red"> 
+						<p class="y1">(일)</p>
+						<p class="y1">7/2</p>
+						<p class="y1">준성수기(주중)</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="price_box b2">
+				<div class="roomname t1">카발(CarBal)
+				<br />
+					<div class="person">(2인/2인)</div>
+				</div>
+				<div class="price_day_box">
+					<ul class="price_day clearfix">
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li >
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:blue"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:red"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="price_box b2">
+				<div class="roomname t1">그람(Gram)
+				<br />
+					<div class="person">(2인/2인)</div>
+				</div>
+				<div class="price_day_box">
+					<ul class="price_day clearfix">
+							<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li >
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:blue"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:red"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="price_box b2">
+				<div class="roomname t1">점보(JumBoo)
+				<br />
+					<div class="person">(2인/4인)</div>
+				</div>
+				<div class="price_day_box">
+					<ul class="price_day clearfix">
+							<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li >
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:blue"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:red"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="price_box b2">
+				<div class="roomname t1">실내(Inner)
+				<br />
+					<div class="person">(2인/4인)</div>
+				</div>
+				<div class="price_day_box">
+					<ul class="price_day clearfix">
+							<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li >
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:blue"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:red"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="price_box b2">
+				<div class="roomname t1">카본(CarBon)
+				<br />
+					<div class="person">(기준/최대)</div>
+				</div>
+				<div class="price_day_box">
+					<ul class="price_day clearfix">
+							<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li >
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:blue"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:red"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="price_box b2">
+				<div class="roomname t1">하우스(House)
+				<br />
+					<div class="person">(4인/8인)</div>
+				</div>
+				<div class="price_day_box">
+					<ul class="price_day clearfix">
+							<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li >
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:blue"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:red"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="price_box b2">
+				<div class="roomname t1">풀업(FullUp)
+				<br />
+					<div class="person">(4인/8인)</div>
+				</div>
+				<div class="price_day_box">
+					<ul class="price_day clearfix">
+							<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li >
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:black"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:blue"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+						<li style="color:red"> 
+						<p class="y2"><del>정가 : 000,000</del></p>
+						<p class="y1">할인가 : 000,000</p>
+						<div class="button_reg">
+						<a href="#">예약 가능</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="Basic_coment"><h4>예약 기본 안내</h4>
+				<div class="coment" id ="advance_check">※ 객실 예약전 꼭 확인해주세요<br /><br />
+					
+					<p>- 펜션이용은 예약 및 비예약으로 가능하나 예약손님을 우선으로 적용하오니 예약을 하시는 것이 더욱 편리합니다.</p>
+					<p>- 전화 예약 후 객실 예약 금액을 입금계좌로 입금 하시면 예약 완료됩니다.</p>
+					<p>- 예약 후 5시간 안에 (하루전 예약과 당일예약은 1시간 안에) 객실 이용 요금을 완불 해주셔야합니다. ( ※ 미입금 시 자동 예약 취소됩니다.)</p>
+					<p>- 예약금 입금 시 예약자 이름으로 하셔야 합니다.</p>
+					<p>- 다른 이름으로 입금하신 경우 꼭 전화로 알려주세요.</p>
+					<p>- 동일 고객이 두 객실 이상 예약하실 때 펜션에 전화문의 부탁드립니다.</p>
+					
+				</div>
+				<div class="coment" id ="more_people">[인원 추가시 비용]<br /><br />
+					<p>- 기준 인원추가시 1인당 20,000원의 추가비용이 적용됩니다.(추가비용은 ~7세까지(유아) 만원, 8세 이상(소아) 2만원 추가됩니다.)</p>
+					<p>- 각 방의 최대 인원을 초과해서는 입실하실 수 없습니다.(갓난아이 포함)</p>
+					<p>- 최대인원은 숙박 기준이 아니고 입실 기준입니다.</p>
+				</div>
+				<div class="coment" id ="barbecue">[바베큐 이용요금]<br /><br />
+					<p>- 바비큐시설을 이용하실 경우 펜션지기에게 미리 말씀해 주세요.</p>
+					<p>- 그릴 사이즈에 따라 개당 小-10,000원 中=20,000원 으로 여러개 대여 가능합니다(숮 재공)</p>
+					<p>- 바비큐 이용시간 오후 6시~10시까지입니다.</p>
+				</div>
+				<div class="coment" id ="checkin_out">[입실/퇴실 시간안내]<br /><br />
+					<p>- 입실은 예약당일 13시 이후부터 가능합니다.</p>
+					<p>- 퇴실은 마지막날 오전 11시까지 입니다.</p>
+					<p>- 퇴실 전에는 잊으신 물건이 없는지 잘 챙겨주시고 사용하신 펜션 비품들은 원위치에 정돈해 주시기 바랍니다.</p>
+					<p>- 퇴실시에는 열쇠를 꼭 반납하시고 사용 중 파손된 물품이나 불편했던 점을 말씀해 주시면 대단히 고맙겠습니다.</p>
+					<p>- 객실 정리가 끝나시면 관리자에게 연락하시어 퇴실 점검을 받으시길 바랍니다.</p>
+				</div>
+			</div>
+
+	
+		
+		</div>
+	</div>
+	<footer id="main_footer">
+		<div class = "terms">
+				<a href = "#">이용약관</a>
+				<span>|</span>
+				<span><a href = "#">개인정보취급방침</a></span>
+				<span>|</span>
+				<span><a href = "#">이메일 무단수집거부</a></span>
+				<span>|</span>
+				<span><a href = "#">책임의 한계와 법적고지</a></span>
+				<span>|</span>
+				<span><a href = "#">이용안내</a></span>
+				<span>|</span>
+				<span><a href = "#">모바일버전</a></span>
+				
+			</div>
+		 	<div id= "footer_info" class="terms" style="font-size:18px">
+		 		<ul>
+		 			<li>상호: 합천 우리 글램핑</li>
+			 		<li>대표: 박창민</li>
+			 		<li>사업자번호: 875-35-68894</li>
+			 		<li>메일: hapG@naver.com</li>
+			 		<li>전화: 010-0000-1111</li>
+			 		<li>주소 : 경남 합천시 00면 00리 12-5</li>
+		 		</ul>
+			</div>
+	
+	</footer>
+	
+	
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	
+	
+
+</body>
+</html>
