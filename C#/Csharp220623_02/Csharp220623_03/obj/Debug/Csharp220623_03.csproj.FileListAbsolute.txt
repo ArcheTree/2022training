@@ -1,0 +1,14 @@
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\Csharp220623_03\bin\Debug\Csharp220623_03.exe.config
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\Csharp220623_03\bin\Debug\Csharp220623_03.exe
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\Csharp220623_03\bin\Debug\Csharp220623_03.pdb
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\Csharp220623_03\obj\Debug\Csharp220623_03.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\Csharp220623_03\obj\Debug\Csharp220623_03.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\Csharp220623_03\obj\Debug\Csharp220623_03.Form1.resources
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\Csharp220623_03\obj\Debug\Csharp220623_03.Properties.Resources.resources
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\Csharp220623_03\obj\Debug\Csharp220623_03.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\Csharp220623_03\obj\Debug\Csharp220623_03.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\Csharp220623_03\obj\Debug\Csharp220623_03.exe
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\Csharp220623_03\obj\Debug\Csharp220623_03.pdb
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\Csharp220623_03\bin\Debug\Newtonsoft.Json.dll
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\Csharp220623_03\bin\Debug\Newtonsoft.Json.xml
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\Csharp220623_03\obj\Debug\Csharp220623_03.csproj.CopyComplete

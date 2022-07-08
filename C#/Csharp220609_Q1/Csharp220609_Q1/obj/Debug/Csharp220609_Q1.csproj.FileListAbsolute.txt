@@ -1,0 +1,8 @@
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220609_Q1\Csharp220609_Q1\obj\Debug\Csharp220609_Q1.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220609_Q1\Csharp220609_Q1\obj\Debug\Csharp220609_Q1.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220609_Q1\Csharp220609_Q1\obj\Debug\Csharp220609_Q1.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220609_Q1\Csharp220609_Q1\bin\Debug\Csharp220609_Q1.exe.config
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220609_Q1\Csharp220609_Q1\bin\Debug\Csharp220609_Q1.exe
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220609_Q1\Csharp220609_Q1\bin\Debug\Csharp220609_Q1.pdb
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220609_Q1\Csharp220609_Q1\obj\Debug\Csharp220609_Q1.exe
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220609_Q1\Csharp220609_Q1\obj\Debug\Csharp220609_Q1.pdb

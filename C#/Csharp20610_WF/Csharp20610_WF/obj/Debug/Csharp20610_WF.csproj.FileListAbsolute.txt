@@ -1,0 +1,11 @@
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp20610_WF\Csharp20610_WF\bin\Debug\Csharp20610_WF.exe.config
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp20610_WF\Csharp20610_WF\bin\Debug\Csharp20610_WF.exe
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp20610_WF\Csharp20610_WF\bin\Debug\Csharp20610_WF.pdb
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp20610_WF\Csharp20610_WF\obj\Debug\Csharp20610_WF.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp20610_WF\Csharp20610_WF\obj\Debug\Csharp20610_WF.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp20610_WF\Csharp20610_WF\obj\Debug\Csharp20610_WF.Form1.resources
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp20610_WF\Csharp20610_WF\obj\Debug\Csharp20610_WF.Properties.Resources.resources
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp20610_WF\Csharp20610_WF\obj\Debug\Csharp20610_WF.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp20610_WF\Csharp20610_WF\obj\Debug\Csharp20610_WF.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp20610_WF\Csharp20610_WF\obj\Debug\Csharp20610_WF.exe
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp20610_WF\Csharp20610_WF\obj\Debug\Csharp20610_WF.pdb

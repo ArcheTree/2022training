@@ -1,0 +1,8 @@
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\prack123\obj\Debug\prack123.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\prack123\obj\Debug\prack123.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\prack123\obj\Debug\prack123.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\prack123\bin\Debug\prack123.exe.config
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\prack123\bin\Debug\prack123.exe
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\prack123\bin\Debug\prack123.pdb
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\prack123\obj\Debug\prack123.exe
+C:\Users\KB\Desktop\ArcheTree\비쥬얼스튜디오\Csharp220623_02\prack123\obj\Debug\prack123.pdb
