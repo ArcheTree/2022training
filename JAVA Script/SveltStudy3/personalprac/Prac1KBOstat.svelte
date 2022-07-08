@@ -71,8 +71,8 @@
     },
     
 }
-const KBOLegendBetter = {   
-    LMS : {
+const KBOLegendBetter = [   
+    {
         name : "이만수",
         BNum : 22,
         Team: "삼성 라이온즈",
@@ -92,7 +92,7 @@ const KBOLegendBetter = {
         ESC : "한국 최초 홈런, 타점의 주인공, 최초의 홈런타자, 최초 20홈런타자"
 
     },
-    LJB : {
+    {
         name : "이종범",
         BNum : 7,
         Team: "해태/기아 타이거즈",
@@ -112,7 +112,7 @@ const KBOLegendBetter = {
         ESC : "한시즌 최다도루(84개), 94년 타율 0.393 19홈런 84도루등 역대급 시즌, 24연속 도루성공 97년 30-30 등록"
 
     },
-    YJH : {
+    {
         name : "양준혁",
         BNum : 10,
         Team: "삼성 라이온즈",
@@ -131,7 +131,7 @@ const KBOLegendBetter = {
         Trophy : "신인상(93), 골든글러브 8회(외야4회 내야1회 지명 3회)",
         ESC : "최초 2000안타, 은퇴당시 출전경기,안타,2루타,3루타,홈런, 볼넷, 타석수등 도루,사사구 제외 모든 타자누적기록 1위로 은퇴(최다 타석,최다타수, 최다볼넷, 최다고의사구 여전히 1위), "
     },
-    LSY : {
+    {
         name : "이승엽",
         BNum : 36,
         Team: "삼성 라이온즈",
@@ -151,7 +151,7 @@ const KBOLegendBetter = {
         ESC : "KBO 한시즌 최다홈런 기록(56), 홈런(467), 2루타(464),누적루나(4077),타점(1498),득점(1355),장타율(0.572) 역대누적 1위, KBO역사상 최고의 홈런타자(일본진출 9년제외한 기록임)"
 
     },
-    JHJ :{
+    {
         name : "장효조",
         BNum : 10,
         Team: "삼성 라이온즈",
@@ -171,7 +171,7 @@ const KBOLegendBetter = {
         ESC : "최초의 OPS형 타자, 역대 최고 출루율 기록보유, 타격의 신"
 
     },
-    PJH : {
+    {
         name : "박재홍",
         BNum : 62,
         Team: "현대 유니콘스/SK 와이번즈",
@@ -191,7 +191,7 @@ const KBOLegendBetter = {
         ESC : "최초 30-30달성 (3번달성), 국내 유일 200-200기록"
 
     },
-    PGY : {
+    {
         name : "박경완",
         BNum : 26,
         Team: "현대 유니콘스/SK 와이번즈",
@@ -210,7 +210,7 @@ const KBOLegendBetter = {
         Trophy : "MVP 1회, 골든글러브 4회 홈런왕 2회 한국시리즈 우승 5회",
         ESC : "최초 포수 20-20, 한국 역사상 최고의 포수(공수포함), 4연타석 홈런, 최다 삼진(1674)"
     },
-    LBG : {
+    {
         name : "이병규",
         BNum : 9,
         Team: "LG 트윈스",
@@ -230,7 +230,7 @@ const KBOLegendBetter = {
         ESC : "LG의 상징같은 선수, 일본 진출경력"
 
     },
-    JJH : {
+    {
         name : "장종훈",
         BNum : 35,
         Team: "한화 이글스",
@@ -250,10 +250,14 @@ const KBOLegendBetter = {
         ESC : "KBO 30주년 레전드 1루수, 연습생 신화의 시작"
 
     }
-}
+]
     export let sig
     let legendplayer = KBOLegendPiter[sig]
     console.log(legendplayer)
+
+    export let bet
+    let legendbetter = KBOLegendBetter[bet]
+    console.log(legendbetter)
 </script>
 
 
@@ -308,6 +312,85 @@ const KBOLegendBetter = {
         {:else}
         <h2> 선동열, 최동원, 송진우, 구대성, 김용수 만 검색가능</h2>
         {/if}
+    </div>
+    
+    <div>{bet} 선수의 통산 누적스텟
+        {#each KBOLegendBetter as betters}
+            {#if bet=betters.name}
+            <table>
+                <tr>
+                    <th>{legendbetter.name}</th>
+                </tr>
+                <tr>
+                    <td class="ed">등번호</td>
+                    <td class="ee">{legendbetter.BNum}</td>
+                </tr>
+                <tr>
+                    <td>소속팀</td>
+                    <td class="ee">{legendbetter.Team}</td>
+                </tr>
+                <tr>
+                    <td class="ed">포지션</td>
+                    <td class="ee">{legendbetter.Position}</td>
+                </tr>
+                <tr>
+                    <td class="ed">출전경기수</td>
+                    <td class="ee">{legendbetter.Game}</td>
+                </tr>
+                <tr>
+                    <td class="ed">통산타율</td>
+                    <td class="ee">{legendbetter.AVG}</td>
+                </tr>
+                <tr>
+                    <td class="ed">통산안타</td>
+                    <td class="ee">{legendbetter.Hit}</td>
+                </tr>
+                <tr>
+                    <td class="ed">통산홈런</td>
+                    <td class="ee">{legendbetter.HR}</td>
+                </tr>
+                <tr>
+                    <td class="ed">통산타점</td>
+                    <td class="ee">{legendbetter.RBI}</td>
+                </tr>
+                <tr>
+                    <td class="ed">통산도루</td>
+                    <td class="ee">{legendbetter.SB}</td>
+                </tr>
+                <tr>
+                    <td class="ed">통산볼넷</td>
+                    <td class="ee">{legendbetter.BB}</td>
+                </tr>
+                <tr>
+                    <td class="ed">통산출루율</td>
+                    <td class="ee">{legendbetter.OBP}</td>
+                </tr>
+                <tr>
+                    <td class="ed">통산장타율</td>
+                    <td class="ee">{legendbetter.SLG}</td>
+                </tr>
+                <tr>
+                    <td class="ed">통산OPS</td>
+                    <td class="ee">{legendbetter.OPS}</td>
+                </tr>
+                <tr>
+                    <td class="ed">누적루타</td>
+                    <td class="ee">{legendbetter.Sbase}</td>
+                </tr>
+                <tr>
+                    <td class="ed">수상경력</td>
+                    <td class="ee">{legendbetter.Trophy}</td>
+                </tr>
+                <tr>
+                    <td class="ed">그외 기록</td>
+                    <td class="ee">{legendbetter.ESC}</td>
+                </tr>
+            </table>
+            <br /><br /><br />
+            {:else}
+            <h2> 이만수, 이종범, 양준혁, 이병규, 이승엽, 장종훈, 박재홍, 박경환, 장효조만 검색가능</h2>
+            {/if}
+        {/each}
     </div>
 
 
