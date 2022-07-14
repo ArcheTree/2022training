@@ -1,77 +1,7 @@
 <script>
-    const KBOLegendPiter = {
-     선동열:{
-        name : "선동열",
-        BNum : 18,
-        Team : "해태 타이거즈",
-        ERA : 1.20,
-        Game : 367,
-        Inning: 1647,
-        Win : 146,
-        Lose: 40,
-        Save : 132,
-        Trophy :"MVP 3회, 올스타 9회, 골든글러브6회",
-        ESC: "완봉29회(역대최고), 완투 68회, 일본진출(4년-98세이브), 선발투수 한시즌 최소 방여율(0.99)"
-    },
-    최동원:{
-        name : "최동원",
-        BNum : 11,
-        Team : "롯데 자이언츠",
-        ERA : 2.46,
-        Game : 248,
-        Inning:1414.2,
-        Win : 103,
-        Lose: 74,
-        Save : 26,
-        Trophy : "MVP 1회, 골든글러브 1회",
-        ESC: "완봉15회, 완투 81회, 한국시리즈 4승(84)"
-    },
-    송진우:{
-        name : "송진우",
-        BNum : 21,
-        Team : "한화 이글스",
-        ERA : 3.51,
-        Game : 672,
-        Inning : 3003,
-        Win: 210,
-        Lose: 153,
-        Save: 103,
-        Trophy : "골든글러브 1회",
-        ESC : "최다승, 최다경기출장(선발투수), 최다패, 최고이닝, 200승-100패-100세이브(유일), 92년 다승, 홀드,세이브 동시석권, 최다 피홈런,피안타,피볼넷, 역대최다삼진(2048개) "
+    import { onDestroy, onMount } from "svelte";
 
-    },
-    
-    구대성:{
-        name : "구대성",
-        BNum : 15,
-        Team : "한화 이글스",
-        ERA : 2.85,
-        Game : 569,
-        Inning : 1128.3,
-        Win : 27,
-        Lose :71,
-        Save :217,
-        Trophy : "MVP 2회 골든글러브 1회",
-        ESC : "투수 4관왕, 일본킬러, 통산K/9 9.74, 역대 마무리투수중 유일한 MVP,골든글러브 수상자"
-
-
-    },
-    김용수:{
-        name : "김용수",
-        BNum : 41,
-        Team: "LG 트윈스",
-        ERA :  2.98,
-        Game : 613,
-        Inning : 1831.1,
-        Win: 126,
-        Lose: 89,
-        Save: 227,
-        Trophy : "다승왕 1회, 승율왕 1회, 한국시리즈 MVP 2회",
-        ESC : "한국 유일 100승 200세이브"
-    },
-    
-}
-const KBOLegendBetter = [   
+let KBOLegendBetter = [   
     {
         name : "이만수",
         BNum : 22,
@@ -251,164 +181,202 @@ const KBOLegendBetter = [
 
     }
 ]
-    export let sig
-    let legendplayer = KBOLegendPiter[sig]
-    console.log(legendplayer)
-
-
+    export let playerName
+    let legendplayer
+    onMount(()=>{
+        legendplayer = KBOLegendBetter
+    })
+    onDestroy(()=>{
+       
+    })
+    let newName, newBNum, newTeam, newPostion, newGame, newAVG, newHit, newHR, newRBI, newSB, newBB, newOBP, newSLG, newOPS, newSbase, newTrophy, newESC
+    function add(){
+        KBOLegendBetter=KBOLegendBetter.concat({
+        name : newName,
+        BNum : newBNum,
+        Team: newTeam,
+        Position: newPostion,
+        Game: newGame,
+        AVG : newAVG,
+        Hit : newHit,
+        HR: newHR,
+        RBI: newRBI,
+        SB: newSB,
+        BB : newBB,
+        OBP : newOBP,
+        SLG : newSLG,
+        OPS : newOPS,
+        Sbase : newSbase,
+        Trophy : newTrophy,
+        ESC : newESC
+        })
+    }
 </script>
 
+<h1>야수 기록</h1>
 
-<div> {sig}의 통산 기록 <br/>
-    {#if legendplayer=KBOLegendPiter[sig]}
-        <table>
-            <tr>
-                <th>{legendplayer.name}</th>
-            </tr>
-            <tr>
-                <td class="ed">등번호</td>
-                <td class="ee">{legendplayer.BNum}</td>
-            </tr>
-            <tr>
-                <td>소속팀</td>
-                <td class="ee">{legendplayer.Team}</td>
-            </tr>
-            <tr>
-                <td class="ed">ERA</td>
-                <td class="ee">{legendplayer.ERA}</td>
-            </tr>
-            <tr>
-                <td class="ed">출전경기수</td>
-                <td class="ee">{legendplayer.Game}</td>
-            </tr>
-            <tr>
-                <td class="ed">누적이닝</td>
-                <td class="ee">{legendplayer.Inning}</td>
-            </tr>
-            <tr>
-                <td class="ed">통산승리</td>
-                <td class="ee">{legendplayer.Win}</td>
-            </tr>
-            <tr>
-                <td class="ed">통산패배</td>
-                <td class="ee">{legendplayer.Lose}</td>
-            </tr>
-            <tr>
-                <td class="ed">통산세이브</td>
-                <td class="ee">{legendplayer.Save}</td>
-            </tr>
-            <tr>
-                <td class="ed">수상경력</td>
-                <td class="ee">{legendplayer.Trophy}</td>
-            </tr>
-            <tr>
-                <td class="ed">그외 기록</td>
-                <td class="ee">{legendplayer.ESC}</td>
-            </tr>
-        </table>
-        <br /><br /><br />
-        {:else}
-        <h2> 선동열, 최동원, 송진우, 구대성, 김용수 만 검색가능</h2>
-        {/if}
-    </div>
-    
-    <!-- <div>{bet} 선수의 통산 누적스텟
-        {#each KBOLegendBetter as betters}
-            {#if bet=betters.name}
+<div>{playerName} 선수의 통산 누적스텟
+    {#each KBOLegendBetter as player}
+        {#if playerName==player.name}
             <table>
                 <tr>
-                    <th>{legendbetter.name}</th>
+                    <th>{player.name}</th>
                 </tr>
                 <tr>
                     <td class="ed">등번호</td>
-                    <td class="ee">{legendbetter.BNum}</td>
+                    <td class="ee">{player.BNum}</td>
                 </tr>
                 <tr>
                     <td>소속팀</td>
-                    <td class="ee">{legendbetter.Team}</td>
+                    <td class="ee">{player.Team}</td>
                 </tr>
                 <tr>
                     <td class="ed">포지션</td>
-                    <td class="ee">{legendbetter.Position}</td>
+                    <td class="ee">{player.Position}</td>
                 </tr>
                 <tr>
                     <td class="ed">출전경기수</td>
-                    <td class="ee">{legendbetter.Game}</td>
+                    <td class="ee">{player.Game}</td>
                 </tr>
                 <tr>
                     <td class="ed">통산타율</td>
-                    <td class="ee">{legendbetter.AVG}</td>
+                    <td class="ee">{player.AVG}</td>
                 </tr>
                 <tr>
                     <td class="ed">통산안타</td>
-                    <td class="ee">{legendbetter.Hit}</td>
+                    <td class="ee">{player.Hit}</td>
                 </tr>
                 <tr>
                     <td class="ed">통산홈런</td>
-                    <td class="ee">{legendbetter.HR}</td>
+                    <td class="ee">{player.HR}</td>
                 </tr>
                 <tr>
                     <td class="ed">통산타점</td>
-                    <td class="ee">{legendbetter.RBI}</td>
+                    <td class="ee">{player.RBI}</td>
                 </tr>
                 <tr>
                     <td class="ed">통산도루</td>
-                    <td class="ee">{legendbetter.SB}</td>
+                    <td class="ee">{player.SB}</td>
                 </tr>
                 <tr>
                     <td class="ed">통산볼넷</td>
-                    <td class="ee">{legendbetter.BB}</td>
+                    <td class="ee">{player.BB}</td>
                 </tr>
                 <tr>
                     <td class="ed">통산출루율</td>
-                    <td class="ee">{legendbetter.OBP}</td>
+                    <td class="ee">{player.OBP}</td>
                 </tr>
                 <tr>
                     <td class="ed">통산장타율</td>
-                    <td class="ee">{legendbetter.SLG}</td>
+                    <td class="ee">{player.SLG}</td>
                 </tr>
                 <tr>
                     <td class="ed">통산OPS</td>
-                    <td class="ee">{legendbetter.OPS}</td>
+                    <td class="ee">{player.OPS}</td>
                 </tr>
                 <tr>
                     <td class="ed">누적루타</td>
-                    <td class="ee">{legendbetter.Sbase}</td>
+                    <td class="ee">{player.Sbase}</td>
                 </tr>
                 <tr>
                     <td class="ed">수상경력</td>
-                    <td class="ee">{legendbetter.Trophy}</td>
+                    <td class="ee">{player.Trophy}</td>
                 </tr>
                 <tr>
                     <td class="ed">그외 기록</td>
-                    <td class="ee">{legendbetter.ESC}</td>
+                    <td class="ee">{player.ESC}</td>
                 </tr>
             </table>
-            <br /><br /><br />
-            {:else}
-            <h2> 이만수, 이종범, 양준혁, 이병규, 이승엽, 장종훈, 박재홍, 박경환, 장효조만 검색가능</h2>
             {/if}
-        {/each} -->
-    <!-- </div> -->
+            {/each}
+            
+</div>
+<button on:click="{add}">선수 추가</button>
 
-
+<table>
+                <tr>
+                    <td class="ed">선수 이름</td>
+                    <td class="ee"><input bind:value = {newName}></td>
+                </tr>
+                <tr>
+                    <td class="ed">등번호</td>
+                    <td class="ee"><input bind:value = {newBNum}></td>
+                </tr>
+                <tr>
+                    <td>소속팀</td>
+                    <td class="ee"><input bind:value = {newTeam}></td>
+                </tr>
+                <tr>
+                    <td class="ed">포지션</td>
+                    <td class="ee"><input bind:value = {newPostion}></td>
+                </tr>
+                <tr>
+                    <td class="ed">출전경기수</td>
+                    <td class="ee"><input bind:value = {newGame}></td>
+                </tr>
+                <tr>
+                    <td class="ed">통산타율</td>
+                    <td class="ee"><input bind:value = {newAVG}></td>
+                </tr>
+                <tr>
+                    <td class="ed">통산안타</td>
+                    <td class="ee"><input bind:value = {newHit}></td>
+                </tr>
+                <tr>
+                    <td class="ed">통산홈런</td>
+                    <td class="ee"><input bind:value = {newHR}></td>
+                </tr>
+                <tr>
+                    <td class="ed">통산타점</td>
+                    <td class="ee"><input bind:value = {newRBI}></td>
+                </tr>
+                <tr>
+                    <td class="ed">통산도루</td>
+                    <td class="ee"><input bind:value = {newSB}></td>
+                </tr>
+                <tr>
+                    <td class="ed">통산볼넷</td>
+                    <td class="ee"><input bind:value = {newBB}></td>
+                </tr>
+                <tr>
+                    <td class="ed">통산출루율</td>
+                    <td class="ee"><input bind:value = {newOBP}></td>
+                </tr>
+                <tr>
+                    <td class="ed">통산장타율</td>
+                    <td class="ee"><input bind:value = {newSLG}></td>
+                </tr>
+                <tr>
+                    <td class="ed">통산OPS</td>
+                    <td class="ee"><input bind:value = {newOPS}></td>
+                </tr>
+                <tr>
+                    <td class="ed">누적루타</td>
+                    <td class="ee"><input bind:value = {newSbase}></td>
+                </tr>
+                <tr>
+                    <td class="ed">수상경력</td>
+                    <td class="ee"><input bind:value = {newTrophy}></td>
+                </tr>
+                <tr>
+                    <td class="ed">그외 기록</td>
+                    <td class="ee"><input bind:value = {newESC}></td>
+                </tr>
+            </table>
 <style>
- table {
-    border: 1px solid black;
-    text-align: center;
- }
- td {
-    border: 2px solid black;
- }
- .ed {
-    width : 80px;
- }
- .ee{
-    width:300px;
-    text-align: left;
-
- }
-
-	
-
-</style>
+    table {
+       border: 1px solid black;
+       text-align: center;
+    }
+    td {
+       border: 2px solid black;
+    }
+    .ed {
+       width : 80px;
+    }
+    .ee{
+       width:300px;
+       text-align: left;
+   
+    }
+   </style>

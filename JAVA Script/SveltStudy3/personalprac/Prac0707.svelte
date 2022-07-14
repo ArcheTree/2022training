@@ -26,6 +26,7 @@ let betname = "타자기록"
 
 <button on:click={serch} >검색</button>
 <button on:click={del}>Click me!!</button>
+<Prac1KbOstat sig = {reserch} />
 
 <!-- <form on:submit|preventDefault={handleSubmit}>
     <select bind:value={selected} on:change={initSelect}>
@@ -39,6 +40,5 @@ let betname = "타자기록"
     <input type=submit disabled={!answer}>
 </form> -->
 
-    <Prac1KbOstat sig = {reserch} bet = {betname}/>
 
 
