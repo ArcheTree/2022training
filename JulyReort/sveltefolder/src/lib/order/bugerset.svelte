@@ -6,12 +6,11 @@ let selectedbuger =false
 let selbugername
 let bugercost
 
-function alte(){
+function alte(selbugername,bugercost){
     selectedbuger =!selectedbuger 
-    buge.cost =  bugercost 
-    selbugername =   buge.name 
     console.log(selbugername,bugercost)
 }
+
 </script>
 
 <h4> 세트구성 : 버거 + 감자 튀김 + 음료</h4>
@@ -21,7 +20,7 @@ function alte(){
         {#if selectedbuger!==true}
         <button
         style="color: {buge.color}" 
-        on:click={alte} bind:this=""
+        on:click={()=>alte(buge.name,buge.cost)}
         >
         <img src={buge.image} alt = "{buge.name}사진" />
         <p>{buge.name}-{buge.setStand}원</p>
@@ -31,7 +30,7 @@ function alte(){
 {/each}
 </div>
 {#if selectedbuger === true}
-<button id ="canclebutton" on:click={alte}>버거 변경</button>
+<button id ="canclebutton" on:click={()=>alte(null,null)}>버거 변경</button>
 <Addorders />
 {/if}
     <!-- bind:value={buge.cost} -->
