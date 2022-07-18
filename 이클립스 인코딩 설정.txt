@@ -1,0 +1,6 @@
+Static Web Project
+Window>Preferences
+>Web>Css>UTF-8
+html>UTF-8
+Genenal>Workspace
+>UTF-8

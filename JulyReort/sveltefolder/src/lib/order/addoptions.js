@@ -1,0 +1,60 @@
+
+export default[
+
+    {
+        id:1,
+        name : "bacon",
+        cost : 400,
+        image : "https://png.pngtree.com/png-clipart/20190517/original/pngtree-bacon-ham-with-food-ham-ham-food-png-image_3823225.jpg",
+        color: "black",
+        addition:false,
+    },
+    {
+        id:2,
+        name : "tomato",
+        cost : 500,
+        image : "https://previews.123rf.com/images/khumthong/khumthong1505/khumthong150500432/40186586-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EC%8A%A4-%ED%86%A0%EB%A7%88%ED%86%A0%EB%8A%94-%ED%9D%B0%EC%83%89-%EB%B0%B0%EA%B2%BD%EC%97%90-%EA%B3%A0%EB%A6%BD%EC%9E%85%EB%8B%88%EB%8B%A4-.jpg",
+        color: "black",
+        addition:false,
+    },
+    {
+        id:3,
+        name : "lettuce",
+        cost : 500,
+        image : "http://image.auction.co.kr/itemimage/17/99/cc/1799cc1256.jpg",
+        color: "black",
+        addition:false,
+    },
+    {
+        id:4,
+        name : "pickle",
+        cost : 300,
+        image : "https://cdn.crowdpic.net/detail-thumb/thumb_d_B2966220E1104EB92219B4611164C8EA.jpg",
+        color: "black",
+        addition:false,
+    },
+    {
+        id:5,
+        name : "cheese",
+        cost : 400,
+        image : "https://img.freepik.com/premium-vector/cheese-vector-isolated_74669-58.jpg?w=2000",
+        color: "black",
+        addition:false,
+    },
+    {
+        id:6,
+        name : "patty",
+        cost : 1200,
+        image : "https://previews.123rf.com/images/tatuasha/tatuasha1511/tatuasha151100083/48451849-%EB%B9%B5%EA%B3%BC-%EA%B3%A0%EA%B8%B0-%ED%8C%A8%ED%8B%B0-%EC%84%B1%EB%B6%84-%ED%96%84%EB%B2%84%EA%B1%B0-%ED%9D%B0%EC%83%89-%EB%B0%B0%EA%B2%BD%EC%97%90-siolated.jpg",
+        color: "black",
+        addition:false,
+    },
+    {
+        id:7,
+        name : "jalapeno",
+        cost : 400,
+        image : "https://cdn-icons-png.flaticon.com/512/2358/2358654.png",
+        color: "black",
+        addition:false,
+    },
+]
