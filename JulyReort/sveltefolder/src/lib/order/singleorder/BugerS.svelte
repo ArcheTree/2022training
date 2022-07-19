@@ -42,7 +42,7 @@ function join(bugers) {
     .grid{
         display: grid;
         flex: 1;
-        grid-template-columns: repeat(4, 4fr);
+        grid-template-columns: repeat(3, 4fr);
         grid-template-rows: repeat(3, 1fr);
         grid-gap: 1vmin;
         width:90%;
