@@ -1,16 +1,40 @@
 <script>
 import Addorders from "./addorders.svelte"
 import buger from "./buger";
+import Sideset from "./sideset.svelte"
+import Bavergeset from "./Bavergeset.svelte"
 
 let selectedbuger =false
-let selbugername
-let bugercost
-
-
-function alte(selbugername,bugercost){
+let selectedoption =false
+let selectedside = false
+let selectedbaverge =false
+function gooption(selitem,standardcost){
     selectedbuger =!selectedbuger 
-    console.log(selbugername,bugercost)
+    selectedoption = true
+    console.log(selitem,standardcost)
+     setbuger = selitem 
+     setcost = standardcost
+    console.log(setbuger,setcost)
 }
+function backhome(selitem,standardcost){
+    setbuger = selitem 
+    setcost = standardcost
+    selectedbuger=false
+    selectedoption=false
+}
+function goside(){
+    selectedbuger = true
+    selectedoption = false
+    selectedside = true
+}
+function gobaverge(){
+    selectedbuger = true
+    selectedoption = false
+    selectedside = false
+    selectedbaverge = true
+}
+let setbuger 
+let setcost
 
 </script>
 
@@ -21,7 +45,7 @@ function alte(selbugername,bugercost){
         {#if selectedbuger!==true}
         <button
         style="color: {buge.color}" 
-        on:click={()=>alte(buge.name,buge.cost)}
+        on:click={()=>gooption(buge.name,buge.cost)}
         >
         <img src={buge.image} alt = "{buge.name}사진" />
         <p>{buge.name}-{buge.setStand}원</p>
@@ -30,21 +54,32 @@ function alte(selbugername,bugercost){
 </div>
 {/each}
 </div>
-{#if selectedbuger === true}
-<button id ="canclebutton" on:click={()=>alte(null,null)}>버거 변경</button>
+{#if selectedoption === true}
+<button id ="canclebutton" on:click={()=>backhome("","")}>버거 변경</button>
 <Addorders />
+<button on:click={goside}>선택 완료</button>
+{/if}
+{#if selectedside===true}
+<Sideset />
+<button on:click={gobaverge}>선택 완료</button>
+{/if}
+{#if selectedbaverge===true}
+<Bavergeset />
 {/if}
 <footer class="payment">
     <table>
       <tr>
-        <td class = "selitem">선택하신 상품</td>
-        <td class = "selitem">{selbugername}</td>
-        <td class = "selitem">추가 옵션</td>
-        <td class = "selitem">우선 빈칸</td>
+        <td class = "selitem_name">상품</td>
+        <td class = "selitem">{setbuger}세트</td>
+        <td class = "selitem_name">추가옵션</td>
+        <td class = "selitem_name">사이드변경</td>
+        <td class = "selitem_name">음료변경</td>
       </tr>
       <tr>
-        <td colspan = 2>기본 가격 : {bugercost}</td>
-        <td colspan = 2>추가 결제 :  일단 빈칸</td>
+        <td colspan = 2>기본 가격 : {setcost}원</td>
+        <td >추가 가격 : 원</td>
+        <td >추가 가격 : 원</td>
+        <td >추가 가격 : 원</td>
       </tr>
     </table>
 </footer>
@@ -54,9 +89,11 @@ function alte(selbugername,bugercost){
 .grid{
     display: grid;
 	flex: 1;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 4fr);
 	grid-template-rows: repeat(3, 1fr);
 	grid-gap: 1vmin;
+    width:90%;
+    margin: 0px auto;
     }
 div>button {
 	width: 100%;
@@ -85,7 +122,12 @@ footer>table>tr>td{
     border : 3px double black;
 }
 .selitem{
-    width : 140px;
+    width : 220px;
     text-align: center;
 }
+.selitem_name{
+    width : 80px;
+    text-align: center;
+}
+
 </style>

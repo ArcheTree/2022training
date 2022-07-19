@@ -1,5 +1,6 @@
 <script>
 import Bugerset from "./order/bugerset.svelte";
+import BugerS from "./order/singleorder/BugerS.svelte";
 
 let a =false
 let b =false
@@ -41,7 +42,8 @@ function drinkorder(){
 </div>
 {#if a}
 <Bugerset />
-
+{:else if b}
+<BugerS />
 {/if}
 
 <style>

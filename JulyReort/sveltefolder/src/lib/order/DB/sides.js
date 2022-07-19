@@ -1,0 +1,51 @@
+export default[
+
+    {
+        id:1,
+        name : "potato(S)",
+        cost : 1700,
+        setStand: 0,
+        image : "https://momstouchdev.co.kr/upload_file/product_info/1616054553-VUFDS.png",
+        color: "black",
+    },
+    {
+        id:2,
+        name : "nugget",
+        cost : 1700,
+        setStand: 0,
+        image :"https://momstouchdev.co.kr/upload_file/product_info/1616054732-QTVZC.png",
+        color: "black",
+    },
+    {
+        id:3,
+        name : "potato(L)",
+        cost : 2200,
+        setStand: 300,
+        image : "https://momstouchdev.co.kr/upload_file/product_info/1616054553-VUFDS.png",
+        color: "black",
+    },
+    {
+        id:4,
+        name : "cheeseStick",
+        cost : 2000,
+        setStand: 300,
+        image :"https://momstouchdev.co.kr/upload_file/product_info/1616054584-PSZSC.png",
+        color: "black",
+    },
+    {
+        id:5,
+        name : "coleslaw",
+        cost : 2200,
+        setStand: 500,
+        image : "https://momstouchdev.co.kr/upload_file/product_info/1616054496-GDRTD.png",
+        color: "black",
+    },
+    {
+        id:6,
+        name : "consalad",
+        cost : 2000,
+        setStand: 300,
+        image : "https://momstouchdev.co.kr/upload_file/product_info/1616054510-HFTVO.png",
+        color: "black",
+    },
+]
