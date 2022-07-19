@@ -6,6 +6,7 @@ let selectedbuger =false
 let selbugername
 let bugercost
 
+
 function alte(selbugername,bugercost){
     selectedbuger =!selectedbuger 
     console.log(selbugername,bugercost)
@@ -33,7 +34,21 @@ function alte(selbugername,bugercost){
 <button id ="canclebutton" on:click={()=>alte(null,null)}>버거 변경</button>
 <Addorders />
 {/if}
-    <!-- bind:value={buge.cost} -->
+<footer class="payment">
+    <table>
+      <tr>
+        <td class = "selitem">선택하신 상품</td>
+        <td class = "selitem">{selbugername}</td>
+        <td class = "selitem">추가 옵션</td>
+        <td class = "selitem">우선 빈칸</td>
+      </tr>
+      <tr>
+        <td colspan = 2>기본 가격 : {bugercost}</td>
+        <td colspan = 2>추가 결제 :  일단 빈칸</td>
+      </tr>
+    </table>
+</footer>
+  
 
 <style>
 .grid{
@@ -62,5 +77,15 @@ h4{
     float: right;
     height: 30px;
     width : 100px;
+}
+footer{
+    float:left
+}
+footer>table>tr>td{
+    border : 3px double black;
+}
+.selitem{
+    width : 140px;
+    text-align: center;
 }
 </style>
