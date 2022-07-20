@@ -1,11 +1,13 @@
 <script>
 
 
-import addoptions from "./addoptions";
+import addoptions from "./DB/addoptions";
 import { flip } from 'svelte/animate';
+import { onDestroy } from "svelte";
 
 let totalcost = 0
 let addcost
+
 
 function payadd(itemcost){
     totalcost += itemcost
@@ -13,10 +15,17 @@ function payadd(itemcost){
     return totalcost
 }
 function refundadd(itemcost){
-    addcost = itemcost
-    totalcost = (totalcost-addcost)
+    totalcost -= itemcost
     return totalcost
 }
+
+onDestroy(()=>{
+    alert(`선택하신 옵션으로 ${totalcost/2}원을 추가결제가 필요합니다.`)
+    for(let i =0; i<addoptions.length;i++){
+        addoptions[i]["addition"]=false
+    }
+
+})
 
 
 </script>
@@ -27,7 +36,8 @@ function refundadd(itemcost){
     {#each addoptions.filter(t => !t.addition)  as addoption (addoption.id)}
         <button class="d" animate:flip on:click={()=>payadd(addoption.cost)}>
             <label>
-                <input type=checkbox bind:checked={addoption.addition}  >
+                <input type=checkbox bind:checked={addoption.addition} 
+                >
                 {addoption.name}
                 <img src={addoption.image} alt = "{addoption.name}사진" />
                 <p>+{addoption.cost}원</p>
@@ -40,7 +50,7 @@ function refundadd(itemcost){
     {#each addoptions.filter(t => t.addition)  as addoption (addoption.id)}
         <button class="d" animate:flip on:click={()=>refundadd(addoption.cost)}>
             <label>
-                <input type=checkbox bind:checked={addoption.addition} >
+                <input type=checkbox bind:checked={addoption.addition}  >
                 <img src={addoption.image} alt = "{addoption.name}사진" />
                 {addoption.name} 
                 <div>
@@ -59,8 +69,9 @@ function refundadd(itemcost){
             <td>
                 <div id="payoption">
                 {#each addoptions as addoption}
-                    {#if addoption.addition}
+                    {#if addoption.addition } 
                         <div class="ed">{addoption.name}추가</div>
+                 
                     {/if}
                 {/each}
                     <div  id = "totalpay">

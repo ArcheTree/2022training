@@ -35,8 +35,8 @@
                 </button>
             {/each}
         </div>
-        <p>변경 금액 {join(sidemenu)}</p>
-        <p>합산금약: {Math.round(sidessum)}</p>
+        
+        <p>합산금액: {Math.round(sidessum)}</p>
 
 
 <style>

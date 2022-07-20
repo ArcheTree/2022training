@@ -1,30 +1,33 @@
 <script>
-import buger from "../buger";
+import buger from "../DB/buger";
 
     let bugers=[]
-    let buc
+    let buc =[]
+    let i
 
 function join(bugers) {
 		if (bugers.length === 1) return bugers[0];
 		return `${bugers.slice(0, -1).join(', ')} and ${bugers[bugers.length - 1]}`;
 	}
-    $: sum = bugers.reduce((t, n) => t + n, 0);
+$: sum = bugers.reduce((t, n) => t + n, 0);
+
+
 </script>
     
     <h4> 버거 단품 주문</h4>
     <div class="grid">
         {#each buger as buge(buge.id)}
-            <button id="d">
-                <label class="square">
+            <button id="d"  >
+                <label class="square" >
                     <input type=checkbox bind:group={bugers} value={buge.cost}  >
                     <img src={buge.image} alt = "{buge.name}사진" />
                     <p>{buge.name} - {buge.cost}원</p>
                 </label>
             </button>
         {/each}
+
     </div>
-    <p>변경 금액 {join(bugers)}</p>
-    <p>합산금약: {sum}</p>
+    <p>합산 금액 : {sum}</p>
     <style>
     .grid{
         display: grid;

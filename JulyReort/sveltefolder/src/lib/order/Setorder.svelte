@@ -2,34 +2,40 @@
 import Addorders from "./addorders.svelte"
 import Sideset from "./sideset.svelte"
 import Bavergeset from "./Bavergeset.svelte"
-import Bugerset from "./Bavergeset.svelte"
+import SetBuger from "./SetBuger.svelte"
+import { onMount } from "svelte";
 
 
-let selectedbuger =true
+let selectbuger = false
 let selectedoption =false
 let selectedside = false
-let selectedbaverge =false
+let selectedbaverge = false
+
+onMount(() => {
+        selectedbaverge = false
+        selectbuger = true
+	})
 
 function goadd(){
-    selectedbuger =false
+    selectbuger =false
     selectedoption = true
     selectedside = false
     selectedbaverge =false
 }
 function goside(){
-    selectedbuger = false
+    selectbuger = false
     selectedoption = false
     selectedside = true
     selectedbaverge =false
 }
 function gobaverge(){
-    selectedbuger = false
+    selectbuger = false
     selectedoption = false
     selectedside = false
     selectedbaverge = true
 }
 function payaction(){
-    selectedbuger = false
+    selectbuger = true
     selectedoption = false
     selectedside = false
     selectedbaverge = false
@@ -39,18 +45,18 @@ function payaction(){
 </script>
 
 <h4> 세트구성 : 버거 + 감자 튀김 + 음료</h4>
-{#if selectedbuger === true}
-<Bugerset/>
-<button id="next" on:click={goadd}>선택 완료</button>
+{#if selectbuger === true}
+    <SetBuger/>
+    <button id="next" on:click={goadd}>선택 완료</button>
 {:else if selectedoption === true}
-<Addorders/>
-<button id="next" on:click={goside}>선택 완료</button>
+    <Addorders/>
+    <button id="next" on:click={goside}>선택 완료</button>
 {:else if selectedside===true}
-<Sideset />
-<button on:click={gobaverge}>선택 완료</button>
+    <Sideset />
+    <button id="next" on:click={gobaverge}>선택 완료</button>
 {:else if selectedbaverge===true}
-<Bavergeset/>
-<button on:click={payaction}>결제하기</button>
+    <Bavergeset/>
+    <button id="next" on:click={payaction}>결제하기</button>
 {/if}
 
   

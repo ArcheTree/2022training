@@ -1,5 +1,7 @@
 <script>
-import buger from "./buger";
+import { onMount,onDestroy } from "svelte";
+
+import buger from "./DB/buger";
 
 let setbuger 
 let setcost
@@ -13,14 +15,15 @@ function gooption(selitem,standardcost){
     console.log(setbuger,setcost)
 }
 
+onDestroy(()=>{alert(`선택하신 상품은 ${setbuger} 이고 기본가격은 ${setbugercost}입니다.`)})
+
 
 </script>
 <div class="grid">
     {#each buger as buge(buge.id)}
-        <button id="d" on:click={()=>{setbugercost=buge.setStand}}>
-            <label class="square">
-                <input type=radio bind:group={bugeritem} value={buge.id}
-                style="color: {buge.color}" 
+        <button id="d" style="background-color: {buge.color}" on:click={()=>{setbugercost=buge.setStand}}>
+            <label class="square" >
+                <input type=radio bind:group={bugeritem} value={buge.id} 
                 on:click={()=>gooption(buge.name,buge.cost)}
                 >        
                 <img src={buge.image} alt = "{buge.name}사진" />
@@ -56,7 +59,7 @@ function gooption(selitem,standardcost){
 div>button {
 	width: 100%;
 	height: 100%;
-	color: white;
+    color:white;
 	border: none;
 	margin: 0;
 	}

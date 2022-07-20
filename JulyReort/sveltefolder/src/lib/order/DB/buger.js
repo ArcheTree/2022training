@@ -7,7 +7,8 @@ export default[
         cost : 2500,
         setStand: 4000,
         image : "https://momstouchdev.co.kr/upload_file/product_info/1616389576-MRVGX.png",
-        color: "#a22a2a",
+        color: "#804000",
+        pick: false,
     },
     {
         id:2,
@@ -16,6 +17,7 @@ export default[
         setStand: 4500,
         image :"https://www.mcdonalds.co.kr/upload/product/pcfile/1583728101061.png",
         color: "#ffd11a",
+        pick: false,
     },
     {
         id:3,
@@ -24,6 +26,7 @@ export default[
         setStand: 11500,
         image : "https://img.tvreportcdn.de/images/20130106/20130106_1357480552_71437800_1.jpg",
         color: "#b30000",
+        pick: false,
     },
     {
         id:4,
@@ -32,6 +35,7 @@ export default[
         setStand: 6300,
         image :"https://momstouchdev.co.kr/upload_file/product_info/1655341040-HOKQW.png",
         color: "#00b33c",
+        pick: false,
     },
     {
         id:5,
@@ -40,6 +44,7 @@ export default[
         setStand: 6200,
         image : "http://www.sporbiz.co.kr/news/photo/202107/20210712_1_bodyimg_20210712570034.jpg",
         color: "#262626",
+        pick: false,
     },
     {
         id:6,
@@ -47,7 +52,8 @@ export default[
         cost : 6000,
         setStand: 7500,
         image : "https://img.khan.co.kr/news/2018/03/01/2018030101000119200003851.jpg",
-        color: "#804000",
+        color: "#a22a2a",
+        pick: false,
     },
     {
         id:7,
@@ -56,5 +62,6 @@ export default[
         setStand: 16500,
         image : "http://weekly.chosun.com/news/photo/201009/810_1.jpg",
         color: "#000066",
+        pick: false,
     },
 ]

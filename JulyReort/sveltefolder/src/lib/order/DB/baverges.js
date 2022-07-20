@@ -3,7 +3,7 @@ export default[
     {
         id:1,
         name : "cook(S)",
-        cost : 1700.1,
+        cost : 1700.001,
         opencost : 1700,
         setStand: 0,
         image : "https://img.danawa.com/prod_img/500000/770/904/img/904770_1.jpg?shrink=330:330&_v=20220111155619",
@@ -12,7 +12,7 @@ export default[
     {
         id:2,
         name : "zero-cook(S)",
-        cost : 1700.2,
+        cost : 1700.002,
         opencost : 1700,
         setStand: 0,
         image :"http://storage.enuri.info/pic_upload/knowbox2/202007/1027495352020070344f6f46e-642d-4016-baf7-21dda116eb85.jpeg",
@@ -21,7 +21,7 @@ export default[
     {
         id:3,
         name : "sprit(S)",
-        cost : 1700.3,
+        cost : 1700.003,
         opencost : 1700,
         setStand: 0,
         image : "https://josundal.com/web/product/big/20191231/3daa45dd1c4e144caf23f1b199124610.jpg",
@@ -30,7 +30,7 @@ export default[
     {
         id:4,
         name : "milkshake(S)",
-        cost : 4000.1,
+        cost : 4000.001,
         opencost : 4000,
         setStand: 1300,
         image :"http://image.auction.co.kr/itemimage/25/39/a9/2539a9e566.jpg",
@@ -39,7 +39,7 @@ export default[
     {
         id:5,
         name : "cook(L)",
-        cost : 2000.1,
+        cost : 2000.001,
         opencost : 2000,
         setStand: 300,
         image : "http://th1.tmon.kr/thumbs/image/3cc/3fa/d56/475318fb7_700x700_95_FIT.jpg",
@@ -48,7 +48,7 @@ export default[
     {
         id:6,
         name : "zero-cook(L)",
-        cost : 2000.2,
+        cost : 2000.002,
         opencost : 2000,
         setStand: 300,
         image : "https://img.danawa.com/prod_img/500000/808/151/img/10151808_1.jpg?shrink=330:330&_v=20211019125643",
@@ -57,7 +57,7 @@ export default[
     {
         id:7,
         name : "sprite(L)",
-        cost : 2000.3,
+        cost : 2000.003,
         opencost : 2000,
         setStand: 300,
         image : "http://gdimg.gmarket.co.kr/1511113050/still/600?ver=1557705046",

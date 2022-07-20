@@ -26,10 +26,10 @@
                 </button>
             {/each}
         </div>
-        <p>변경 금액 {join(bevergemenu)}</p>
-        <p>합산금약: {Math.round(bevergesum)}</p>
+        <p>선택 메뉴 : {Math.round(bevergesum)}</p>
+ 
 
-
+        <button on:click={()=>{alert(`결제하실 가격은 ${Math.round(bevergesum)}입니다.`)}}>가격확인</button>
 <style>
     .grid{
         display: grid;
