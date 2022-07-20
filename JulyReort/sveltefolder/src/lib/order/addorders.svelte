@@ -4,17 +4,12 @@
 import addoptions from "./addoptions";
 import { flip } from 'svelte/animate';
 
-export let totalcost = 0
+let totalcost = 0
 let addcost
 
-// let sum
-// function totalcost() {
-//    sum= addcost.reduce((t, n) => t + n, 0);
-// 	}
-
 function payadd(itemcost){
-    addcost = itemcost
-    totalcost = totalcost + addcost
+    totalcost += itemcost
+    console.log(totalcost)
     return totalcost
 }
 function refundadd(itemcost){
@@ -30,32 +25,30 @@ function refundadd(itemcost){
 <div id="left">
     <h3> 선택가능</h3>
     {#each addoptions.filter(t => !t.addition)  as addoption (addoption.id)}
-        <label
-            animate:flip
-        >
-		<input type=checkbox bind:checked={addoption.addition}  >
-        {addoption.name}   
-        <img src={addoption.image} alt = "{addoption.name}사진" />
-        <p>+{addoption.cost}원</p>
-		</label>
+        <button class="d" animate:flip on:click={()=>payadd(addoption.cost)}>
+            <label>
+                <input type=checkbox bind:checked={addoption.addition}  >
+                {addoption.name}
+                <img src={addoption.image} alt = "{addoption.name}사진" />
+                <p>+{addoption.cost}원</p>
+            </label>
+        </button>
     {/each}
 </div>
 <div id = "right">
     <h3>추가 옵션</h3>
     {#each addoptions.filter(t => t.addition)  as addoption (addoption.id)}
-        <label
-            animate:flip
-        >
-		<input type=checkbox bind:checked={addoption.addition} >
-        <img src={addoption.image} alt = "{addoption.name}사진" />
-        {addoption.name}   
-        <div>
-        <p> +{addoption.cost} 원</p>
-            <button on:click|once={()=>payadd(addoption.cost)}>확정</button>
-            <button on:click|once={()=>refundadd(addoption.cost)}>취소</button>
-	    </div>	
-    </label>
-    {/each}
+        <button class="d" animate:flip on:click={()=>refundadd(addoption.cost)}>
+            <label>
+                <input type=checkbox bind:checked={addoption.addition} >
+                <img src={addoption.image} alt = "{addoption.name}사진" />
+                {addoption.name} 
+                <div>
+                <p> +{addoption.cost} 원</p>
+                </div>	
+            </label>
+        </button>
+        {/each}
 </div>
 <footer>
     <table>
@@ -67,15 +60,12 @@ function refundadd(itemcost){
                 <div id="payoption">
                 {#each addoptions as addoption}
                     {#if addoption.addition}
-                    <table>
-                        <tr>
-                            <td class="ed">{addoption.name}추가</td>
-                           
-                        </tr>
-                    </table>
+                        <div class="ed">{addoption.name}추가</div>
                     {/if}
-                    {/each}
-                    <p>추가결제금 : {totalcost}</p>
+                {/each}
+                    <div  id = "totalpay">
+                        <p>추가결제금 : {totalcost/2}</p>
+                    </div>
                 </div>
             </td>
         </tr>
@@ -90,27 +80,42 @@ function refundadd(itemcost){
 	padding: 0 1em 0 0;
 	box-sizing: border-box;
 }
-label {
+.d{
+    width:100%;
+    display: block;
+    border-radius: 2px;
+    left: 0;
+    border : 0px;
+    margin-bottom: 5px;
+}
+label{
 	top: 0;
 	left: 0;
+    height : 50px;
 	display: block;
 	font-size: 1em;
 	line-height: 1;
-	padding: 0.5em;
-	margin: 0 auto 0.5em auto;
+	padding: 0em;
+	margin:  auto;
 	border-radius: 2px;
-	background-color:#ffffff;
+
 	user-select: none;
 }
+h5{
+    margin: 0px;
+}
+input { 
+    margin: 0;
+    float: left;
+}
 
-input { margin: 0 }
-
-#right label {		
+#right>button {		
     background-color: rgb(180,240,100);
 }
 img{
     width:50x;
     height : 50px;
+    float: left;
 }
 label>div>p {
     font-weight: 800;
@@ -133,12 +138,19 @@ footer>table>tr>td{
     text-align: center;
 }
 .ed{
-    width:180px;
+    float : left;
+    display:block;
     border: 1px solid black;
+    padding: 5px;
+    margin: 3px;
 }
 label>div{
     float: right;
 
 }
-
+#totalpay{
+    float: right;
+    padding: 5px;
+    margin: 3px;
+}
 </style>

@@ -3,19 +3,7 @@ import buger from "../buger";
 
     let bugers=[]
     let buc
-    let addbucost = 0
-    let bugerscost =0
 
-    function payadd(itemcost){
-        addbucost = itemcost
-    bugerscost = bugerscost + addbucost
-    return bugerscost
-}
-function refundadd(itemcost){
-    addbucost = itemcost
-    bugerscost = (bugerscost-addbucost)
-    return bugerscost
-}
 function join(bugers) {
 		if (bugers.length === 1) return bugers[0];
 		return `${bugers.slice(0, -1).join(', ')} and ${bugers[bugers.length - 1]}`;
@@ -23,11 +11,10 @@ function join(bugers) {
     $: sum = bugers.reduce((t, n) => t + n, 0);
 </script>
     
-    
-    <h4> 세트 : 음료 변경</h4>
+    <h4> 버거 단품 주문</h4>
     <div class="grid">
         {#each buger as buge(buge.id)}
-            <button id="d" on:click={()=>payadd(addbucost= buge.cost)}>
+            <button id="d">
                 <label class="square">
                     <input type=checkbox bind:group={bugers} value={buge.cost}  >
                     <img src={buge.image} alt = "{buge.name}사진" />
