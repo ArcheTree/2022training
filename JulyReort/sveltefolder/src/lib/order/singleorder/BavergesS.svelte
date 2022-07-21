@@ -5,13 +5,18 @@
         let bevergemenu=[]
         let bevergename=[]
 
-    
+        function ad(){
+            bevergename=bevergename.slice(8)
+        for(let i =0 ; i <bevergemenu.length ; i++)
+        bevergename=bevergename.concat(baverges[bevergemenu[i]-1].opencost)
+
+    }
 
         function join(bevergemenu) {
             if (bevergemenu.length === 1) return bevergemenu[0];
             return `${bevergemenu.slice(0, -1).join(', ')} and ${bevergemenu[bevergemenu.length - 1]}`;
         }
-        $: bevergesum = bevergemenu.reduce((t, n) => t + n, 0);
+        $: bevergesum = bevergename.reduce((t, n) => t + n, 0);
         
 </script>
         <h4> 음료 단품주문 </h4>
@@ -19,7 +24,7 @@
             {#each baverges as baverge(baverge.id)}
                 <button id="d" >
                     <label class="square">
-                        <input type=checkbox bind:group={bevergemenu} value={baverge.cost} >
+                        <input type=checkbox bind:group={bevergemenu} value={baverge.id} >
                         <img src={baverge.image} alt = "{baverge.name}사진" />
                         <p>{baverge.name} - {baverge.opencost}원</p>
                     </label>
@@ -28,7 +33,7 @@
         </div>
         <p>선택 메뉴 : {Math.round(bevergesum)}</p>
  
-
+        <button on:click={ad}>계산</button>
         <button on:click={()=>{alert(`결제하실 가격은 ${Math.round(bevergesum)}입니다.`)}}>가격확인</button>
 <style>
     .grid{

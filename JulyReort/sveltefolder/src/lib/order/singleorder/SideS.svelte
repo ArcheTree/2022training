@@ -5,18 +5,19 @@
         let sidemenu=[]
         let addsidcost = 0
         let sidecost =0
-        let payment
+        let payment=[]
     
-        function refundadd(itemcost){
-            addsidcost = itemcost
-            sidecost = (sidecost-addsidcost)
-            return sidecost
-        }
+        function ad(){
+            payment=payment.slice(8)
+        for(let i =0 ; i <sides.length ; i++)
+        payment=payment.concat(sides[sidemenu[i]-1].opencost)
+
+    }
         function join(sidemenu) {
             if (sidemenu.length === 1) return sidemenu[0];
             return `${sidemenu.slice(0, -1).join(', ')} and ${sidemenu[sidemenu.length - 1]}`;
         }
-        $: sidessum = sidemenu.reduce((t, n) => t + n, 0);
+        $: sidessum = payment.reduce((t, n) => t + n, 0);
         
         
         
@@ -28,15 +29,15 @@
             {#each sides as side(side.id)}
                 <button id="d" >
                     <label class="square">
-                        <input type=checkbox bind:group={sidemenu} value={side.cost}  >
+                        <input type=checkbox bind:group={sidemenu} value={side.id}  >
                         <img src={side.image} alt = "{side.name}사진" />
                         <p>{side.name} - {side.opencost}원</p>
                     </label>
                 </button>
             {/each}
         </div>
-        
-        <p>합산금액: {Math.round(sidessum)}</p>
+        <button on:click={ad}>계산</button>
+        <p>합산금액: {sidessum}</p>
 
 
 <style>

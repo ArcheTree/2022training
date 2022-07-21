@@ -3,13 +3,19 @@ import buger from "../DB/buger";
 
     let bugers=[]
     let buc =[]
-    let i
+    
+
+    function ad(){
+        buc=buc.slice(8)
+        for(let i =0 ; i <bugers.length ; i++)
+        buc=buc.concat(buger[bugers[i]-1].cost)
+    }
 
 function join(bugers) {
 		if (bugers.length === 1) return bugers[0];
 		return `${bugers.slice(0, -1).join(', ')} and ${bugers[bugers.length - 1]}`;
 	}
-$: sum = bugers.reduce((t, n) => t + n, 0);
+$:sum = buc.reduce((t, n) => t + n, 0);
 
 
 </script>
@@ -19,7 +25,7 @@ $: sum = bugers.reduce((t, n) => t + n, 0);
         {#each buger as buge(buge.id)}
             <button id="d"  >
                 <label class="square" >
-                    <input type=checkbox bind:group={bugers} value={buge.cost}  >
+                    <input type=checkbox bind:group={bugers} value={buge.id} >
                     <img src={buge.image} alt = "{buge.name}사진" />
                     <p>{buge.name} - {buge.cost}원</p>
                 </label>
@@ -27,6 +33,7 @@ $: sum = bugers.reduce((t, n) => t + n, 0);
         {/each}
 
     </div>
+    <button on:click={ad}>계산</button>
     <p>합산 금액 : {sum}</p>
     <style>
     .grid{
