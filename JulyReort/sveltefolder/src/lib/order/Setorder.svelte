@@ -6,6 +6,7 @@ import SetBuger from "./SetBuger.svelte"
 import { onMount } from "svelte";
 
 
+
 let selectbuger = false
 let selectedoption =false
 let selectedside = false
@@ -59,7 +60,7 @@ function payaction(){
     <button id="next" on:click={payaction}>결제하기</button>
 {/if}
 
-  
+ 
 
 <style>
 

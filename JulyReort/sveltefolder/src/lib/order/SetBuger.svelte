@@ -15,7 +15,9 @@ function gooption(selitem,standardcost){
     console.log(setbuger,setcost)
 }
 
-onDestroy(()=>{alert(`선택하신 상품은 ${setbuger} 이고 기본가격은 ${setbugercost}입니다.`)})
+onDestroy(()=>{
+    
+})
 
 
 </script>

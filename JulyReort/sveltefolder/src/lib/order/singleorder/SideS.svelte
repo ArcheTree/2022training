@@ -1,17 +1,17 @@
 <script>
 
     import sides from "../DB/sides";
+    import { sidecost } from "../stores"
     
         let sidemenu=[]
-        let addsidcost = 0
-        let sidecost =0
         let payment=[]
     
         function ad(){
-            payment=payment.slice(8)
-        for(let i =0 ; i <sides.length ; i++)
-        payment=payment.concat(sides[sidemenu[i]-1].opencost)
-
+        payment=payment.slice(8)
+        for(let i =0 ; i <sides.length ; i++){
+            payment=payment.concat(sides[sidemenu[i]-1].opencost)
+        }
+        sidecost.update(t=>sidessum)
     }
         function join(sidemenu) {
             if (sidemenu.length === 1) return sidemenu[0];

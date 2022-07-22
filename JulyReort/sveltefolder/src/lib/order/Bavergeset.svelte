@@ -7,7 +7,6 @@ let bavergechange
 let bavername
 
 
-onDestroy(()=>{alert(`선택하신 상품은 ${bavername} 이고 추가가격은 ${bavergechange}원 입니다.`)})
 </script>
 
 

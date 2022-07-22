@@ -1,4 +1,5 @@
 <script>
+import PayCost from "./order/PayCost.svelte";
 import Setorder from "./order/Setorder.svelte";
 import BavergesS from "./order/singleorder/BavergesS.svelte";
 import BugerS from "./order/singleorder/BugerS.svelte";
@@ -51,7 +52,9 @@ function drinkorder(){
 {:else if d}
 <BavergesS />
 {/if}
-
+<div id="cash">
+<PayCost />
+</div>
 
 <style>
 
@@ -75,6 +78,9 @@ function drinkorder(){
 .navbar_lng{
   width: 100%;
   height: 30px;
+}
+#cash{
+  float: left;
 }
 
 

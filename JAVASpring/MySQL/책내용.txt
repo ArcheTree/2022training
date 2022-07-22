@@ -1,0 +1,14 @@
+D3 ->ncs UI/UX 요구사항분석, 사용자 화면설계, 사용자 인터페이스 구현 ->자바스크립트 라이브러리(그래프보여주는 것) (CSS,HTML,JS필수)
+(사실상 파이선에서 그래프를 그릴 수 있음)
+
+JSP=(HTML,CSS,JS,EL,JSTL) - 고대유물 ㅋㅋㅋㅋ
+===> 대신 svelte 를 선택
+
+서버프로그램기능 구현 
+
+php->웹(30% - 2000대 초반 등장)
+c# ->.net asp 
+python ->Django, flask
+java->spring (60% 전통강자)
+jS->Node.js express (신흥강자)
+

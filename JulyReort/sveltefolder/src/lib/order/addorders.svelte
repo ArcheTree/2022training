@@ -20,7 +20,7 @@ function refundadd(itemcost){
 }
 
 onDestroy(()=>{
-    alert(`선택하신 옵션으로 ${totalcost/2}원을 추가결제가 필요합니다.`)
+    
     for(let i =0; i<addoptions.length;i++){
         addoptions[i]["addition"]=false
     }

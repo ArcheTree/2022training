@@ -1,5 +1,6 @@
 <script>
 import buger from "../DB/buger";
+import { bugercost } from "../stores";
 
     let bugers=[]
     let buc =[]
@@ -9,6 +10,7 @@ import buger from "../DB/buger";
         buc=buc.slice(8)
         for(let i =0 ; i <bugers.length ; i++)
         buc=buc.concat(buger[bugers[i]-1].cost)
+        bugercost.update(t=>sum)
     }
 
 function join(bugers) {
@@ -16,6 +18,7 @@ function join(bugers) {
 		return `${bugers.slice(0, -1).join(', ')} and ${bugers[bugers.length - 1]}`;
 	}
 $:sum = buc.reduce((t, n) => t + n, 0);
+
 
 
 </script>

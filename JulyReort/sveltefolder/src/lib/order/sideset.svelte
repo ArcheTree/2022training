@@ -5,7 +5,9 @@
     let sidename
     import { onDestroy } from "svelte";
 
-    onDestroy(()=>{alert(`선택하신 옵션으로 ${sidechange}원을 추가결제가 필요합니다.`)})
+    onDestroy(()=>{
+        
+    })
 </script>
 
 <h4> 세트 : 사이드메뉴 변경</h4>
