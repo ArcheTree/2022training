@@ -1,0 +1,12 @@
+root계정을 잊지말아야함(최고 권한을 주는 PW)
+1111
+
+
+DB 이름 -> 유저이름 -> 스키마이름 순으로 기억해야함(PW있음)
+
+
+eclips ->maven -> JRE S L 버전 1.8이상(람다 등 대규모 업글된버전이라 1.8이상 필요)org.apache.maven ->qickstart 1.1
+
+<dependency> 업글은 자주하기됨(라이브러리 다운로드)
+
+
