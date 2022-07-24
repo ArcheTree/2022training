@@ -1,27 +1,26 @@
 <script>
 
     import sides from "../DB/sides";
-    import { sidecost } from "../stores"
+    import { sidecost } from "../stores";
     
         let sidemenu=[]
         let payment=[]
     
         function ad(){
         payment=payment.slice(8)
-        for(let i =0 ; i <sides.length ; i++){
+        for(let i =0 ; i <sides.length ; i++)
             payment=payment.concat(sides[sidemenu[i]-1].opencost)
+        
+            sidecost.update(t=>sidessum)
         }
-        sidecost.update(t=>sidessum)
-    }
+    
         function join(sidemenu) {
             if (sidemenu.length === 1) return sidemenu[0];
             return `${sidemenu.slice(0, -1).join(', ')} and ${sidemenu[sidemenu.length - 1]}`;
         }
+
+
         $: sidessum = payment.reduce((t, n) => t + n, 0);
-        
-        
-        
-       
    
     </script>
         <h4> 사이드 단품주문 </h4>
