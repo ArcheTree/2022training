@@ -1,10 +1,15 @@
 <script>
 import baverges from "./DB/baverges";
 import { onDestroy } from "svelte";
+import { setbavergecost } from "./stores";
 
-let bavergeitem =1
+let bavergeitem = 0;
 let bavergechange
 let bavername
+
+onDestroy(()=>{
+    setbavergecost.update(t=>bavergechange)
+})
 
 
 </script>
@@ -16,7 +21,7 @@ let bavername
         <button id="d" on:click={()=>{bavergechange= baverge.setStand
                                         bavername = baverge.name}}>
             <label class="square">
-                <input type=radio bind:group={bavergeitem} value={baverge.id}
+                <input type=radio bind:group={bavergeitem} value={baverge.id} default
                 style="color: {baverge.color}" 
                 >
                 <img src={baverge.image} alt = "{baverge.name}사진" />

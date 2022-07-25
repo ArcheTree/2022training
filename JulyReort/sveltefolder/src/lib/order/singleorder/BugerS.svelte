@@ -10,14 +10,14 @@ import { bugercost } from "../stores";
         buc=buc.slice(8)
         for(let i =0 ; i <bugers.length ; i++)
         buc=buc.concat(buger[bugers[i]-1].cost)
-        bugercost.update(t=>sum)
     }
-
-function join(bugers) {
-		if (bugers.length === 1) return bugers[0];
+    
+    function join(bugers) {
+        if (bugers.length === 1) return bugers[0];
 		return `${bugers.slice(0, -1).join(', ')} and ${bugers[bugers.length - 1]}`;
 	}
-$:sum = buc.reduce((t, n) => t + n, 0);
+    $:sum = buc.reduce((t, n) => t + n, 0);
+    $:bugercost.update(t=>sum)
 
 
 

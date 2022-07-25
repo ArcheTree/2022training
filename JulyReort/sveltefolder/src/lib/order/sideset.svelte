@@ -1,12 +1,14 @@
 <script>
     import sides from "./DB/sides";
-    let sideitem = 1 
+    import { onDestroy } from "svelte";
+    import { setsidecost } from "./stores";
+    
+    let sideitem = 0;
     let sidechange
     let sidename
-    import { onDestroy } from "svelte";
 
     onDestroy(()=>{
-        
+        setsidecost.update(t=>sidechange)
     })
 </script>
 

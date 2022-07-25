@@ -2,11 +2,11 @@
 import { onMount,onDestroy } from "svelte";
 
 import buger from "./DB/buger";
+import { setbugercost } from "./stores";
 
 let setbuger 
 let setcost
 let bugeritem=1
-let setbugercost
 
 function gooption(selitem,standardcost){
     console.log(selitem,standardcost)
@@ -16,14 +16,14 @@ function gooption(selitem,standardcost){
 }
 
 onDestroy(()=>{
-    
 })
+$:setbugercost.update(t=>setcost)
 
 
 </script>
 <div class="grid">
     {#each buger as buge(buge.id)}
-        <button id="d" style="background-color: {buge.color}" on:click={()=>{setbugercost=buge.setStand}}>
+        <button id="d" style="background-color: {buge.color}" on:click={()=>{setcost=buge.setStand}}>
             <label class="square" >
                 <input type=radio bind:group={bugeritem} value={buge.id} 
                 on:click={()=>gooption(buge.name,buge.cost)}
@@ -42,7 +42,7 @@ onDestroy(()=>{
             <td class = "selitem">{setbuger}세트</td>
         </tr>
         <tr>
-            <td colspan = 2>기본 가격 : {setbugercost}원</td>
+            <td colspan = 2>기본 가격 : {setcost}원</td>
 
         </tr>
         </table>

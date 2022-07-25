@@ -1,4 +1,5 @@
 <script>
+
 import {
     setbuger, setbugercost,setadd,setaddcost,setside,setsidecost,setbaverge,setbavergecost,singlebuger,bugercost,singlesides,sidecost,singlebaverges,bavergecost
 } from "./stores"
@@ -37,10 +38,16 @@ sidecost.subscribe(t=>{ sidecostpoint=t})
 singlebaverges.subscribe(t=>{ singlebavergespoint=t})
 bavergecost.subscribe(t=>{ bavergecostpoint=t})
 
+function cash(){
+  
+}
+
+
 </script>
 
 <h1>구매상품 총합</h1>
 <table>
+    {#if setbugercostpoint !== 0}
     <tr>
         <td>{setbugerpoint} 세트</td>
         <td>{setbugercostpoint}원</td>
@@ -60,22 +67,30 @@ bavergecost.subscribe(t=>{ bavergecostpoint=t})
     <tr>
         <td colspan=2>세트결제금액 : {setbugercostpoint+setaddcostpoint+setsidecostpoint+setbavergecostpoint}</td>
     </tr>
+    {/if}
+    {#if  bugercostpoint !=0}
     <tr>
         <td>{singlebugerpoint} 단품</td>
         <td>{bugercostpoint}원</td>
     </tr>
+    {/if}
+    {#if sidecostpoint != null|| sidecostpoint != 0}
     <tr>
         <td>{singlesidespoint} 단품</td>
         <td>{sidecostpoint}원</td>
     </tr>
+    {/if}
+    {#if bavergecostpoint !=0}
     <tr>
         <td>{singlebavergespoint} 단품</td>
         <td>{bavergecostpoint}원</td>
     </tr>
+    {/if}
     <tr>
-        <td colspan=2>최종결제금액 : {setbugercostpoint}+{setaddcostpoint}+{setsidecostpoint}+{setbavergecostpoint}+{bugercostpoint}+{sidecostpoint}+{bavergecostpoint}</td>
+        <td colspan=2>최종결제금액 : {setbugercostpoint+setaddcostpoint+setsidecostpoint+setbavergecostpoint+bugercostpoint+sidecostpoint+bavergecostpoint}</td>
     </tr>
 
 
-
+    
+    
 </table>

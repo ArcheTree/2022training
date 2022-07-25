@@ -13,7 +13,6 @@ let selectedside = false
 let selectedbaverge = false
 
 onMount(() => {
-        selectedbaverge = false
         selectbuger = true
 	})
 
@@ -36,7 +35,7 @@ function gobaverge(){
     selectedbaverge = true
 }
 function payaction(){
-    selectbuger = true
+    selectbuger = false
     selectedoption = false
     selectedside = false
     selectedbaverge = false

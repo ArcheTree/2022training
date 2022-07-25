@@ -11,16 +11,16 @@
         for(let i =0 ; i <sides.length ; i++)
             payment=payment.concat(sides[sidemenu[i]-1].opencost)
         
-            sidecost.update(t=>sidessum)
         }
-    
+        
         function join(sidemenu) {
             if (sidemenu.length === 1) return sidemenu[0];
             return `${sidemenu.slice(0, -1).join(', ')} and ${sidemenu[sidemenu.length - 1]}`;
         }
-
-
+        
+        
         $: sidessum = payment.reduce((t, n) => t + n, 0);
+        $: sidecost.update(t=>sidessum)
    
     </script>
         <h4> 사이드 단품주문 </h4>

@@ -4,6 +4,7 @@
 import addoptions from "./DB/addoptions";
 import { flip } from 'svelte/animate';
 import { onDestroy } from "svelte";
+import { setaddcost } from "./stores";
 
 let totalcost = 0
 let addcost
@@ -24,7 +25,7 @@ onDestroy(()=>{
     for(let i =0; i<addoptions.length;i++){
         addoptions[i]["addition"]=false
     }
-
+    setaddcost.update(t=>totalcost/2)
 })
 
 

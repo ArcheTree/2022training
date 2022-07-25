@@ -9,6 +9,7 @@ let a =false
 let b =false
 let c =false
 let d =false
+let pay = false
 
 function setmenu(){
   a = true
@@ -34,6 +35,9 @@ function drinkorder(){
   c = false
   d = true
 }
+function paypage(){
+  pay = !pay
+}
 </script>
 <div id="ordercontain">
     <ul>
@@ -52,10 +56,13 @@ function drinkorder(){
 {:else if d}
 <BavergesS />
 {/if}
-<div id="cash">
-<PayCost />
-</div>
 
+
+<button on:click={paypage}>계산하기</button>
+{#if pay}
+  <PayCost />
+
+{/if}
 <style>
 
 #ordercontain{
@@ -79,9 +86,9 @@ function drinkorder(){
   width: 100%;
   height: 30px;
 }
-#cash{
+/* #cash{
   float: left;
-}
+} */
 
 
 </style>
