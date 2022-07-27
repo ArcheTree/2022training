@@ -1,0 +1,13 @@
+eclips market place(web 읎으면) ->jsp 검색 (UTF-8 설정해야함)
+Eclipse Enterprise java and web Developer tools 3.26
+  
+window->refernece ->web->css,html,javasc-> 언어 맨위(unicode uft-8로 변경
+
+
+
+spr web
+spr boot devtools
+mysql driver
+spr data jpa
+
+
