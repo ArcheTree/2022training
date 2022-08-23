@@ -1,0 +1,11 @@
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\Parkingmanager\ParkingManager\bin\Debug\ParkingManager.exe.config
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\Parkingmanager\ParkingManager\bin\Debug\ParkingManager.exe
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\Parkingmanager\ParkingManager\bin\Debug\ParkingManager.pdb
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\Parkingmanager\ParkingManager\obj\Debug\ParkingManager.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\Parkingmanager\ParkingManager\obj\Debug\ParkingManager.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\Parkingmanager\ParkingManager\obj\Debug\ParkingManager.MainForm.resources
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\Parkingmanager\ParkingManager\obj\Debug\ParkingManager.Properties.Resources.resources
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\Parkingmanager\ParkingManager\obj\Debug\ParkingManager.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\Parkingmanager\ParkingManager\obj\Debug\ParkingManager.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\Parkingmanager\ParkingManager\obj\Debug\ParkingManager.exe
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\Parkingmanager\ParkingManager\obj\Debug\ParkingManager.pdb
