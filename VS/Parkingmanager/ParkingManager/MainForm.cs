@@ -26,6 +26,8 @@ namespace ParkingManager
                 textBox_driverName.Text = DataManager.Cars[0].driverName;
                 textBox_phoneNumber.Text = DataManager.Cars[0].phoneNumber;
 
+                textBox_findNum.Text = textBox_parkingSpot.Text;
+
 
             }
             catch (Exception)
@@ -151,8 +153,7 @@ namespace ParkingManager
                         DataManager.Save
                             (textBox_parkingSpot.Text, "", "", "",true);
 
-                        string contents = $"주차공간{textBox_parkingSpot.Text}에 " +
-                            $"{oldCar}차를 출차했습니다.";
+                        string contents = $"주차공간{textBox_parkingSpot.Text}에 " +  $"{oldCar}차를 출차했습니다.";
 
                         WriteLog(contents);
                         MessageBox.Show(contents);
@@ -194,12 +195,116 @@ namespace ParkingManager
                 textBox_carNumber.Text = car.carNumber;
                 textBox_driverName.Text = car.driverName;
                 textBox_phoneNumber.Text = car.phoneNumber;
+                textBox_findNum.Text = car.ParkingSpot.ToString();
 
             }
             catch (Exception)
             {
 
             }
+        }
+        //Cars 리스트에서 매개변수인 parkingspot에 해달하는 공간 정보 찾는 것 .. single 말고 foreach로 찾는것
+        private string lookupParkingSpot (int parkingSpot)
+        {
+            string parkiedCarNum = ""; //주차된 차 넘버
+            try
+            {
+                foreach(var item in DataManager.Cars)
+                {
+                    if(item.ParkingSpot == parkingSpot)
+                    {
+                        parkiedCarNum = item.carNumber;
+                        break;
+                    }
+                }
+            }
+            catch(Exception)
+            {
+
+            }
+            return parkiedCarNum; //해당 공간에 차가 없으면 ""으로 반환한다
+
+        }
+        //해당 공간에 정보를 메시지 박스로 띄움
+        //select 문 안쓰고 그냥 cars에서 바로 찾을것
+
+        private void button_find_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int parkingSpot = int.Parse(textBox_findNum.Text);
+                string ParkingCar = lookupParkingSpot(parkingSpot);
+                string contents = "";
+                if(ParkingCar.Trim() != "")
+                {
+                    contents = $"주차공간 {parkingSpot}에 " + $"주차된 차는 {ParkingCar}입니다.";
+                }
+                else
+                {
+                    contents = $"주차공간 {parkingSpot}에 차가 없습니다.";
+                }
+                WriteLog(contents);
+                MessageBox.Show(contents);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        //db에서 다시 읽어오는것
+        private void button_refresh_Click(object sender, EventArgs e)
+        {
+            DataManager.Load();
+            dataGridView_parkingManager.DataSource = null;
+            if(DataManager.Cars.Count > 0)
+            {
+                dataGridView_parkingManager.DataSource = DataManager.Cars;
+            }
+        }
+
+        //주차공간을 추가하거나 삭제하는 메소드
+        //parkingSpot - 공간번호
+        //command-삭제 혹은 추가
+        private void spot_add_delete(string parkingSpot, string command)
+        {
+            //Tryparse = int.Parse와 try catch가 합쳐진것
+            //첫번쨰 매개변수가 123 이런식으로 숫자로 변환이 가능한거면 sPot이라는 변수 선언하고 그 변수에 숫자를 넣음
+            //그리고TryParse라는 이 메소든는 true를 리턴함
+            //공백이나 엉뚱한 값을 입력하면 sPot에 0이들어감
+            //tryParse라는 ㅁ소드는 false값을 리턴함
+            int.TryParse(parkingSpot, out int pSpot);
+            if(pSpot <= 0)
+            {
+                WriteLog("주차 공간 번호는 0이상의 숫자이어야합니다.");
+                MessageBox.Show("주차 공간 번호는 0이상의 숫자이어야합니다.");
+                return;
+            }
+            string contents = ""; //로그에 넣을 컨텐츠
+            //DataManager에 Save라는 메소드르 추가
+            //기조은 만들었던 save는 주차/출차용
+            //이거는 주차공간의 추가/삭제용
+            bool check = DataManager.Save(command, parkingSpot, out contents);
+
+            //check 주차공간이 성공적으로 추가삭제될 경우
+            //만약 주차공간에 이미 주차가 있거나 없는걸 삭제하련ㄴ 경우
+            //전채 갱신 버튼을 누를 필요 없음
+            if (check)
+            {
+                button_refresh.PerformClick();
+                MessageBox.Show(contents);
+                WriteLog(contents);
+            }
+        }
+
+        private void button_delete_Click(object sender, EventArgs e)
+        {
+            spot_add_delete(textBox_findNum.Text, "delete");
+        }
+
+        private void button_add_Click(object sender, EventArgs e)
+        {
+            spot_add_delete(textBox_findNum.Text, "insert");
         }
     }
 }

@@ -99,21 +99,21 @@
             // 
             // textBox_phoneNumber
             // 
-            this.textBox_phoneNumber.Location = new System.Drawing.Point(81, 99);
+            this.textBox_phoneNumber.Location = new System.Drawing.Point(81, 109);
             this.textBox_phoneNumber.Name = "textBox_phoneNumber";
             this.textBox_phoneNumber.Size = new System.Drawing.Size(100, 21);
             this.textBox_phoneNumber.TabIndex = 7;
             // 
             // textBox_driverName
             // 
-            this.textBox_driverName.Location = new System.Drawing.Point(81, 72);
+            this.textBox_driverName.Location = new System.Drawing.Point(81, 77);
             this.textBox_driverName.Name = "textBox_driverName";
             this.textBox_driverName.Size = new System.Drawing.Size(100, 21);
             this.textBox_driverName.TabIndex = 6;
             // 
             // textBox_carNumber
             // 
-            this.textBox_carNumber.Location = new System.Drawing.Point(80, 48);
+            this.textBox_carNumber.Location = new System.Drawing.Point(81, 48);
             this.textBox_carNumber.Name = "textBox_carNumber";
             this.textBox_carNumber.Size = new System.Drawing.Size(100, 21);
             this.textBox_carNumber.TabIndex = 5;
@@ -128,7 +128,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 102);
+            this.label5.Location = new System.Drawing.Point(22, 114);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 3;
@@ -137,7 +137,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 75);
+            this.label4.Location = new System.Drawing.Point(22, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 2;
@@ -146,7 +146,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 48);
+            this.label3.Location = new System.Drawing.Point(22, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 12);
             this.label3.TabIndex = 1;
@@ -184,6 +184,7 @@
             this.button_refresh.TabIndex = 13;
             this.button_refresh.Text = "전체 갱신";
             this.button_refresh.UseVisualStyleBackColor = true;
+            this.button_refresh.Click += new System.EventHandler(this.button_refresh_Click);
             // 
             // button_delete
             // 
@@ -193,6 +194,7 @@
             this.button_delete.TabIndex = 12;
             this.button_delete.Text = "공간 삭제";
             this.button_delete.UseVisualStyleBackColor = true;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
             // button_add
             // 
@@ -202,6 +204,7 @@
             this.button_add.TabIndex = 11;
             this.button_add.Text = "공간 추가";
             this.button_add.UseVisualStyleBackColor = true;
+            this.button_add.Click += new System.EventHandler(this.button_add_Click);
             // 
             // button_find
             // 
@@ -211,6 +214,7 @@
             this.button_find.TabIndex = 10;
             this.button_find.Text = "공간 조회";
             this.button_find.UseVisualStyleBackColor = true;
+            this.button_find.Click += new System.EventHandler(this.button_find_Click);
             // 
             // textBox_findNum
             // 

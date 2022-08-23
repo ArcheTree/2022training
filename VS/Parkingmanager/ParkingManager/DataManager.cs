@@ -90,5 +90,57 @@ namespace ParkingManager
 
             }
         }
+
+        public static bool Save(string command, string parkingSpot, out string contents)
+        {
+
+            DBHelper.selectQuery(int.Parse(parkingSpot));
+            //out 키워드의 특징이 해당 메소드에 반드시 해당 변수의 값을 지정해야함.
+            contents = "";
+            if(command == "insert")
+            {
+                //ref = reference
+                //contents 변수의 위치(메모리 상에서 어디 있는지) DBinsert나 DBdelete 안에서 contents 값 변경하기 //실제 변경됨
+                //out 키워드와 유사, out키워드는 값을 바꾸는 것에 초첨을 맞춘거라면 ref는 이 변수의 위치(=주소값)을 전달하는 것에 초점을 맞춤
+
+                //정확히 주소값이 아닌 참조값임 C#과 JAVA는 주소값 개념이 없음
+                //포인터 문법처럼 주소를 쓰거나 그러진 않음
+                return DBInsert(parkingSpot, ref contents);
+            }
+            else
+            {
+                return DBDelete(parkingSpot, ref contents);
+            }
+        }
+
+        private static bool DBDelete(string parkingSpot, ref string contents)
+        {
+            if (DBHelper.dt.Rows.Count != 0)  //해당 공간이 있는 경우
+            {
+                DBHelper.deleteQuery(parkingSpot);
+                contents = $"주차공간 {parkingSpot}이/가 삭제되었습니다.";
+                return true;
+            }
+            else
+            {
+                contents = "해당 주차공간은 없는 공간입니다.";
+                return false;
+            }
+        }
+
+        private static bool DBInsert(string parkingSpot, ref string contents)
+        {
+            if (DBHelper.dt.Rows.Count == 0)
+            {
+                DBHelper.insertQuery(parkingSpot);
+                contents = $"주차공간 {parkingSpot}이/가 추가되었습니다.";
+                return true;
+            }
+            else
+            {
+                contents = "해당 주차공간이 이미 존재합니다.";
+                return false;
+            }
+        }
     }
 }
