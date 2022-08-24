@@ -1,0 +1,11 @@
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CsharpStudy08\CSharpParcticeWF\bin\Debug\CSharpParcticeWF.exe.config
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CsharpStudy08\CSharpParcticeWF\bin\Debug\CSharpParcticeWF.exe
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CsharpStudy08\CSharpParcticeWF\bin\Debug\CSharpParcticeWF.pdb
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CsharpStudy08\CSharpParcticeWF\obj\Debug\CSharpParcticeWF.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CsharpStudy08\CSharpParcticeWF\obj\Debug\CSharpParcticeWF.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CsharpStudy08\CSharpParcticeWF\obj\Debug\CSharpParcticeWF.Form1.resources
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CsharpStudy08\CSharpParcticeWF\obj\Debug\CSharpParcticeWF.Properties.Resources.resources
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CsharpStudy08\CSharpParcticeWF\obj\Debug\CSharpParcticeWF.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CsharpStudy08\CSharpParcticeWF\obj\Debug\CSharpParcticeWF.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CsharpStudy08\CSharpParcticeWF\obj\Debug\CSharpParcticeWF.exe
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CsharpStudy08\CSharpParcticeWF\obj\Debug\CSharpParcticeWF.pdb

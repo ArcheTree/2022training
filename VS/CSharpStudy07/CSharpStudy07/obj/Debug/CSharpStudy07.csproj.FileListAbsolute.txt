@@ -1,0 +1,8 @@
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07\bin\Debug\CSharpStudy07.exe.config
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07\bin\Debug\CSharpStudy07.exe
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07\bin\Debug\CSharpStudy07.pdb
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07\obj\Debug\CSharpStudy07.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07\obj\Debug\CSharpStudy07.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07\obj\Debug\CSharpStudy07.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07\obj\Debug\CSharpStudy07.exe
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07\obj\Debug\CSharpStudy07.pdb

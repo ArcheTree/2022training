@@ -1,0 +1,11 @@
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07_02\bin\Debug\CSharpStudy07_02.exe.config
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07_02\bin\Debug\CSharpStudy07_02.exe
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07_02\bin\Debug\CSharpStudy07_02.pdb
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07_02\obj\Debug\CSharpStudy07_02.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07_02\obj\Debug\CSharpStudy07_02.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07_02\obj\Debug\CSharpStudy07_02.Form1.resources
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07_02\obj\Debug\CSharpStudy07_02.Properties.Resources.resources
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07_02\obj\Debug\CSharpStudy07_02.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07_02\obj\Debug\CSharpStudy07_02.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07_02\obj\Debug\CSharpStudy07_02.exe
+C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\CSharpStudy07\CSharpStudy07_02\obj\Debug\CSharpStudy07_02.pdb

@@ -17,6 +17,7 @@ namespace ParkingManager
             InitializeComponent();
             label_now.Text
                 = DateTime.Now.ToString("yyyy년 MM월 dd일 hh시 mm분 ss초");
+       
 
             try
             {
@@ -25,10 +26,7 @@ namespace ParkingManager
                 textBox_carNumber.Text = DataManager.Cars[0].carNumber;
                 textBox_driverName.Text = DataManager.Cars[0].driverName;
                 textBox_phoneNumber.Text = DataManager.Cars[0].phoneNumber;
-
                 textBox_findNum.Text = textBox_parkingSpot.Text;
-
-
             }
             catch (Exception)
             {
@@ -36,7 +34,6 @@ namespace ParkingManager
             }
             if (DataManager.Cars.Count > 0)
                 dataGridView_parkingManager.DataSource = DataManager.Cars;
-
         }
 
         private void timer_now_Tick(object sender, EventArgs e)
@@ -110,13 +107,7 @@ namespace ParkingManager
 
                         WriteLog(contents);
                         MessageBox.Show(contents);
-
-
                     }
-
-
-
-
                 }
                 catch (Exception)
                 {
@@ -157,14 +148,8 @@ namespace ParkingManager
 
                         WriteLog(contents);
                         MessageBox.Show(contents);
-
-
                     }
-
-
-
-
-                }
+                 }
                 catch (Exception)
                 {
                     MessageBox.Show($"주차 공간 {textBox_parkingSpot.Text}은/는 없습니다.");
@@ -189,8 +174,7 @@ namespace ParkingManager
             {
                 //내가 클릭한 행(=row)의 데이터들을
                 //ParkingCar로 형변환한 것(as = 형변환 키워드)
-                ParkingCar car 
-                    = dataGridView_parkingManager.CurrentRow.DataBoundItem as ParkingCar;
+                ParkingCar car = dataGridView_parkingManager.CurrentRow.DataBoundItem as ParkingCar;
                 textBox_parkingSpot.Text = car.ParkingSpot.ToString();
                 textBox_carNumber.Text = car.carNumber;
                 textBox_driverName.Text = car.driverName;
@@ -282,7 +266,7 @@ namespace ParkingManager
             }
             string contents = ""; //로그에 넣을 컨텐츠
             //DataManager에 Save라는 메소드르 추가
-            //기조은 만들었던 save는 주차/출차용
+            //기존에 만들었던 save는 주차/출차용
             //이거는 주차공간의 추가/삭제용
             bool check = DataManager.Save(command, parkingSpot, out contents);
 
