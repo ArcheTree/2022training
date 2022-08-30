@@ -10,8 +10,7 @@ namespace ParkingManager
 {
     public class DataManager
     {
-        public static List<ParkingCar> Cars 
-            = new List<ParkingCar>();
+        public static List<ParkingCar> Cars = new List<ParkingCar>();
 
         //정적 생성자
         //DataManager에 접근하려고 할 때 불러와짐

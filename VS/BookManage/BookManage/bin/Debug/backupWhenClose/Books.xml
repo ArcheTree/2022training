@@ -1,0 +1,12 @@
+<books>
+<book>
+<isbn>1241232</isbn>
+<name>세상을 가져라</name>
+<publisher>세상출판사</publisher>
+<page>123</page>
+<borrowedAt>0001-01-01 오전 12:00:00</borrowedAt>
+<isBorrowed>0</isBorrowed>
+<userId>0</userId>
+<userName></userName>
+</book>
+</books>
