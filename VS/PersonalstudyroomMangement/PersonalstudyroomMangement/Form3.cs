@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PersonalstudyroomMangement
 {
-    public partial class Form_mamber : Form
+    public partial class Form_now : Form
     {
-        public Form_mamber()
+        public Form_now()
         {
             InitializeComponent();
         }

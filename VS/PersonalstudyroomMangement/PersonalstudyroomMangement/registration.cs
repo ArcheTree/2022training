@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace PersonalstudyroomMangement
 {
-    public class registration
+    public class Registration
     {
-        public string Name { get; set; }
-        public string seatNum { get; set; }
+        public string userId { get; set; }
+        public int roomNum { get; set; }
+        public int seatNum { get; set; }
         public int takeDay { get; set; }
-        public string Phone { get; set; }
         public int pay { get; set; }
 
 

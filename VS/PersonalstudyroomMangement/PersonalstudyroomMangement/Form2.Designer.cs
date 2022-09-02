@@ -1,6 +1,6 @@
 ﻿namespace PersonalstudyroomMangement
 {
-    partial class Form2
+    partial class Form_mamber
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox_birth = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBox_phone = new System.Windows.Forms.TextBox();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_id = new System.Windows.Forms.TextBox();
@@ -39,8 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -62,14 +64,16 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 17);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(230, 462);
+            this.dataGridView1.Size = new System.Drawing.Size(225, 455);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox_birth);
             this.groupBox2.Controls.Add(this.textBox_phone);
             this.groupBox2.Controls.Add(this.textBox_name);
             this.groupBox2.Controls.Add(this.textBox_id);
@@ -84,12 +88,43 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "신규정보";
             // 
-            // textBox_birth
+            // button2
             // 
-            this.textBox_birth.Location = new System.Drawing.Point(81, 210);
-            this.textBox_birth.Name = "textBox_birth";
-            this.textBox_birth.Size = new System.Drawing.Size(100, 21);
-            this.textBox_birth.TabIndex = 7;
+            this.button2.Location = new System.Drawing.Point(120, 257);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 44);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "검색";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(26, 257);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 44);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "신규등록";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label6.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(47, 338);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 20);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "※주의사항";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 380);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(181, 72);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "ID는 중복불가\r\n\r\n연락처는 필수확인입니다.\r\n\r\n생년월일은 정확히 작성해주세요\r\n\r\n";
             // 
             // textBox_phone
             // 
@@ -148,35 +183,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID :";
             // 
-            // label5
+            // dateTimePicker1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 342);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(171, 60);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "ID는 중복불가\r\n\r\n생년 월일은 6자리 숫자로 기입\r\n\r\n연락처는 필수확인\r\n";
+            this.dateTimePicker1.Location = new System.Drawing.Point(72, 209);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(123, 21);
+            this.dateTimePicker1.TabIndex = 12;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label6.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(47, 300);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 20);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "※주의사항";
-            // 
-            // Form2
+            // Form_mamber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 503);
+            this.ClientSize = new System.Drawing.Size(502, 499);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form2";
-            this.Text = "신규등록";
+            this.Name = "Form_mamber";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "ID_manage";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -191,7 +214,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox_birth;
         private System.Windows.Forms.TextBox textBox_phone;
         private System.Windows.Forms.TextBox textBox_name;
         private System.Windows.Forms.TextBox textBox_id;
@@ -200,5 +222,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
