@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker_birth = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,10 +44,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.registerationdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -60,16 +67,23 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.nameDataGridViewTextBoxColumn,
+            this.phoneDataGridViewTextBoxColumn,
+            this.registerationdayDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.userBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(3, 17);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(225, 455);
+            this.dataGridView1.Size = new System.Drawing.Size(231, 455);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.dateTimePicker_birth);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.label6);
@@ -88,14 +102,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "신규정보";
             // 
+            // dateTimePicker_birth
+            // 
+            this.dateTimePicker_birth.Location = new System.Drawing.Point(72, 209);
+            this.dateTimePicker_birth.Name = "dateTimePicker_birth";
+            this.dateTimePicker_birth.Size = new System.Drawing.Size(123, 21);
+            this.dateTimePicker_birth.TabIndex = 12;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(120, 257);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 44);
             this.button2.TabIndex = 11;
-            this.button2.Text = "검색";
+            this.button2.Text = "수정";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -105,6 +127,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "신규등록";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -183,12 +206,33 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID :";
             // 
-            // dateTimePicker1
+            // Id
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(72, 209);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(123, 21);
-            this.dateTimePicker1.TabIndex = 12;
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            // 
+            // registerationdayDataGridViewTextBoxColumn
+            // 
+            this.registerationdayDataGridViewTextBoxColumn.DataPropertyName = "registerationday";
+            this.registerationdayDataGridViewTextBoxColumn.HeaderText = "registerationday";
+            this.registerationdayDataGridViewTextBoxColumn.Name = "registerationdayDataGridViewTextBoxColumn";
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(PersonalstudyroomMangement.User);
             // 
             // Form_mamber
             // 
@@ -204,6 +248,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,6 +269,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_birth;
+
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn registerationdayDataGridViewTextBoxColumn;
     }
 }

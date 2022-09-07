@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,20 +13,26 @@ namespace PersonalstudyroomMangement
 {
     public partial class Form_charge : Form
     {
-        Registration registration= new Registration();
+        int seatNum = 0;
+        int roomNum = 0;
+
         string billing = "";
 
-        public Form_charge()
+        public Form_charge(int seatnum, int roomnum)
         {
             InitializeComponent();
             label_money.Text = billing;
-            label_setNum.Text = registration.seatNum.ToString();
-        }
+            int temp = seatnum;
+            string temp2 = temp.ToString();
+            label_setNum.Text = temp2;
+            roomNum = roomnum;
 
-  
+        }
+     
+
         private void domainUpDown_day_SelectedItemChanged(object sender, EventArgs e)
         {
-            if(registration.roomNum == 201 || registration.roomNum == 202 || registration.roomNum == 203)
+            if(roomNum == 201 ||roomNum == 202 ||roomNum == 203)
 
                 if (domainUpDown_day.SelectedItem.Equals("1일"))
                 {
@@ -75,7 +82,7 @@ namespace PersonalstudyroomMangement
 
         private void button_pay_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"{registration.seatNum}번자리 {registration.Name}님 {registration.startday}~{registration.endday}일까지 결제금 {registration.pay}입니다");
+            MessageBox.Show($"{seatNum}번자리");
         }
     }
 }

@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.components = new System.ComponentModel.Container();
+            this.dateTimePicker_start = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_end = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,23 +45,35 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.seatNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.takeDayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.payDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enddayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.refundpayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.registrationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registrationBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dateTimePicker_start
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(98, 20);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dateTimePicker_start.Location = new System.Drawing.Point(98, 20);
+            this.dateTimePicker_start.Name = "dateTimePicker_start";
+            this.dateTimePicker_start.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker_start.TabIndex = 0;
+            this.dateTimePicker_start.ValueChanged += new System.EventHandler(this.dateTimePicker_start_ValueChanged);
             // 
-            // dateTimePicker2
+            // dateTimePicker_end
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(354, 20);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker2.TabIndex = 1;
+            this.dateTimePicker_end.Location = new System.Drawing.Point(354, 20);
+            this.dateTimePicker_end.Name = "dateTimePicker_end";
+            this.dateTimePicker_end.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker_end.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -74,8 +87,20 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 20);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.userIdDataGridViewTextBoxColumn,
+            this.roomNumDataGridViewTextBoxColumn,
+            this.seatNumDataGridViewTextBoxColumn,
+            this.takeDayDataGridViewTextBoxColumn,
+            this.payDataGridViewTextBoxColumn,
+            this.startdayDataGridViewTextBoxColumn,
+            this.enddayDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.refundpayDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.registrationBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(2, 19);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(685, 378);
@@ -190,6 +215,64 @@
             this.label12.TabIndex = 14;
             this.label12.Text = "label12";
             // 
+            // userIdDataGridViewTextBoxColumn
+            // 
+            this.userIdDataGridViewTextBoxColumn.DataPropertyName = "userId";
+            this.userIdDataGridViewTextBoxColumn.HeaderText = "userId";
+            this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
+            // 
+            // roomNumDataGridViewTextBoxColumn
+            // 
+            this.roomNumDataGridViewTextBoxColumn.DataPropertyName = "roomNum";
+            this.roomNumDataGridViewTextBoxColumn.HeaderText = "roomNum";
+            this.roomNumDataGridViewTextBoxColumn.Name = "roomNumDataGridViewTextBoxColumn";
+            // 
+            // seatNumDataGridViewTextBoxColumn
+            // 
+            this.seatNumDataGridViewTextBoxColumn.DataPropertyName = "seatNum";
+            this.seatNumDataGridViewTextBoxColumn.HeaderText = "seatNum";
+            this.seatNumDataGridViewTextBoxColumn.Name = "seatNumDataGridViewTextBoxColumn";
+            // 
+            // takeDayDataGridViewTextBoxColumn
+            // 
+            this.takeDayDataGridViewTextBoxColumn.DataPropertyName = "takeDay";
+            this.takeDayDataGridViewTextBoxColumn.HeaderText = "takeDay";
+            this.takeDayDataGridViewTextBoxColumn.Name = "takeDayDataGridViewTextBoxColumn";
+            // 
+            // payDataGridViewTextBoxColumn
+            // 
+            this.payDataGridViewTextBoxColumn.DataPropertyName = "pay";
+            this.payDataGridViewTextBoxColumn.HeaderText = "pay";
+            this.payDataGridViewTextBoxColumn.Name = "payDataGridViewTextBoxColumn";
+            // 
+            // startdayDataGridViewTextBoxColumn
+            // 
+            this.startdayDataGridViewTextBoxColumn.DataPropertyName = "startday";
+            this.startdayDataGridViewTextBoxColumn.HeaderText = "startday";
+            this.startdayDataGridViewTextBoxColumn.Name = "startdayDataGridViewTextBoxColumn";
+            // 
+            // enddayDataGridViewTextBoxColumn
+            // 
+            this.enddayDataGridViewTextBoxColumn.DataPropertyName = "endday";
+            this.enddayDataGridViewTextBoxColumn.HeaderText = "endday";
+            this.enddayDataGridViewTextBoxColumn.Name = "enddayDataGridViewTextBoxColumn";
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            // 
+            // refundpayDataGridViewTextBoxColumn
+            // 
+            this.refundpayDataGridViewTextBoxColumn.DataPropertyName = "refundpay";
+            this.refundpayDataGridViewTextBoxColumn.HeaderText = "refundpay";
+            this.refundpayDataGridViewTextBoxColumn.Name = "refundpayDataGridViewTextBoxColumn";
+            // 
+            // registrationBindingSource
+            // 
+            this.registrationBindingSource.DataSource = typeof(PersonalstudyroomMangement.Registration);
+            // 
             // Form_sale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -208,13 +291,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePicker_end);
+            this.Controls.Add(this.dateTimePicker_start);
             this.Name = "Form_sale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "매출관리";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registrationBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,8 +306,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_start;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_end;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
@@ -238,5 +322,15 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn seatNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn takeDayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn payDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startdayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enddayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn refundpayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource registrationBindingSource;
     }
 }

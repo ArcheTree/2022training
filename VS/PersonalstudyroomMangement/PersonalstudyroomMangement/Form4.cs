@@ -16,5 +16,11 @@ namespace PersonalstudyroomMangement
         {
             InitializeComponent();
         }
+
+        private void dateTimePicker_start_ValueChanged(object sender, EventArgs e)
+        {
+           DataManage.DaySearch(dateTimePicker_start.Value, dateTimePicker_end.Value);
+        }
+  
     }
 }

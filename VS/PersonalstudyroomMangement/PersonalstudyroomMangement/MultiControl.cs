@@ -20,10 +20,10 @@ namespace PersonalstudyroomMangement
 
         private void m301_31_Click(object sender, EventArgs e)
         {
-            registration.seatNum = 031;
-            registration.roomNum = 201;
-            Form_charge temp = new Form_charge();
-            temp.ShowDialog();
+          //  registration.seatNum = 031;
+          //  registration.roomNum = 201;
+          //  Form_charge temp = new Form_charge(int);
+          //  temp.ShowDialog();
         }
     }
 }
