@@ -13,6 +13,8 @@ namespace PersonalstudyroomMangement
     public partial class MultiControl : UserControl
     {
         Registration registration=new Registration();
+        public int seatNum = 0;
+        public int roomNum = 0;
         public MultiControl()
         {
             InitializeComponent();
@@ -20,10 +22,11 @@ namespace PersonalstudyroomMangement
 
         private void m301_31_Click(object sender, EventArgs e)
         {
-          //  registration.seatNum = 031;
-          //  registration.roomNum = 201;
-          //  Form_charge temp = new Form_charge(int);
-          //  temp.ShowDialog();
+            DataManage.registrations.Clear();
+            registration.seatNum = seatNum = 31;
+            registration.roomNum = roomNum = 301;
+            Form_charge temp = new Form_charge(seatNum, roomNum);
+            temp.ShowDialog();
         }
     }
 }
