@@ -39,12 +39,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox_now = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.seatMngBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.seatNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enddayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.seatMngBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox_serch.SuspendLayout();
             this.groupBox_now.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -161,10 +161,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(881, 485);
             this.dataGridView1.TabIndex = 0;
             // 
-            // seatMngBindingSource
-            // 
-            this.seatMngBindingSource.DataSource = typeof(PersonalstudyroomMangement.seatMng);
-            // 
             // roomNumDataGridViewTextBoxColumn
             // 
             this.roomNumDataGridViewTextBoxColumn.DataPropertyName = "roomNum";
@@ -204,6 +200,10 @@
             this.enddayDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.enddayDataGridViewTextBoxColumn.Name = "enddayDataGridViewTextBoxColumn";
             this.enddayDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // seatMngBindingSource
+            // 
+            this.seatMngBindingSource.DataSource = typeof(PersonalstudyroomMangement.seatMng);
             // 
             // Form_now
             // 

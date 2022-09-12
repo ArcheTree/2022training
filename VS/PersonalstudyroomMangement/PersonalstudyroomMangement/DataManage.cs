@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PersonalstudyroomMangement
 {
@@ -12,9 +13,11 @@ namespace PersonalstudyroomMangement
     {
         public static List<Registration> registrations = new List<Registration>();
         public static List<User> users = new List<User>();
+        public static List<seatMng> seatMngs = new List<seatMng>();
         static DataManage()
         {
             userLoad();
+            SeatLoad();
         }
         public static void userLoad()
         {
@@ -33,7 +36,7 @@ namespace PersonalstudyroomMangement
                     car.Name = item["name"].ToString();
                     car.Phone = item["phone"].ToString();
                     car.birth = DateTime.Parse(item["birth"].ToString());
-                    car.registerationday = DateTime.Parse(item["registrationDay"].ToString());
+                    car.registerationday = DateTime.Parse(item["registerationDay"].ToString());
                     users.Add(car);
                 }
             }
@@ -42,6 +45,31 @@ namespace PersonalstudyroomMangement
                 System.Windows.Forms.MessageBox.Show(ex.Message);
                
             }
+        }
+        public static void SeatLoad()
+        {
+            try
+            {
+                DBconnect.seatMngselectQuery();
+                foreach (DataRow item in DBconnect.dt.Rows)
+                {
+                    seatMng seat = new seatMng();
+                    seat.roomNum = int.Parse(item["roomNum"].ToString());
+                    seat.seatNum = int.Parse(item["seatNum"].ToString());
+                    seat.userId = item["userId"].ToString();
+                    seat.startday = DateTime.Parse(item["startday"].ToString());
+                    seat.endday = DateTime.Parse(item["endday"].ToString());
+                    seatMngs.Add(seat);
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+           
+
         }
         public static void printLog(string contents)
         {
@@ -75,6 +103,29 @@ namespace PersonalstudyroomMangement
             catch (Exception)
             {
 
+            }
+        }
+        public static void Save(string uesrid, int roomNum, int seatNum, DateTime startday, DateTime endday, int pay, string Description)
+        {
+            try
+            {
+                DBconnect.newinsertQuery(uesrid, roomNum, seatNum, startday, endday, pay, Description);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+        public static void Save(int seatNum, string uesrid, DateTime startday, DateTime endday)
+        {
+            try
+            {
+                DBconnect.PSRMngQuery(seatNum, uesrid, startday, endday);
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

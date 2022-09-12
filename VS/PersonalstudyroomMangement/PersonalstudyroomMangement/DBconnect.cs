@@ -18,15 +18,15 @@ namespace PersonalstudyroomMangement
 
         public static void ConnectDB()
         {
-            conn.ConnectionString =
+                conn.ConnectionString =
                 string.Format("Data Source=({0}); "
                 + "initial Catalog = {1};" +
                 "integrated Security = {2};" +
                 "Timeout=3",
-                "local", "PSRMngDB", "SSPI");
-            conn = new SqlConnection(conn.ConnectionString);
-            conn.Open();
-            }
+                "local", "PSRMngDB", "SSPI"); //학원에서는 PSRMngDB  로 연결해야함
+                conn = new SqlConnection(conn.ConnectionString);
+                conn.Open();
+        }
         public static void registerselectQuery(DateTime takeday)
         {
             try
@@ -63,7 +63,7 @@ namespace PersonalstudyroomMangement
                 conn.Close();
             }
         }
-        public static void seatMngselectQuery(int seatNum = -1)
+        public static void seatMngselectQuery()
         {
             try
             {
@@ -71,16 +71,9 @@ namespace PersonalstudyroomMangement
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
-                if (seatNum == -1) //매개변수 없이 selectQuery 실행
-                {
+                
                     cmd.CommandText = "select * from seatMng";
-                }
-                else //그게 아닌 경우는 특정 주차 공간 번호의 정보 조회
-                {
-                    cmd.CommandText = "select * from seatMng " +
-                        " where  = seatNum "
-                        + seatNum;
-                }
+               
 
                 da = new SqlDataAdapter(cmd);
                 ds = new DataSet();
@@ -171,7 +164,7 @@ namespace PersonalstudyroomMangement
             }
 
         }
-        public static void PSRMngQuery(int roomNum, int seatNum,  string uesrid, DateTime startday, DateTime endday, string Description)
+        public static void PSRMngQuery(int seatNum,  string uesrid, DateTime startday, DateTime endday)
         {
 
             try
@@ -181,14 +174,11 @@ namespace PersonalstudyroomMangement
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.Text;
                 string sqlcommand = "";
-                sqlcommand = "update Mngseat set userId = @p1 starday=@p4, endday=@p5 where roomNum =  @p2, seatNum = @p3";
+                sqlcommand = "update Mngseat set userId = @p1 starday=@p4, endday=@p5 where seatNum = @p3";
                 cmd.Parameters.AddWithValue("@p1", uesrid);
-                cmd.Parameters.AddWithValue("@p2", roomNum);
                 cmd.Parameters.AddWithValue("@p3", seatNum);
-                cmd.Parameters.AddWithValue("@p4", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")); ;
-                cmd.Parameters.AddWithValue("@p5", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")); ;
-                cmd.Parameters.AddWithValue("@p6", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")); ;
-                cmd.Parameters.AddWithValue("@p7", Description);
+                cmd.Parameters.AddWithValue("@p4", startday); ;
+                cmd.Parameters.AddWithValue("@p5", endday); ;
                 cmd.CommandText = sqlcommand;
                 cmd.ExecuteNonQuery();
             }

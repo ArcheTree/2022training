@@ -26,12 +26,12 @@ namespace PersonalstudyroomMangement
             roomNum = roomnum;
 
         }
-     
+
 
         private void domainUpDown_day_SelectedItemChanged(object sender, EventArgs e)
         {
-            if(roomNum == 201 ||roomNum == 202 ||roomNum == 203)
-            { 
+            if (roomNum == 201 || roomNum == 202 || roomNum == 203)
+            {
                 if (domainUpDown_day.SelectedItem.Equals("1일"))
                 {
                     label_money.Text = "8,000원";
@@ -58,38 +58,84 @@ namespace PersonalstudyroomMangement
                 }
             }
             else
+            {
+                if (domainUpDown_day.SelectedItem.Equals("1일"))
                 {
-                    if (domainUpDown_day.SelectedItem.Equals("1일"))
-                    {
-                        label_money.Text = "6,000원";
+                    label_money.Text = "6,000원";
                     billing = 6000;
-                        dateTimePicker_end.Value = dateTimePicker_start.Value.AddDays(1);
-                    }
-                    else if (domainUpDown_day.SelectedItem.Equals("7일(1주일)"))
-                    {
-                        label_money.Text = "40,000원";
-                        billing = 40000;
-                        dateTimePicker_end.Value = dateTimePicker_start.Value.AddDays(7);
-                    }
-                    else if (domainUpDown_day.SelectedItem.Equals("15일"))
-                    {
-                        label_money.Text = "75,000원";
-                        billing = 75000;
-                        dateTimePicker_end.Value = dateTimePicker_start.Value.AddDays(15);
-                    }
-                    else if (domainUpDown_day.SelectedItem.Equals("30일"))
-                    {
-                        label_money.Text = "120,000원";
-                        billing = 120000;
-                        dateTimePicker_end.Value = dateTimePicker_start.Value.AddDays(30);
-                    }
+                    dateTimePicker_end.Value = dateTimePicker_start.Value.AddDays(1);
                 }
-            
+                else if (domainUpDown_day.SelectedItem.Equals("7일(1주일)"))
+                {
+                    label_money.Text = "40,000원";
+                    billing = 40000;
+                    dateTimePicker_end.Value = dateTimePicker_start.Value.AddDays(7);
+                }
+                else if (domainUpDown_day.SelectedItem.Equals("15일"))
+                {
+                    label_money.Text = "75,000원";
+                    billing = 75000;
+                    dateTimePicker_end.Value = dateTimePicker_start.Value.AddDays(15);
+                }
+                else if (domainUpDown_day.SelectedItem.Equals("30일"))
+                {
+                    label_money.Text = "120,000원";
+                    billing = 120000;
+                    dateTimePicker_end.Value = dateTimePicker_start.Value.AddDays(30);
+                }
+            }
+
         }
 
         private void button_pay_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"{seatNum}번자리");
+            if (DataManage.users.Exists((x) => x.Id == textBox_id.Text))
+            {
+                try
+                {
+                    Registration registrations = new Registration()
+                    {
+                        userId = textBox_id.Text,
+                        roomNum = roomNum,
+                        seatNum = seatNum,
+                        pay = billing,
+                        startday = dateTimePicker_start.Value,
+                        endday = dateTimePicker_end.Value,
+
+                    };
+                    DataManage.registrations.Add(registrations);
+                    
+
+                    DataManage.Save
+                        (textBox_id.Text, roomNum, seatNum, dateTimePicker_start.Value, dateTimePicker_end.Value, billing,"");
+
+                    DataManage.Save(seatNum, textBox_id.Text, dateTimePicker_start.Value, dateTimePicker_end.Value);
+
+                    string contents = $"ID : {textBox_id.Text}님이 " + $"{roomNum}의 {seatNum}에 + " +
+                        $"{dateTimePicker_start.Value}~{dateTimePicker_end.Value}까지 이용하십니다.";
+
+                    WriteLog(contents);
+                    MessageBox.Show(contents);
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+            else
+            {
+                string contents = $"등록된 회원이 아닙니다. 등록 후 다시 결제를 진행해주세요";
+                WriteLog(contents);
+                MessageBox.Show(contents);
+            }
+        }
+        private void WriteLog(string contents)
+        {
+            string logContents
+                = $"[{DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss")}]{contents}";
+            DataManage.printLog(logContents);
+
         }
     }
 }
