@@ -16,8 +16,6 @@ namespace PersonalstudyroomMangement
         {
             InitializeComponent();
 
-            if (DataManage.seatMngs.Count > 0)
-                dataGridView1.DataSource = DataManage.seatMngs;
         }
 
     }

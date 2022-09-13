@@ -17,7 +17,7 @@ namespace PersonalstudyroomMangement
         static DataManage()
         {
             userLoad();
-            SeatLoad();
+            registerLoad();
         }
         public static void userLoad()
         {
@@ -36,24 +36,27 @@ namespace PersonalstudyroomMangement
                     car.Name = item["name"].ToString();
                     car.Phone = item["phone"].ToString();
                     car.birth = DateTime.Parse(item["birth"].ToString());
-                    car.registerationday = DateTime.Parse(item["registerationDay"].ToString());
+                    car.registerationday = DateTime.Parse(item["registrationDay"].ToString());
                     users.Add(car);
                 }
             }
             catch (Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
-               
+                MessageBox.Show("유저테이블");
+
             }
         }
         public static void SeatLoad()
         {
             try
             {
-                DBconnect.seatMngselectQuery();
-                foreach (DataRow item in DBconnect.dt.Rows)
+                DBseatconnect.seatMngselectQuery();
+                seatMngs.Clear();
+                foreach (DataRow item in DBseatconnect.dt.Rows)
                 {
                     seatMng seat = new seatMng();
+
                     seat.roomNum = int.Parse(item["roomNum"].ToString());
                     seat.seatNum = int.Parse(item["seatNum"].ToString());
                     seat.userId = item["userId"].ToString();
@@ -67,8 +70,41 @@ namespace PersonalstudyroomMangement
             {
 
                 System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show("자리테이블");
             }
            
+
+        }
+        public static void registerLoad()
+        {
+            try
+            {
+                DBregisteration.registerselectQuery();
+                registrations.Clear();
+                foreach (DataRow item in DBregisteration.dt.Rows)
+                {
+                    Registration register = new Registration();
+                    
+                    register.registerNum = int.Parse(item["registerNum"].ToString());
+                    register.userId = item["userId"].ToString();
+                    register.roomNum = int.Parse(item["roomNum"].ToString());
+                    register.seatNum = int.Parse(item["seatNum"].ToString());
+                    register.takeDay = DateTime.Parse(item["takeday"].ToString());
+                    register.pay = int.Parse(item["pay"].ToString());
+                    register.startday = DateTime.Parse(item["startday"].ToString());
+                    register.endday = DateTime.Parse(item["endday"].ToString());
+                    register.Description = item["description"].ToString();
+                    register.refundpay = int.Parse(item["refundpay"].ToString());
+                    registrations.Add(register);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show("등록테이블");
+            }
+
 
         }
         public static void printLog(string contents)
@@ -98,18 +134,18 @@ namespace PersonalstudyroomMangement
         {
             try
             {
-                DBconnect.dayselectQuerty(onday, offday);
+                DBregisteration.dayselectQuerty(onday, offday);
             }
             catch (Exception)
             {
 
             }
         }
-        public static void Save(string uesrid, int roomNum, int seatNum, DateTime startday, DateTime endday, int pay, string Description)
+        public static void Save(string uesrid, int roomNum, int seatNum, DateTime takeday, DateTime startday, DateTime endday, int pay, string Description)
         {
             try
             {
-                DBconnect.newinsertQuery(uesrid, roomNum, seatNum, startday, endday, pay, Description);
+                DBregisteration.newinsertQuery(uesrid, roomNum, seatNum, takeday ,startday, endday, pay, Description);
             }
             catch (Exception)
             {
@@ -120,7 +156,7 @@ namespace PersonalstudyroomMangement
         {
             try
             {
-                DBconnect.PSRMngQuery(seatNum, uesrid, startday, endday);
+                DBseatconnect.PSRMngQuery(seatNum, uesrid, startday, endday);
             }
             catch (Exception)
             {

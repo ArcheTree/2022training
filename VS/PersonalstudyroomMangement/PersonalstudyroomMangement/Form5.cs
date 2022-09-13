@@ -21,6 +21,7 @@ namespace PersonalstudyroomMangement
         {
             InitializeComponent();
             int temp = seatnum;
+            seatNum = seatnum;
             string temp2 = temp.ToString();
             label_setNum.Text = temp2;
             roomNum = roomnum;
@@ -100,19 +101,16 @@ namespace PersonalstudyroomMangement
                         seatNum = seatNum,
                         pay = billing,
                         startday = dateTimePicker_start.Value,
-                        endday = dateTimePicker_end.Value,
-
+                        endday = dateTimePicker_end.Value
                     };
                     DataManage.registrations.Add(registrations);
                     
-
                     DataManage.Save
-                        (textBox_id.Text, roomNum, seatNum, dateTimePicker_start.Value, dateTimePicker_end.Value, billing,"");
-
-                    DataManage.Save(seatNum, textBox_id.Text, dateTimePicker_start.Value, dateTimePicker_end.Value);
-
-                    string contents = $"ID : {textBox_id.Text}님이 " + $"{roomNum}의 {seatNum}에 + " +
-                        $"{dateTimePicker_start.Value}~{dateTimePicker_end.Value}까지 이용하십니다.";
+                        (textBox_id.Text, roomNum, seatNum, DateTime.Now ,dateTimePicker_start.Value, dateTimePicker_end.Value, billing,"");
+                  
+                   
+                    string contents = $"ID : {textBox_id.Text}님이 {roomNum}호 {seatNum}번에 \n" +
+                        $"{dateTimePicker_start.Value}~{dateTimePicker_end.Value}까지 이용하십니다. \n 결제 금액은 {billing}원입니다.";
 
                     WriteLog(contents);
                     MessageBox.Show(contents);

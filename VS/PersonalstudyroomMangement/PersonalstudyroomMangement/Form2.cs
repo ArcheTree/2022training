@@ -112,15 +112,10 @@ namespace PersonalstudyroomMangement
 
                     if (DataManage.users.Exists((x) => x.Id == textBox_id.Text))
                     {
-                        //car는 Single로 인해 해당 조건이 맞는 객체와 연결됨
-                        //이를 참조개념 내지는 참조변수라고 한다.(참조복사)
-                        //car에 있는 내용 변경시 Cars에 있는 내용이 바뀐다.
+                       
                         user.Name = textBox_name.Text;
                         user.Phone = textBox_phone.Text;
                         user.birth = dateTimePicker_birth.Value;
-
-                        dataGridView1.DataSource = null;
-                        dataGridView1.DataSource = DataManage.users;
 
 
                         DataManage.Save

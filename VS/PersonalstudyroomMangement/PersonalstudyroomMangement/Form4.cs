@@ -15,12 +15,13 @@ namespace PersonalstudyroomMangement
         public Form_sale()
         {
             InitializeComponent();
+
+            if (DataManage.registrations.Count > 0)
+            {
+                dataGridView1.DataSource = DataManage.registrations;
+            }
+
         }
 
-        private void dateTimePicker_start_ValueChanged(object sender, EventArgs e)
-        {
-           DataManage.DaySearch(dateTimePicker_start.Value, dateTimePicker_end.Value);
-        }
-  
     }
 }
