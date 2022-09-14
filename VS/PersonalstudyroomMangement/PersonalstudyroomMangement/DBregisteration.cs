@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using System.Windows.Forms;
 
 namespace PersonalstudyroomMangement
 {
@@ -16,7 +17,7 @@ namespace PersonalstudyroomMangement
         public static DataSet ds;
         public static DataTable dt;
 
-        public static void ConnectDB()
+        public static void ConnectreDB()
         {
             conn.ConnectionString =
             string.Format("Data Source=({0}); "
@@ -28,16 +29,18 @@ namespace PersonalstudyroomMangement
             conn.Open();
         }
 
-        public static void registerselectQuery()
+        public static void registerselectQuery(DateTime onday, DateTime overday)
         {
             try
             {
-                ConnectDB();
+                ConnectreDB();
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
 
-                cmd.CommandText = "select * from Registeration";
+                cmd.CommandText = "select * from Registeration where takeday between @p1 and @p2";
+                cmd.Parameters.AddWithValue("@p1", onday);
+                cmd.Parameters.AddWithValue("@p2", overday);
 
                 da = new SqlDataAdapter(cmd);
                 ds = new DataSet();
@@ -60,7 +63,7 @@ namespace PersonalstudyroomMangement
         {
             try
             {
-                ConnectDB();
+                ConnectreDB();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.Text;
@@ -100,41 +103,17 @@ namespace PersonalstudyroomMangement
             }
 
         }
-        public static void dayselectQuerty(DateTime onday, DateTime overday)
-        {
-            try
-            {
-                ConnectDB();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandType = CommandType.Text;
-                string sqlcommand = "";
-                sqlcommand = "select * from Registeration where takeday BETWEEN '@p1' AND '@p2'";
-                cmd.Parameters.AddWithValue("@p1", onday);
-                cmd.Parameters.AddWithValue("@p2", overday);
-                cmd.CommandText = sqlcommand;
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception)
-            {
-
-            }
-            finally
-            {
-                conn.Close();
-            }
-
-        }
+     
         public static void newinsertQuery(string uesrid, int roomNum, int seatNum, DateTime takeday, DateTime startday, DateTime endday, int pay, string Description)
         {
             try
             {
-                ConnectDB();
+                ConnectreDB();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.Text;
                 string sqlcommand = "";
-                sqlcommand = "insert into Registeration values(NEXT VALUE FOR dbo.PSRMngDB, @p1, @p2, @p3, @p6, @p7, @p4, @p5, null, null)";
+                sqlcommand = "insert into Registeration values(NEXT VALUE FOR dbo.PSRMngDB, @p1, @p2, @p3, @p6, @p7, @p4, @p5, null, 0)";
                 cmd.Parameters.AddWithValue("@p1", uesrid);
                 cmd.Parameters.AddWithValue("@p2", roomNum);
                 cmd.Parameters.AddWithValue("@p3", seatNum);

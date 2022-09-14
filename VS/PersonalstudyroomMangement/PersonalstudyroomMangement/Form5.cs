@@ -105,10 +105,11 @@ namespace PersonalstudyroomMangement
                     };
                     DataManage.registrations.Add(registrations);
                     
-                    DataManage.Save
-                        (textBox_id.Text, roomNum, seatNum, DateTime.Now ,dateTimePicker_start.Value, dateTimePicker_end.Value, billing,"");
-                  
+                    DataManage.Save(textBox_id.Text, roomNum, seatNum, DateTime.Now ,dateTimePicker_start.Value, dateTimePicker_end.Value, billing,"");
+
                    
+
+
                     string contents = $"ID : {textBox_id.Text}님이 {roomNum}호 {seatNum}번에 \n" +
                         $"{dateTimePicker_start.Value}~{dateTimePicker_end.Value}까지 이용하십니다. \n 결제 금액은 {billing}원입니다.";
 
@@ -118,14 +119,30 @@ namespace PersonalstudyroomMangement
                 catch (Exception)
                 {
 
-                    throw;
                 }
+               
             }
             else
             {
                 string contents = $"등록된 회원이 아닙니다. 등록 후 다시 결제를 진행해주세요";
                 WriteLog(contents);
                 MessageBox.Show(contents);
+            }
+            try
+            {
+                seatMng mng = DataManage.seatMngs.Single(x => x.seatNum == seatNum);
+
+                mng.userId = textBox_id.Text;
+                mng.startday = dateTimePicker_start.Value;
+                mng.endday = dateTimePicker_end.Value;
+               
+                if(mng.userId == null)
+                DataManage.Save(seatNum, textBox_id.Text, dateTimePicker_start.Value, dateTimePicker_end.Value);
+                
+            }
+            catch (Exception)
+            {
+
             }
         }
         private void WriteLog(string contents)

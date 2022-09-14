@@ -113,6 +113,7 @@
             this.dateTimePicker_start.Name = "dateTimePicker_start";
             this.dateTimePicker_start.Size = new System.Drawing.Size(210, 24);
             this.dateTimePicker_start.TabIndex = 7;
+            this.dateTimePicker_start.Value = new System.DateTime(2022, 9, 14, 0, 0, 0, 0);
             // 
             // dateTimePicker_end
             // 
@@ -123,6 +124,7 @@
             this.dateTimePicker_end.Name = "dateTimePicker_end";
             this.dateTimePicker_end.Size = new System.Drawing.Size(209, 24);
             this.dateTimePicker_end.TabIndex = 8;
+            this.dateTimePicker_end.Value = new System.DateTime(2022, 9, 14, 0, 0, 0, 0);
             // 
             // domainUpDown_day
             // 

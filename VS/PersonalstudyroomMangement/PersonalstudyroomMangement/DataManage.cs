@@ -17,7 +17,7 @@ namespace PersonalstudyroomMangement
         static DataManage()
         {
             userLoad();
-            registerLoad();
+            SeatLoad();
         }
         public static void userLoad()
         {
@@ -60,8 +60,8 @@ namespace PersonalstudyroomMangement
                     seat.roomNum = int.Parse(item["roomNum"].ToString());
                     seat.seatNum = int.Parse(item["seatNum"].ToString());
                     seat.userId = item["userId"].ToString();
-                    seat.startday = DateTime.Parse(item["startday"].ToString());
-                    seat.endday = DateTime.Parse(item["endday"].ToString());
+                    seat.startday = item["startday"].ToString() == "" ? new DateTime() :  DateTime.Parse(item["startday"].ToString());
+                    seat.endday = item["endday"].ToString() == "" ? new DateTime() : DateTime.Parse(item["endday"].ToString());
                     seatMngs.Add(seat);
                 }
 
@@ -75,11 +75,12 @@ namespace PersonalstudyroomMangement
            
 
         }
-        public static void registerLoad()
+        public static void registerLoad(DateTime onday, DateTime offday)
         {
             try
             {
-                DBregisteration.registerselectQuery();
+                DBregisteration.registerselectQuery(onday,offday);
+
                 registrations.Clear();
                 foreach (DataRow item in DBregisteration.dt.Rows)
                 {
@@ -130,17 +131,7 @@ namespace PersonalstudyroomMangement
 
             }
         }
-        public static void DaySearch(DateTime onday, DateTime offday)
-        {
-            try
-            {
-                DBregisteration.dayselectQuerty(onday, offday);
-            }
-            catch (Exception)
-            {
-
-            }
-        }
+       
         public static void Save(string uesrid, int roomNum, int seatNum, DateTime takeday, DateTime startday, DateTime endday, int pay, string Description)
         {
             try

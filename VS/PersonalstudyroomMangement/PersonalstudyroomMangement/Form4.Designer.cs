@@ -45,7 +45,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.registrationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.registerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +55,7 @@
             this.enddayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.refundpayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.registrationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationBindingSource)).BeginInit();
@@ -69,6 +69,8 @@
             this.dateTimePicker_start.Name = "dateTimePicker_start";
             this.dateTimePicker_start.Size = new System.Drawing.Size(249, 24);
             this.dateTimePicker_start.TabIndex = 0;
+            this.dateTimePicker_start.Value = new System.DateTime(2022, 9, 14, 0, 0, 0, 0);
+            this.dateTimePicker_start.ValueChanged += new System.EventHandler(this.dateTimePicker_start_ValueChanged);
             // 
             // dateTimePicker_end
             // 
@@ -78,6 +80,8 @@
             this.dateTimePicker_end.Name = "dateTimePicker_end";
             this.dateTimePicker_end.Size = new System.Drawing.Size(237, 24);
             this.dateTimePicker_end.TabIndex = 1;
+            this.dateTimePicker_end.Value = new System.DateTime(2022, 9, 14, 0, 0, 0, 0);
+            this.dateTimePicker_end.ValueChanged += new System.EventHandler(this.dateTimePicker_end_ValueChanged);
             // 
             // groupBox1
             // 
@@ -222,10 +226,6 @@
             this.label12.TabIndex = 14;
             this.label12.Text = "label12";
             // 
-            // registrationBindingSource
-            // 
-            this.registrationBindingSource.DataSource = typeof(PersonalstudyroomMangement.Registration);
-            // 
             // registerNumDataGridViewTextBoxColumn
             // 
             this.registerNumDataGridViewTextBoxColumn.DataPropertyName = "registerNum";
@@ -285,6 +285,10 @@
             this.refundpayDataGridViewTextBoxColumn.DataPropertyName = "refundpay";
             this.refundpayDataGridViewTextBoxColumn.HeaderText = "refundpay";
             this.refundpayDataGridViewTextBoxColumn.Name = "refundpayDataGridViewTextBoxColumn";
+            // 
+            // registrationBindingSource
+            // 
+            this.registrationBindingSource.DataSource = typeof(PersonalstudyroomMangement.Registration);
             // 
             // Form_sale
             // 

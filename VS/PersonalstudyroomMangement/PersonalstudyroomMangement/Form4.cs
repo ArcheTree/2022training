@@ -15,13 +15,28 @@ namespace PersonalstudyroomMangement
         public Form_sale()
         {
             InitializeComponent();
-
-            if (DataManage.registrations.Count > 0)
-            {
-                dataGridView1.DataSource = DataManage.registrations;
-            }
+        
 
         }
 
+        private void dateTimePicker_start_ValueChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource =null;
+            DataManage.registerLoad(dateTimePicker_start.Value, dateTimePicker_end.Value);
+            dataGridView1.DataSource = DataManage.registrations;
+        }
+
+        private void dateTimePicker_end_ValueChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            DataManage.registerLoad(dateTimePicker_start.Value, dateTimePicker_end.Value);
+            dataGridView1.DataSource = DataManage.registrations;
+
+            if(dateTimePicker_start.Value > dateTimePicker_end.Value)
+            {
+                MessageBox.Show("날짜를 다시 지정해주세요");
+                return;
+            }
+        }
     }
 }

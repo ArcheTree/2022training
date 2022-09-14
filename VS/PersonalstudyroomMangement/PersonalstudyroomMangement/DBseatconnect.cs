@@ -22,7 +22,7 @@ namespace PersonalstudyroomMangement
             + "initial Catalog = {1};" +
             "integrated Security = {2};" +
             "Timeout=3",
-            "local", "PSRMngDB", "SSPI"); //학원에서는 PSRMngDB  로 연결해야함
+            "local", "PSRMngDB", "SSPI"); 
             conn = new SqlConnection(conn.ConnectionString);
             conn.Open();
         }
@@ -65,10 +65,10 @@ namespace PersonalstudyroomMangement
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.Text;
                 string sqlcommand = "";
-                sqlcommand = "update seatMng set userId = @p1 starday=@p4, endday=@p5 where seatNum = @p3";
+                sqlcommand = "update seatMng set userId = @p1, startday=@p4, endday=@p5 where seatNum = @p3";
                 cmd.Parameters.AddWithValue("@p1", uesrid);
                 cmd.Parameters.AddWithValue("@p3", seatNum);
-                cmd.Parameters.AddWithValue("@p4", startday); ;
+                cmd.Parameters.AddWithValue("@p4", startday); 
                 cmd.Parameters.AddWithValue("@p5", endday); ;
                 cmd.CommandText = sqlcommand;
                 cmd.ExecuteNonQuery();
