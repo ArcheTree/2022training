@@ -25,7 +25,16 @@ namespace PersonalstudyroomMangement
             string temp2 = temp.ToString();
             label_setNum.Text = temp2;
             roomNum = roomnum;
+            DataManage.SeatLoad();
+            if (DataManage.registrations.Exists((x) => x.seatNum == seatNum))
+            {
+                if (DataManage.registrations.Exists((x) => x.endday >= dateTimePicker_start.Value) || DataManage.registrations.Exists((x) => x.startday >= dateTimePicker_end.Value))
+                {
+                    MessageBox.Show("금일 이용중인 좌석입니다.");
 
+                }
+
+            }
         }
 
 
@@ -87,10 +96,20 @@ namespace PersonalstudyroomMangement
             }
 
         }
+        
 
         private void button_pay_Click(object sender, EventArgs e)
         {
-            if (DataManage.users.Exists((x) => x.Id == textBox_id.Text))
+            if (DataManage.registrations.Exists((x) => x.seatNum == seatNum))
+            {
+                if (DataManage.registrations.Exists((x) => x.endday >= dateTimePicker_start.Value))
+                {
+                    MessageBox.Show("등록기간중 이용중인 좌석입니다");
+                    
+                }
+                
+            }
+            else if (DataManage.users.Exists((x) => x.Id == textBox_id.Text))
             {
                 try
                 {
@@ -104,10 +123,10 @@ namespace PersonalstudyroomMangement
                         endday = dateTimePicker_end.Value
                     };
                     DataManage.registrations.Add(registrations);
-                    
-                    DataManage.Save(textBox_id.Text, roomNum, seatNum, DateTime.Now ,dateTimePicker_start.Value, dateTimePicker_end.Value, billing,"");
 
-                   
+                    DataManage.Save(textBox_id.Text, roomNum, seatNum, DateTime.Now, dateTimePicker_start.Value, dateTimePicker_end.Value, billing, "");
+
+
 
 
                     string contents = $"ID : {textBox_id.Text}님이 {roomNum}호 {seatNum}번에 \n" +
@@ -120,7 +139,7 @@ namespace PersonalstudyroomMangement
                 {
 
                 }
-               
+
             }
             else
             {
@@ -128,22 +147,8 @@ namespace PersonalstudyroomMangement
                 WriteLog(contents);
                 MessageBox.Show(contents);
             }
-            try
-            {
-                seatMng mng = DataManage.seatMngs.Single(x => x.seatNum == seatNum);
-
-                mng.userId = textBox_id.Text;
-                mng.startday = dateTimePicker_start.Value;
-                mng.endday = dateTimePicker_end.Value;
-               
-                if(mng.userId == null)
-                DataManage.Save(seatNum, textBox_id.Text, dateTimePicker_start.Value, dateTimePicker_end.Value);
-                
-            }
-            catch (Exception)
-            {
-
-            }
+           
+            
         }
         private void WriteLog(string contents)
         {

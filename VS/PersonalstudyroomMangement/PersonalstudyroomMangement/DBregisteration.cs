@@ -37,10 +37,11 @@ namespace PersonalstudyroomMangement
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
-
-                cmd.CommandText = "select * from Registeration where takeday between @p1 and @p2";
+                cmd.CommandText = "select * from Registeration where takeday between @p1 and @p2 order by registerNum";
+                
                 cmd.Parameters.AddWithValue("@p1", onday);
                 cmd.Parameters.AddWithValue("@p2", overday);
+           
 
                 da = new SqlDataAdapter(cmd);
                 ds = new DataSet();
@@ -51,6 +52,74 @@ namespace PersonalstudyroomMangement
             catch (Exception )
             {
                 System.Windows.Forms.MessageBox.Show("select 실패");
+                return;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public static void seatMngselectQuery()
+        {
+            try
+            {
+                ConnectreDB();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+
+                cmd.CommandText = "select roomNum, seatNum, userId, startday, endday from Registeration where endday >= CONVERT(date,GETDATE()-2) order by endday";
+             
+
+                da = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                da.Fill(ds, "Registeration");
+                dt = ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show("조건부검색");
+                return;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+        public static void searchQuery(string Query, string view)
+        {
+            try
+            {
+                ConnectreDB();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+
+                if(Query == "roomNum")
+                {
+                cmd.CommandText = "select roomNum, seatNum, userId, startday, endday from Registeration where endday >= CONVERT(date,GETDATE()-2) AND roomNum = @p1";
+                }
+                else if (Query == "userId")
+                {
+                cmd.CommandText = "select roomNum, seatNum, userId, startday, endday from Registeration where endday >= CONVERT(date,GETDATE()-2) AND userId = @p1";
+                }
+                else if (Query == "seatNum")
+                {
+                cmd.CommandText = "select roomNum, seatNum, userId, startday, endday from Registeration where endday >= CONVERT(date,GETDATE()-2) AND seatNum = @p1";
+                }
+
+                cmd.Parameters.AddWithValue("@p1", view);
+
+                da = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                da.Fill(ds, "Registeration");
+                dt = ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show("조건부검색");
                 return;
             }
             finally

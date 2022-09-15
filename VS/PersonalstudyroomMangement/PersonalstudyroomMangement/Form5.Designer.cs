@@ -34,14 +34,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker_start = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker_end = new System.Windows.Forms.DateTimePicker();
             this.domainUpDown_day = new System.Windows.Forms.DomainUpDown();
             this.label_money = new System.Windows.Forms.Label();
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button_pay = new System.Windows.Forms.Button();
             this.button_refund = new System.Windows.Forms.Button();
+            this.dateTimePicker_start = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_end = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -104,28 +104,6 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "결제금액 : ";
             // 
-            // dateTimePicker_start
-            // 
-            this.dateTimePicker_start.CustomFormat = "";
-            this.dateTimePicker_start.Font = new System.Drawing.Font("굴림", 11F);
-            this.dateTimePicker_start.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_start.Location = new System.Drawing.Point(153, 198);
-            this.dateTimePicker_start.Name = "dateTimePicker_start";
-            this.dateTimePicker_start.Size = new System.Drawing.Size(210, 24);
-            this.dateTimePicker_start.TabIndex = 7;
-            this.dateTimePicker_start.Value = new System.DateTime(2022, 9, 14, 0, 0, 0, 0);
-            // 
-            // dateTimePicker_end
-            // 
-            this.dateTimePicker_end.Enabled = false;
-            this.dateTimePicker_end.Font = new System.Drawing.Font("굴림", 11F);
-            this.dateTimePicker_end.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_end.Location = new System.Drawing.Point(154, 246);
-            this.dateTimePicker_end.Name = "dateTimePicker_end";
-            this.dateTimePicker_end.Size = new System.Drawing.Size(209, 24);
-            this.dateTimePicker_end.TabIndex = 8;
-            this.dateTimePicker_end.Value = new System.DateTime(2022, 9, 14, 0, 0, 0, 0);
-            // 
             // domainUpDown_day
             // 
             this.domainUpDown_day.Font = new System.Drawing.Font("굴림", 9F);
@@ -186,19 +164,35 @@
             this.button_refund.Text = "환불하기";
             this.button_refund.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker_start
+            // 
+            this.dateTimePicker_start.CalendarFont = new System.Drawing.Font("굴림", 11F);
+            this.dateTimePicker_start.Location = new System.Drawing.Point(153, 200);
+            this.dateTimePicker_start.Name = "dateTimePicker_start";
+            this.dateTimePicker_start.Size = new System.Drawing.Size(209, 21);
+            this.dateTimePicker_start.TabIndex = 14;
+            // 
+            // dateTimePicker_end
+            // 
+            this.dateTimePicker_end.Enabled = false;
+            this.dateTimePicker_end.Location = new System.Drawing.Point(153, 247);
+            this.dateTimePicker_end.Name = "dateTimePicker_end";
+            this.dateTimePicker_end.Size = new System.Drawing.Size(209, 21);
+            this.dateTimePicker_end.TabIndex = 15;
+            // 
             // Form_charge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 446);
+            this.Controls.Add(this.dateTimePicker_end);
+            this.Controls.Add(this.dateTimePicker_start);
             this.Controls.Add(this.button_refund);
             this.Controls.Add(this.button_pay);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox_id);
             this.Controls.Add(this.label_money);
             this.Controls.Add(this.domainUpDown_day);
-            this.Controls.Add(this.dateTimePicker_end);
-            this.Controls.Add(this.dateTimePicker_start);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -221,13 +215,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_start;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_end;
         private System.Windows.Forms.DomainUpDown domainUpDown_day;
         private System.Windows.Forms.Label label_money;
         private System.Windows.Forms.TextBox textBox_id;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button_pay;
         private System.Windows.Forms.Button button_refund;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_start;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_end;
     }
 }

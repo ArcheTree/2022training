@@ -29,22 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dateTimePicker_start = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker_end = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.dataGridView_detail = new System.Windows.Forms.DataGridView();
             this.registerNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,48 +42,38 @@
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.refundpayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.registrationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label_totalcount = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label_sale = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label_refund = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label_finalsale = new System.Windows.Forms.Label();
+            this.dateTimePicker_start = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_end = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_detail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker_start
-            // 
-            this.dateTimePicker_start.CalendarFont = new System.Drawing.Font("굴림", 11F);
-            this.dateTimePicker_start.Font = new System.Drawing.Font("굴림", 11F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker_start.Location = new System.Drawing.Point(98, 22);
-            this.dateTimePicker_start.Name = "dateTimePicker_start";
-            this.dateTimePicker_start.Size = new System.Drawing.Size(249, 24);
-            this.dateTimePicker_start.TabIndex = 0;
-            this.dateTimePicker_start.Value = new System.DateTime(2022, 9, 14, 0, 0, 0, 0);
-            this.dateTimePicker_start.ValueChanged += new System.EventHandler(this.dateTimePicker_start_ValueChanged);
-            // 
-            // dateTimePicker_end
-            // 
-            this.dateTimePicker_end.CalendarFont = new System.Drawing.Font("굴림", 11F);
-            this.dateTimePicker_end.Font = new System.Drawing.Font("굴림", 11F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker_end.Location = new System.Drawing.Point(399, 22);
-            this.dateTimePicker_end.Name = "dateTimePicker_end";
-            this.dateTimePicker_end.Size = new System.Drawing.Size(237, 24);
-            this.dateTimePicker_end.TabIndex = 1;
-            this.dateTimePicker_end.Value = new System.DateTime(2022, 9, 14, 0, 0, 0, 0);
-            this.dateTimePicker_end.ValueChanged += new System.EventHandler(this.dateTimePicker_end_ValueChanged);
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dataGridView_detail);
             this.groupBox1.Location = new System.Drawing.Point(12, 59);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1040, 402);
+            this.groupBox1.Size = new System.Drawing.Size(1040, 433);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "검색 결과";
             // 
-            // dataGridView1
+            // dataGridView_detail
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView_detail.AutoGenerateColumns = false;
+            this.dataGridView_detail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_detail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.registerNumDataGridViewTextBoxColumn,
             this.userIdDataGridViewTextBoxColumn,
             this.roomNumDataGridViewTextBoxColumn,
@@ -108,123 +84,14 @@
             this.enddayDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn,
             this.refundpayDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.registrationBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1032, 378);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 15F);
-            this.label1.Location = new System.Drawing.Point(360, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "~";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("굴림", 11F);
-            this.label2.Location = new System.Drawing.Point(11, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "검색기간 :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 480);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "총 건수 :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(81, 481);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 12);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 506);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 12);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "카드매출 :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(82, 506);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 12);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "label6";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(186, 506);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 12);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "현금매출 :";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(260, 506);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 12);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "label8";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(352, 506);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 12);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "환불금 :";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(407, 506);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 12);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "label10";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(534, 506);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 12);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "총 매출:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(589, 506);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 12);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "label12";
+            this.dataGridView_detail.DataSource = this.registrationBindingSource;
+            this.dataGridView_detail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView_detail.Location = new System.Drawing.Point(3, 17);
+            this.dataGridView_detail.Name = "dataGridView_detail";
+            this.dataGridView_detail.RowHeadersWidth = 51;
+            this.dataGridView_detail.RowTemplate.Height = 23;
+            this.dataGridView_detail.Size = new System.Drawing.Size(1034, 413);
+            this.dataGridView_detail.TabIndex = 0;
             // 
             // registerNumDataGridViewTextBoxColumn
             // 
@@ -290,31 +157,137 @@
             // 
             this.registrationBindingSource.DataSource = typeof(PersonalstudyroomMangement.Registration);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("굴림", 15F);
+            this.label1.Location = new System.Drawing.Point(360, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "~";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("굴림", 11F);
+            this.label2.Location = new System.Drawing.Point(11, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 15);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "검색기간 :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 506);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "총 건수 :";
+            // 
+            // label_totalcount
+            // 
+            this.label_totalcount.AutoSize = true;
+            this.label_totalcount.Location = new System.Drawing.Point(83, 507);
+            this.label_totalcount.Name = "label_totalcount";
+            this.label_totalcount.Size = new System.Drawing.Size(17, 12);
+            this.label_totalcount.TabIndex = 6;
+            this.label_totalcount.Text = "건";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(167, 506);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 12);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "매출 :";
+            // 
+            // label_sale
+            // 
+            this.label_sale.AutoSize = true;
+            this.label_sale.Location = new System.Drawing.Point(234, 506);
+            this.label_sale.Name = "label_sale";
+            this.label_sale.Size = new System.Drawing.Size(17, 12);
+            this.label_sale.TabIndex = 8;
+            this.label_sale.Text = "원";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(352, 506);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 12);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "환불금 :";
+            // 
+            // label_refund
+            // 
+            this.label_refund.AutoSize = true;
+            this.label_refund.Location = new System.Drawing.Point(407, 506);
+            this.label_refund.Name = "label_refund";
+            this.label_refund.Size = new System.Drawing.Size(17, 12);
+            this.label_refund.TabIndex = 12;
+            this.label_refund.Text = "원";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(534, 506);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 12);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "총 매출:";
+            // 
+            // label_finalsale
+            // 
+            this.label_finalsale.AutoSize = true;
+            this.label_finalsale.Location = new System.Drawing.Point(589, 506);
+            this.label_finalsale.Name = "label_finalsale";
+            this.label_finalsale.Size = new System.Drawing.Size(17, 12);
+            this.label_finalsale.TabIndex = 14;
+            this.label_finalsale.Text = "원";
+            // 
+            // dateTimePicker_start
+            // 
+            this.dateTimePicker_start.Location = new System.Drawing.Point(110, 23);
+            this.dateTimePicker_start.Name = "dateTimePicker_start";
+            this.dateTimePicker_start.Size = new System.Drawing.Size(228, 21);
+            this.dateTimePicker_start.TabIndex = 15;
+            this.dateTimePicker_start.ValueChanged += new System.EventHandler(this.dateTimePicker_start_ValueChanged_1);
+            // 
+            // dateTimePicker_end
+            // 
+            this.dateTimePicker_end.Location = new System.Drawing.Point(405, 23);
+            this.dateTimePicker_end.Name = "dateTimePicker_end";
+            this.dateTimePicker_end.Size = new System.Drawing.Size(228, 21);
+            this.dateTimePicker_end.TabIndex = 16;
+            this.dateTimePicker_end.ValueChanged += new System.EventHandler(this.dateTimePicker_end_ValueChanged_1);
+            // 
             // Form_sale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 536);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.dateTimePicker_end);
+            this.Controls.Add(this.dateTimePicker_start);
+            this.Controls.Add(this.label_finalsale);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label_refund);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label_sale);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label_totalcount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dateTimePicker_end);
-            this.Controls.Add(this.dateTimePicker_start);
             this.Name = "Form_sale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "매출관리";
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_detail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -322,23 +295,18 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker dateTimePicker_start;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_end;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_detail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_totalcount;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label_sale;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label_refund;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label_finalsale;
         private System.Windows.Forms.DataGridViewTextBoxColumn registerNumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roomNumDataGridViewTextBoxColumn;
@@ -350,5 +318,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn refundpayDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource registrationBindingSource;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_start;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_end;
     }
 }
