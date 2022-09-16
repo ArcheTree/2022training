@@ -42,7 +42,6 @@ namespace PersonalstudyroomMangement
                 cmd.Parameters.AddWithValue("@p1", onday);
                 cmd.Parameters.AddWithValue("@p2", overday);
            
-
                 da = new SqlDataAdapter(cmd);
                 ds = new DataSet();
                 da.Fill(ds, "Registeration");
@@ -50,6 +49,32 @@ namespace PersonalstudyroomMangement
 
             }
             catch (Exception )
+            {
+                System.Windows.Forms.MessageBox.Show("select 실패");
+                return;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public static void countQuery()
+        {
+            try
+            {
+                ConnectreDB();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "select * from Registeration where endday between CONVERT(date,GETDATE()) AND CONVERT(date,GETDATE()+7)";
+
+                da = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                da.Fill(ds, "Registeration");
+                dt = ds.Tables[0];
+
+            }
+            catch (Exception)
             {
                 System.Windows.Forms.MessageBox.Show("select 실패");
                 return;
@@ -68,7 +93,7 @@ namespace PersonalstudyroomMangement
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
 
-                cmd.CommandText = "select roomNum, seatNum, userId, startday, endday from Registeration where endday >= CONVERT(date,GETDATE()-2) order by endday";
+                cmd.CommandText = "select * from Registeration where endday >= CONVERT(date,GETDATE()) order by endday";
              
 
                 da = new SqlDataAdapter(cmd);
@@ -98,15 +123,15 @@ namespace PersonalstudyroomMangement
 
                 if(Query == "roomNum")
                 {
-                cmd.CommandText = "select roomNum, seatNum, userId, startday, endday from Registeration where endday >= CONVERT(date,GETDATE()-2) AND roomNum = @p1";
+                cmd.CommandText = "select roomNum, seatNum, userId, startday, endday from Registeration where endday >= CONVERT(date,GETDATE()) AND roomNum = @p1";
                 }
                 else if (Query == "userId")
                 {
-                cmd.CommandText = "select roomNum, seatNum, userId, startday, endday from Registeration where endday >= CONVERT(date,GETDATE()-2) AND userId = @p1";
+                cmd.CommandText = "select roomNum, seatNum, userId, startday, endday from Registeration where endday >= CONVERT(date,GETDATE()) AND userId = @p1";
                 }
                 else if (Query == "seatNum")
                 {
-                cmd.CommandText = "select roomNum, seatNum, userId, startday, endday from Registeration where endday >= CONVERT(date,GETDATE()-2) AND seatNum = @p1";
+                cmd.CommandText = "select roomNum, seatNum, userId, startday, endday from Registeration where endday >= CONVERT(date,GETDATE()) AND seatNum = @p1";
                 }
 
                 cmd.Parameters.AddWithValue("@p1", view);

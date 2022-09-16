@@ -39,16 +39,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox_now = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.registrationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.registrationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox_serch.SuspendLayout();
             this.groupBox_now.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox_serch
@@ -153,6 +155,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(771, 388);
             this.dataGridView1.TabIndex = 0;
             // 
+            // registrationBindingSource
+            // 
+            this.registrationBindingSource.DataSource = typeof(PersonalstudyroomMangement.Registration);
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(PersonalstudyroomMangement.User);
+            // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "roomNum";
@@ -183,10 +193,6 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "endday";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // registrationBindingSource
-            // 
-            this.registrationBindingSource.DataSource = typeof(PersonalstudyroomMangement.Registration);
-            // 
             // Form_now
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -202,6 +208,7 @@
             this.groupBox_now.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registrationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,11 +230,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn startdayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enddayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource registrationBindingSource;
+        private System.Windows.Forms.BindingSource userBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.BindingSource registrationBindingSource;
     }
 }

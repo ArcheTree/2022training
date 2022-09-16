@@ -26,12 +26,18 @@ namespace PersonalstudyroomMangement
             label_setNum.Text = temp2;
             roomNum = roomnum;
             DataManage.SeatLoad();
+
             if (DataManage.registrations.Exists((x) => x.seatNum == seatNum))
             {
                 if (DataManage.registrations.Exists((x) => x.endday >= dateTimePicker_start.Value) || DataManage.registrations.Exists((x) => x.startday >= dateTimePicker_end.Value))
                 {
                     MessageBox.Show("금일 이용중인 좌석입니다.");
-
+                    Registration refund= DataManage.registrations.Find((x) => x.seatNum == seatNum);
+                    string expay = refund.pay.ToString();
+                    dateTimePicker_start.Value = refund.startday;
+                    dateTimePicker_end.Value = refund.endday;
+                    textBox_id.Enabled = dateTimePicker_start.Enabled = dateTimePicker_end.Enabled = domainUpDown_day.Enabled=false;
+                    label_money.Text = expay;
                 }
 
             }
@@ -127,8 +133,6 @@ namespace PersonalstudyroomMangement
                     DataManage.Save(textBox_id.Text, roomNum, seatNum, DateTime.Now, dateTimePicker_start.Value, dateTimePicker_end.Value, billing, "");
 
 
-
-
                     string contents = $"ID : {textBox_id.Text}님이 {roomNum}호 {seatNum}번에 \n" +
                         $"{dateTimePicker_start.Value}~{dateTimePicker_end.Value}까지 이용하십니다. \n 결제 금액은 {billing}원입니다.";
 
@@ -157,5 +161,6 @@ namespace PersonalstudyroomMangement
             DataManage.printLog(logContents);
 
         }
+   
     }
 }

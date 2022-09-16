@@ -16,6 +16,7 @@ namespace PersonalstudyroomMangement
     {
         public Form_now()
         {
+            
             InitializeComponent();
             if (DataManage.registrations.Count > 0)
             {
@@ -37,17 +38,16 @@ namespace PersonalstudyroomMangement
 
         private void button_serch_Click(object sender, EventArgs e)
         {
-            
-             
-                DataManage.registrations = null;
+           
 
             try
                 {
                     if (textBox_Id.Text.Trim() != "")
                     {
-                        string point = "userId";
+                    DataManage.seatMngs = null;
+                    string point = "userId";
                         DataManage.search(point, textBox_Id.Text);
-                        dataGridView1.DataSource = DataManage.registrations;
+                        dataGridView1.DataSource = DataManage.seatMngs;
                     }
                 }
                 catch (Exception)
@@ -58,9 +58,10 @@ namespace PersonalstudyroomMangement
                 {
                     if (textBox_room.Text.Trim() != "")
                     {
-                        string point = "roomNum";
+                    DataManage.seatMngs = null;
+                    string point = "roomNum";
                         DataManage.search(point, textBox_room.Text);
-                        dataGridView1.DataSource = DataManage.registrations;
+                        dataGridView1.DataSource = DataManage.seatMngs;
                     }
                 }
                 catch (Exception)
@@ -71,9 +72,10 @@ namespace PersonalstudyroomMangement
                 {
                     if (textBox_seat.Text.Trim() != "")
                     {
-                        string point = "seatNum";
+                    DataManage.seatMngs = null;
+                    string point = "seatNum";
                         DataManage.search(point, textBox_seat.Text);
-                        dataGridView1.DataSource = DataManage.registrations;
+                        dataGridView1.DataSource = DataManage.seatMngs;
                     }
                 }
                 catch (Exception)

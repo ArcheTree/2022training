@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PersonalstudyroomMangement.Properties;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
@@ -14,6 +15,7 @@ namespace PersonalstudyroomMangement
     {
         public static List<Registration> registrations = new List<Registration>();
         public static List<Registration> allregistration = new List<Registration>();
+        public static List<seatMng> seatMngs = new List<seatMng>();
         public static List<User> users = new List<User>();
         static DataManage()
         {
@@ -63,6 +65,7 @@ namespace PersonalstudyroomMangement
                     seat.userId = item["userId"].ToString();
                     seat.startday = DateTime.Parse(item["startday"].ToString());
                     seat.endday = DateTime.Parse(item["endday"].ToString());
+                    seat.pay = int.Parse(item["pay"].ToString());
                     registrations.Add(seat);
                 }
 
@@ -84,14 +87,14 @@ namespace PersonalstudyroomMangement
 
                 foreach (DataRow item in DBregisteration.dt.Rows)
                 {
-                    Registration re = new Registration();
+                    seatMng re = new seatMng();
                    
                     re.roomNum = int.Parse(item["roomNum"].ToString());
                     re.seatNum = int.Parse(item["seatNum"].ToString());
                     re.userId = item["userId"].ToString();
                     re.startday = DateTime.Parse(item["startday"].ToString());
                     re.endday = DateTime.Parse(item["endday"].ToString());
-                    registrations.Add(re);
+                    seatMngs.Add(re);
                     
                 }
 

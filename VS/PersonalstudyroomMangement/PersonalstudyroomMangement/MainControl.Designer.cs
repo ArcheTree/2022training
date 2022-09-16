@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label_all_share = new System.Windows.Forms.Label();
+            this.label_all_expired = new System.Windows.Forms.Label();
+            this.label_all_empty = new System.Windows.Forms.Label();
+            this.label_all_now = new System.Windows.Forms.Label();
+            this.label_all_total = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -68,11 +68,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label_all_share);
+            this.groupBox1.Controls.Add(this.label_all_expired);
+            this.groupBox1.Controls.Add(this.label_all_empty);
+            this.groupBox1.Controls.Add(this.label_all_now);
+            this.groupBox1.Controls.Add(this.label_all_total);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -85,50 +85,50 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "독서실전체";
             // 
-            // label10
+            // label_all_share
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(136, 310);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 12);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "label10";
+            this.label_all_share.AutoSize = true;
+            this.label_all_share.Location = new System.Drawing.Point(136, 310);
+            this.label_all_share.Name = "label_all_share";
+            this.label_all_share.Size = new System.Drawing.Size(44, 12);
+            this.label_all_share.TabIndex = 9;
+            this.label_all_share.Text = "label10";
             // 
-            // label9
+            // label_all_expired
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(136, 250);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 12);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "label9";
+            this.label_all_expired.AutoSize = true;
+            this.label_all_expired.Location = new System.Drawing.Point(136, 250);
+            this.label_all_expired.Name = "label_all_expired";
+            this.label_all_expired.Size = new System.Drawing.Size(38, 12);
+            this.label_all_expired.TabIndex = 8;
+            this.label_all_expired.Text = "label9";
             // 
-            // label8
+            // label_all_empty
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(136, 190);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 12);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "label8";
+            this.label_all_empty.AutoSize = true;
+            this.label_all_empty.Location = new System.Drawing.Point(136, 190);
+            this.label_all_empty.Name = "label_all_empty";
+            this.label_all_empty.Size = new System.Drawing.Size(38, 12);
+            this.label_all_empty.TabIndex = 7;
+            this.label_all_empty.Text = "label8";
             // 
-            // label7
+            // label_all_now
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(136, 130);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 12);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "label7";
+            this.label_all_now.AutoSize = true;
+            this.label_all_now.Location = new System.Drawing.Point(136, 130);
+            this.label_all_now.Name = "label_all_now";
+            this.label_all_now.Size = new System.Drawing.Size(38, 12);
+            this.label_all_now.TabIndex = 6;
+            this.label_all_now.Text = "label7";
             // 
-            // label6
+            // label_all_total
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(136, 70);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 12);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "label6";
+            this.label_all_total.AutoSize = true;
+            this.label_all_total.Location = new System.Drawing.Point(136, 70);
+            this.label_all_total.Name = "label_all_total";
+            this.label_all_total.Size = new System.Drawing.Size(23, 12);
+            this.label_all_total.TabIndex = 5;
+            this.label_all_total.Text = "110";
             // 
             // label5
             // 
@@ -416,11 +416,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label_all_share;
+        private System.Windows.Forms.Label label_all_expired;
+        private System.Windows.Forms.Label label_all_empty;
+        private System.Windows.Forms.Label label_all_now;
+        private System.Windows.Forms.Label label_all_total;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

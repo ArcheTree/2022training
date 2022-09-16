@@ -124,8 +124,9 @@
             this.label_money.Font = new System.Drawing.Font("굴림", 11F);
             this.label_money.Location = new System.Drawing.Point(164, 294);
             this.label_money.Name = "label_money";
-            this.label_money.Size = new System.Drawing.Size(0, 15);
+            this.label_money.Size = new System.Drawing.Size(102, 15);
             this.label_money.TabIndex = 10;
+            this.label_money.Text = "이용기간 선택";
             // 
             // textBox_id
             // 
