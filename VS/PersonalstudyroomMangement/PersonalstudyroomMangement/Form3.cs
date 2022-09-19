@@ -38,53 +38,59 @@ namespace PersonalstudyroomMangement
 
         private void button_serch_Click(object sender, EventArgs e)
         {
-           
 
             try
+            {
+                if (textBox_Id.Text.Trim() != "")
                 {
-                    if (textBox_Id.Text.Trim() != "")
-                    {
-                    DataManage.seatMngs = null;
+                    dataGridView1.DataSource = null;
                     string point = "userId";
-                        DataManage.search(point, textBox_Id.Text);
-                        dataGridView1.DataSource = DataManage.seatMngs;
-                    }
+                    DataManage.search(point,textBox_Id.Text);
+                    dataGridView1.DataSource = DataManage.registrations;
+                    string contents = $"ID({textBox_Id.Text}) 이용현황 검색";
+                    WriteLog(contents);
                 }
-                catch (Exception)
-                {
+            }
+            catch (Exception)
+            {
 
-                }
-                try
+            }
+            try
+            {
+                if (textBox_room.Text.Trim() != "")
                 {
-                    if (textBox_room.Text.Trim() != "")
-                    {
-                    DataManage.seatMngs = null;
+                    dataGridView1.DataSource = null;
                     string point = "roomNum";
-                        DataManage.search(point, textBox_room.Text);
-                        dataGridView1.DataSource = DataManage.seatMngs;
-                    }
+                    DataManage.search(point, textBox_room.Text);
+                    dataGridView1.DataSource = DataManage.registrations;
+                    string contents = $"방({textBox_room.Text}) 이용현황 검색";
+                    WriteLog(contents);
                 }
-                catch (Exception)
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                if (textBox_seat.Text.Trim() != "")
                 {
 
-                }
-                try
-                {
-                    if (textBox_seat.Text.Trim() != "")
-                    {
-                    DataManage.seatMngs = null;
+                    dataGridView1.DataSource = null;
                     string point = "seatNum";
-                        DataManage.search(point, textBox_seat.Text);
-                        dataGridView1.DataSource = DataManage.seatMngs;
-                    }
+                    DataManage.search(point, textBox_seat.Text);
+                    dataGridView1.DataSource = DataManage.registrations;
+                    string contents = $"자리({textBox_seat.Text}) 이용현황 검색";
+                    WriteLog(contents);
                 }
-                catch (Exception)
-                {
+            }
+            catch (Exception)
+            {
 
-                }
+            }
            
         }
 
-        }
     }
+}
 

@@ -15,7 +15,6 @@ namespace PersonalstudyroomMangement
     {
         public static List<Registration> registrations = new List<Registration>();
         public static List<Registration> allregistration = new List<Registration>();
-        public static List<seatMng> seatMngs = new List<seatMng>();
         public static List<User> users = new List<User>();
         static DataManage()
         {
@@ -79,23 +78,23 @@ namespace PersonalstudyroomMangement
            
 
         }
-        public static void search(string query, string view)
+        public static void search(string Query, string view)
         {
             try
             {
-                DBregisteration.searchQuery(query,view);
+                DBregisteration.searchQuery(Query, view);
+
+                Registration seat = new Registration();
+                registrations.Clear();
 
                 foreach (DataRow item in DBregisteration.dt.Rows)
                 {
-                    seatMng re = new seatMng();
-                   
-                    re.roomNum = int.Parse(item["roomNum"].ToString());
-                    re.seatNum = int.Parse(item["seatNum"].ToString());
-                    re.userId = item["userId"].ToString();
-                    re.startday = DateTime.Parse(item["startday"].ToString());
-                    re.endday = DateTime.Parse(item["endday"].ToString());
-                    seatMngs.Add(re);
-                    
+                    seat.roomNum = int.Parse(item["roomNum"].ToString());
+                    seat.seatNum = int.Parse(item["seatNum"].ToString());
+                    seat.userId = item["userId"].ToString();
+                    seat.startday = DateTime.Parse(item["startday"].ToString());
+                    seat.endday = DateTime.Parse(item["endday"].ToString());
+                    registrations.Add(seat);
                 }
 
             }
@@ -168,6 +167,17 @@ namespace PersonalstudyroomMangement
             try
             {
                 DBregisteration.newinsertQuery(uesrid, roomNum, seatNum, takeday ,startday, endday, pay, Description);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+        public static void updateUesr(string userId, string name, string phone)
+        {
+            try
+            {
+
             }
             catch (Exception)
             {

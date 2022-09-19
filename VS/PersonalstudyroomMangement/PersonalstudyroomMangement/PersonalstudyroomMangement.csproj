@@ -49,6 +49,7 @@
     <Compile Include="DataManage.cs" />
     <Compile Include="DBconnect.cs" />
     <Compile Include="DBregisteration.cs" />
+    <Compile Include="DBseatMng.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

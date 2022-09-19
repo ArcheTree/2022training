@@ -118,7 +118,7 @@ namespace PersonalstudyroomMangement
                         user.birth = dateTimePicker_birth.Value;
 
 
-                        DataManage.Save
+                        DataManage.Save  //업데이트로 변경
                             (textBox_id.Text, textBox_name.Text, textBox_phone.Text, dateTimePicker_birth.Value, DateTime.Now);
 
                         string contents = $"ID : {textBox_id.Text}에 " +
@@ -134,7 +134,8 @@ namespace PersonalstudyroomMangement
                     WriteLog(contents);
                     MessageBox.Show(contents);
                 }
-
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = DataManage.users;
 
             }
         }

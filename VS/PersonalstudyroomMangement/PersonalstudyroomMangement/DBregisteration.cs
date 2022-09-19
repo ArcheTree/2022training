@@ -93,7 +93,7 @@ namespace PersonalstudyroomMangement
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
 
-                cmd.CommandText = "select * from Registeration where endday >= CONVERT(date,GETDATE()) order by endday";
+                cmd.CommandText = "select * from Registeration where endday >= CONVERT(date,GETDATE()-2) order by endday";
              
 
                 da = new SqlDataAdapter(cmd);
@@ -121,17 +121,21 @@ namespace PersonalstudyroomMangement
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
 
-                if(Query == "roomNum")
+                if (Query == "roomNum")
                 {
-                cmd.CommandText = "select roomNum, seatNum, userId, startday, endday from Registeration where endday >= CONVERT(date,GETDATE()) AND roomNum = @p1";
+                    cmd.CommandText = "select * from Registeration where endday >= CONVERT(date,GETDATE()) AND roomNum = @p1";
                 }
                 else if (Query == "userId")
                 {
-                cmd.CommandText = "select roomNum, seatNum, userId, startday, endday from Registeration where endday >= CONVERT(date,GETDATE()) AND userId = @p1";
+                    cmd.CommandText = "select * from Registeration where endday >= CONVERT(date,GETDATE()) AND userId = @p1";
                 }
                 else if (Query == "seatNum")
                 {
-                cmd.CommandText = "select roomNum, seatNum, userId, startday, endday from Registeration where endday >= CONVERT(date,GETDATE()) AND seatNum = @p1";
+                    cmd.CommandText = "select * from Registeration where endday >= CONVERT(date,GETDATE()) AND seatNum = @p1";
+                }
+                else
+                {
+                    cmd.CommandText = "select * from Registeration where endday >= CONVERT(date,GETDATE())";
                 }
 
                 cmd.Parameters.AddWithValue("@p1", view);
