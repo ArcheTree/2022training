@@ -42,6 +42,8 @@
             this.button_refund = new System.Windows.Forms.Button();
             this.dateTimePicker_start = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_end = new System.Windows.Forms.DateTimePicker();
+            this.textBox_refund = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -148,7 +150,7 @@
             // 
             // button_pay
             // 
-            this.button_pay.Location = new System.Drawing.Point(72, 341);
+            this.button_pay.Location = new System.Drawing.Point(72, 338);
             this.button_pay.Name = "button_pay";
             this.button_pay.Size = new System.Drawing.Size(118, 43);
             this.button_pay.TabIndex = 13;
@@ -158,12 +160,13 @@
             // 
             // button_refund
             // 
-            this.button_refund.Location = new System.Drawing.Point(221, 340);
+            this.button_refund.Location = new System.Drawing.Point(224, 338);
             this.button_refund.Name = "button_refund";
             this.button_refund.Size = new System.Drawing.Size(118, 43);
             this.button_refund.TabIndex = 13;
             this.button_refund.Text = "환불하기";
             this.button_refund.UseVisualStyleBackColor = true;
+            this.button_refund.Click += new System.EventHandler(this.button_refund_Click);
             // 
             // dateTimePicker_start
             // 
@@ -181,11 +184,31 @@
             this.dateTimePicker_end.Size = new System.Drawing.Size(209, 21);
             this.dateTimePicker_end.TabIndex = 15;
             // 
+            // textBox_refund
+            // 
+            this.textBox_refund.Font = new System.Drawing.Font("굴림", 11F);
+            this.textBox_refund.Location = new System.Drawing.Point(153, 402);
+            this.textBox_refund.Name = "textBox_refund";
+            this.textBox_refund.Size = new System.Drawing.Size(157, 24);
+            this.textBox_refund.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("굴림", 11F);
+            this.label2.Location = new System.Drawing.Point(66, 405);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 15);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "환불금액 :";
+            // 
             // Form_charge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 446);
+            this.Controls.Add(this.textBox_refund);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker_end);
             this.Controls.Add(this.dateTimePicker_start);
             this.Controls.Add(this.button_refund);
@@ -224,5 +247,7 @@
         private System.Windows.Forms.Button button_refund;
         private System.Windows.Forms.DateTimePicker dateTimePicker_start;
         private System.Windows.Forms.DateTimePicker dateTimePicker_end;
+        private System.Windows.Forms.TextBox textBox_refund;
+        private System.Windows.Forms.Label label2;
     }
 }

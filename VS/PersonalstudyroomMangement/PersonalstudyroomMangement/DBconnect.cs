@@ -146,6 +146,28 @@ namespace PersonalstudyroomMangement
             }
         }
 
+        public static void modifiUserQuery(string userId, string name, string phone)
+        {
+            try
+            {
+                ConnectDB();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                string sqlcommand = "";
+                sqlcommand = "update UserId set name=@p1, " + "phone=@p2 where userId=@p3";
+                cmd.Parameters.AddWithValue("@p1", name);
+                cmd.Parameters.AddWithValue("@p2", phone);
+                cmd.Parameters.AddWithValue("@p3", userId);
+                cmd.CommandText = sqlcommand;
+                cmd.ExecuteNonQuery();
 
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

@@ -15,11 +15,13 @@ namespace PersonalstudyroomMangement
     {
         public static List<Registration> registrations = new List<Registration>();
         public static List<Registration> allregistration = new List<Registration>();
+        public static List<Registration> expiredmembers = new List<Registration>();
         public static List<User> users = new List<User>();
         static DataManage()
         {
             userLoad();
             SeatLoad();
+            exLoad();
         }
         public static void userLoad()
         {
@@ -59,6 +61,7 @@ namespace PersonalstudyroomMangement
                 {
                     Registration seat = new Registration();
 
+                    seat.registerNum = int.Parse(item["registerNum"].ToString());
                     seat.roomNum = int.Parse(item["roomNum"].ToString());
                     seat.seatNum = int.Parse(item["seatNum"].ToString());
                     seat.userId = item["userId"].ToString();
@@ -77,6 +80,29 @@ namespace PersonalstudyroomMangement
             }
            
 
+        }
+        public static void exLoad()
+        {
+            try
+            {
+                DBregisteration.expiredcountQuery();
+                Registration seat = new Registration();
+                expiredmembers.Clear();
+
+                foreach (DataRow item in DBregisteration.dt.Rows)
+                {
+                    seat.roomNum = int.Parse(item["roomNum"].ToString());
+                    seat.endday = DateTime.Parse(item["endday"].ToString());
+                    expiredmembers.Add(seat);
+                }
+                
+            }
+            catch (Exception)
+            {
+
+               
+            }
+           
         }
         public static void search(string Query, string view)
         {
@@ -112,6 +138,7 @@ namespace PersonalstudyroomMangement
                 DBregisteration.registerselectQuery(onday,offday);
 
                 allregistration.Clear();
+
                 foreach (DataRow item in DBregisteration.dt.Rows)
                 {
                     Registration register = new Registration();
@@ -177,13 +204,17 @@ namespace PersonalstudyroomMangement
         {
             try
             {
-
+                DBconnect.modifiUserQuery(userId, name, phone);
             }
             catch (Exception)
             {
 
             }
         }
-        
+
+        internal static void refundQuery(int registerNum, string Description,int refundpay)
+        {
+            DBregisteration.registerupdateQuery(registerNum, Description, DateTime.Now, refundpay);
+        }
     }
 }

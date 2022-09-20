@@ -58,7 +58,7 @@ namespace PersonalstudyroomMangement
                 conn.Close();
             }
         }
-        public static void countQuery()
+        public static void expiredcountQuery()
         {
             try
             {
@@ -156,8 +156,7 @@ namespace PersonalstudyroomMangement
                 conn.Close();
             }
         }
-        public static void registerupdateQuery(int registerNum, string uesrid, int roomNum,
-           int seatNum, DateTime endday, string Description, bool isRefund, DateTime refundDay, int refundpay)
+        public static void registerupdateQuery(int registerNum,  string Description, DateTime refundDay, int refundpay)
         {
             try
             {
@@ -167,25 +166,12 @@ namespace PersonalstudyroomMangement
                 cmd.CommandType = CommandType.Text;
                 string sqlcommand = "";
 
-                if (isRefund) //환불
-                {
-                    sqlcommand = "update Registration set endday=" + refundDay + " =@p2, Description='환불'=@p3, refundpay = " + refundpay + "원 = @p4  where registerNum=@p1";
+                    sqlcommand = "update Registeration set endday=@p2, description= @p3, refundpay = @p4  where registerNum=@p1";
                     cmd.Parameters.AddWithValue("@p1", registerNum);
-                    cmd.Parameters.AddWithValue("@p2", endday);
+                    cmd.Parameters.AddWithValue("@p2", refundDay);
                     cmd.Parameters.AddWithValue("@p3", Description);
                     cmd.Parameters.AddWithValue("@p4", refundpay);
-                }
-                else //자리변경
-                {
-                    sqlcommand = "update Registration set roomNum=@p2, seatNum=@p3," +
-                        "Description=@7 where registerNum=@p8";
-
-                    cmd.Parameters.AddWithValue("@p1", uesrid);
-                    cmd.Parameters.AddWithValue("@p2", roomNum);
-                    cmd.Parameters.AddWithValue("@p3", seatNum);
-                    cmd.Parameters.AddWithValue("@p7", Description);
-                    cmd.Parameters.AddWithValue("@p8", registerNum);
-                }
+               
                 cmd.CommandText = sqlcommand;
                 cmd.ExecuteNonQuery();
 

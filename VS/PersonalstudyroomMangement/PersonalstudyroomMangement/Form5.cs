@@ -16,6 +16,8 @@ namespace PersonalstudyroomMangement
         int seatNum = 0;
         int roomNum = 0;
         int billing = 0;
+        int registernumber = 0;
+        int paycash = 0;
 
         public Form_charge(int seatnum, int roomnum)
         {
@@ -27,6 +29,8 @@ namespace PersonalstudyroomMangement
             roomNum = roomnum;
             DataManage.SeatLoad();
 
+          
+
             if (DataManage.registrations.Exists((x) => x.seatNum == seatNum))
             {
                 if (DataManage.registrations.Exists((x) => x.endday >= dateTimePicker_start.Value) || DataManage.registrations.Exists((x) => x.startday >= dateTimePicker_end.Value))
@@ -34,10 +38,13 @@ namespace PersonalstudyroomMangement
                     MessageBox.Show("금일 이용중인 좌석입니다.");
                     Registration refund= DataManage.registrations.Find((x) => x.seatNum == seatNum);
                     string expay = refund.pay.ToString();
+                    textBox_id.Text = refund.userId;
                     dateTimePicker_start.Value = refund.startday;
                     dateTimePicker_end.Value = refund.endday;
                     textBox_id.Enabled = dateTimePicker_start.Enabled = dateTimePicker_end.Enabled = domainUpDown_day.Enabled=false;
                     label_money.Text = expay;
+                    registernumber = refund.registerNum;
+                    paycash = refund.pay;
                 }
 
             }
@@ -131,13 +138,13 @@ namespace PersonalstudyroomMangement
                     DataManage.registrations.Add(registrations);
 
                     DataManage.Save(textBox_id.Text, roomNum, seatNum, DateTime.Now, dateTimePicker_start.Value, dateTimePicker_end.Value, billing, "");
-                    DataManage.Save(textBox_id.Text, roomNum, seatNum, DateTime.Now, dateTimePicker_start.Value, dateTimePicker_end.Value, billing, "");
 
                     string contents = $"ID : {textBox_id.Text}님이 {roomNum}호 {seatNum}번에 \n" +
                         $"{dateTimePicker_start.Value}~{dateTimePicker_end.Value}까지 이용하십니다. \n 결제 금액은 {billing}원입니다.";
 
                     WriteLog(contents);
                     MessageBox.Show(contents);
+                    Close();
                 }
                 catch (Exception)
                 {
@@ -161,6 +168,26 @@ namespace PersonalstudyroomMangement
             DataManage.printLog(logContents);
 
         }
-   
+
+        private void button_refund_Click(object sender, EventArgs e)
+        {
+            string description = "환불";
+            int refundpay = int.Parse(textBox_refund.Text);
+
+            if(refundpay > paycash)
+            {
+                MessageBox.Show("결제금액보다 환불금액이 더 높습니다. 확인해주세요");
+            }
+            else
+            {
+                DataManage.refundQuery(registernumber, description, refundpay);
+                string contents = $"등록번호 {registernumber} ID : {textBox_id.Text}님이 {roomNum}호 {seatNum}번에 \n" +
+                       $"{DateTime.Now}환불하셨습니다. \n 환불 금액은 {refundpay}원입니다.";
+
+                WriteLog(contents);
+                MessageBox.Show(contents);
+                Close();            
+            }
+        }
     }
 }

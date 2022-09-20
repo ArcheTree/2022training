@@ -74,7 +74,8 @@ namespace PersonalstudyroomMangement
                         dataGridView1.DataSource = DataManage.users;
                         WriteLog(contents);
                         MessageBox.Show(contents);
-                        
+
+                        Close();
                     }
                 }
                 catch (Exception)
@@ -118,9 +119,8 @@ namespace PersonalstudyroomMangement
                         user.birth = dateTimePicker_birth.Value;
 
 
-                        DataManage.Save  //업데이트로 변경
-                            (textBox_id.Text, textBox_name.Text, textBox_phone.Text, dateTimePicker_birth.Value, DateTime.Now);
-
+                        DataManage.updateUesr(textBox_id.Text, textBox_name.Text, textBox_phone.Text);  //업데이트로 변경
+                            
                         string contents = $"ID : {textBox_id.Text}에 " +
                             $"{textBox_name.Text}님이 정보변경 하셨습니다.";
 
