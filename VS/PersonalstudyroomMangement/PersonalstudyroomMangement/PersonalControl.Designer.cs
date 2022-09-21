@@ -87,6 +87,7 @@
             // 
             // b201_10
             // 
+            this.b201_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b201_10.Location = new System.Drawing.Point(146, 395);
             this.b201_10.Name = "b201_10";
             this.b201_10.Size = new System.Drawing.Size(82, 54);
@@ -97,6 +98,7 @@
             // 
             // b201_9
             // 
+            this.b201_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b201_9.Location = new System.Drawing.Point(146, 310);
             this.b201_9.Name = "b201_9";
             this.b201_9.Size = new System.Drawing.Size(82, 54);
@@ -107,6 +109,7 @@
             // 
             // b201_8
             // 
+            this.b201_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b201_8.Location = new System.Drawing.Point(146, 224);
             this.b201_8.Name = "b201_8";
             this.b201_8.Size = new System.Drawing.Size(82, 54);
@@ -117,6 +120,7 @@
             // 
             // b201_7
             // 
+            this.b201_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b201_7.Location = new System.Drawing.Point(146, 136);
             this.b201_7.Name = "b201_7";
             this.b201_7.Size = new System.Drawing.Size(82, 54);
@@ -127,6 +131,7 @@
             // 
             // b201_6
             // 
+            this.b201_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b201_6.Location = new System.Drawing.Point(146, 48);
             this.b201_6.Name = "b201_6";
             this.b201_6.Size = new System.Drawing.Size(82, 54);
@@ -137,6 +142,7 @@
             // 
             // b201_5
             // 
+            this.b201_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b201_5.Location = new System.Drawing.Point(18, 395);
             this.b201_5.Name = "b201_5";
             this.b201_5.Size = new System.Drawing.Size(82, 54);
@@ -147,16 +153,19 @@
             // 
             // b201_4
             // 
+            this.b201_4.BackColor = System.Drawing.SystemColors.Control;
+            this.b201_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b201_4.Location = new System.Drawing.Point(18, 310);
             this.b201_4.Name = "b201_4";
             this.b201_4.Size = new System.Drawing.Size(82, 54);
             this.b201_4.TabIndex = 3;
             this.b201_4.Text = "4";
-            this.b201_4.UseVisualStyleBackColor = true;
+            this.b201_4.UseVisualStyleBackColor = false;
             this.b201_4.Click += new System.EventHandler(this.b201_4_Click);
             // 
             // b201_3
             // 
+            this.b201_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b201_3.Location = new System.Drawing.Point(18, 224);
             this.b201_3.Name = "b201_3";
             this.b201_3.Size = new System.Drawing.Size(82, 54);
@@ -167,6 +176,7 @@
             // 
             // b201_2
             // 
+            this.b201_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b201_2.Location = new System.Drawing.Point(18, 136);
             this.b201_2.Name = "b201_2";
             this.b201_2.Size = new System.Drawing.Size(82, 54);
@@ -177,12 +187,14 @@
             // 
             // b201_1
             // 
+            this.b201_1.BackColor = System.Drawing.SystemColors.Control;
+            this.b201_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b201_1.Location = new System.Drawing.Point(18, 48);
             this.b201_1.Name = "b201_1";
             this.b201_1.Size = new System.Drawing.Size(82, 54);
             this.b201_1.TabIndex = 0;
             this.b201_1.Text = "1";
-            this.b201_1.UseVisualStyleBackColor = true;
+            this.b201_1.UseVisualStyleBackColor = false;
             this.b201_1.Click += new System.EventHandler(this.b201_1_Click);
             // 
             // groupBox2
@@ -206,6 +218,7 @@
             // 
             // b202_20
             // 
+            this.b202_20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b202_20.Location = new System.Drawing.Point(146, 395);
             this.b202_20.Name = "b202_20";
             this.b202_20.Size = new System.Drawing.Size(82, 54);
@@ -215,6 +228,7 @@
             // 
             // b202_19
             // 
+            this.b202_19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b202_19.Location = new System.Drawing.Point(146, 310);
             this.b202_19.Name = "b202_19";
             this.b202_19.Size = new System.Drawing.Size(82, 54);
@@ -224,6 +238,7 @@
             // 
             // b202_18
             // 
+            this.b202_18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b202_18.Location = new System.Drawing.Point(146, 224);
             this.b202_18.Name = "b202_18";
             this.b202_18.Size = new System.Drawing.Size(82, 54);
@@ -233,6 +248,7 @@
             // 
             // b202_17
             // 
+            this.b202_17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b202_17.Location = new System.Drawing.Point(146, 136);
             this.b202_17.Name = "b202_17";
             this.b202_17.Size = new System.Drawing.Size(82, 54);
@@ -242,6 +258,7 @@
             // 
             // b202_16
             // 
+            this.b202_16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b202_16.Location = new System.Drawing.Point(146, 48);
             this.b202_16.Name = "b202_16";
             this.b202_16.Size = new System.Drawing.Size(82, 54);
@@ -251,6 +268,7 @@
             // 
             // b202_15
             // 
+            this.b202_15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b202_15.Location = new System.Drawing.Point(18, 395);
             this.b202_15.Name = "b202_15";
             this.b202_15.Size = new System.Drawing.Size(82, 54);
@@ -260,6 +278,7 @@
             // 
             // b202_14
             // 
+            this.b202_14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b202_14.Location = new System.Drawing.Point(18, 310);
             this.b202_14.Name = "b202_14";
             this.b202_14.Size = new System.Drawing.Size(82, 54);
@@ -269,6 +288,7 @@
             // 
             // b202_13
             // 
+            this.b202_13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b202_13.Location = new System.Drawing.Point(18, 224);
             this.b202_13.Name = "b202_13";
             this.b202_13.Size = new System.Drawing.Size(82, 54);
@@ -278,6 +298,7 @@
             // 
             // b202_12
             // 
+            this.b202_12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b202_12.Location = new System.Drawing.Point(18, 136);
             this.b202_12.Name = "b202_12";
             this.b202_12.Size = new System.Drawing.Size(82, 54);
@@ -287,6 +308,7 @@
             // 
             // b202_11
             // 
+            this.b202_11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b202_11.Location = new System.Drawing.Point(18, 48);
             this.b202_11.Name = "b202_11";
             this.b202_11.Size = new System.Drawing.Size(82, 54);
@@ -315,6 +337,7 @@
             // 
             // b203_30
             // 
+            this.b203_30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b203_30.Location = new System.Drawing.Point(146, 395);
             this.b203_30.Name = "b203_30";
             this.b203_30.Size = new System.Drawing.Size(82, 54);
@@ -324,6 +347,7 @@
             // 
             // b203_29
             // 
+            this.b203_29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b203_29.Location = new System.Drawing.Point(146, 310);
             this.b203_29.Name = "b203_29";
             this.b203_29.Size = new System.Drawing.Size(82, 54);
@@ -333,6 +357,7 @@
             // 
             // b203_28
             // 
+            this.b203_28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b203_28.Location = new System.Drawing.Point(146, 224);
             this.b203_28.Name = "b203_28";
             this.b203_28.Size = new System.Drawing.Size(82, 54);
@@ -342,6 +367,7 @@
             // 
             // b203_27
             // 
+            this.b203_27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b203_27.Location = new System.Drawing.Point(146, 136);
             this.b203_27.Name = "b203_27";
             this.b203_27.Size = new System.Drawing.Size(82, 54);
@@ -351,6 +377,7 @@
             // 
             // b203_26
             // 
+            this.b203_26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b203_26.Location = new System.Drawing.Point(146, 48);
             this.b203_26.Name = "b203_26";
             this.b203_26.Size = new System.Drawing.Size(82, 54);
@@ -360,6 +387,7 @@
             // 
             // b203_25
             // 
+            this.b203_25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b203_25.Location = new System.Drawing.Point(18, 395);
             this.b203_25.Name = "b203_25";
             this.b203_25.Size = new System.Drawing.Size(82, 54);
@@ -369,6 +397,7 @@
             // 
             // b203_24
             // 
+            this.b203_24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b203_24.Location = new System.Drawing.Point(18, 310);
             this.b203_24.Name = "b203_24";
             this.b203_24.Size = new System.Drawing.Size(82, 54);
@@ -378,6 +407,7 @@
             // 
             // b203_23
             // 
+            this.b203_23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b203_23.Location = new System.Drawing.Point(18, 224);
             this.b203_23.Name = "b203_23";
             this.b203_23.Size = new System.Drawing.Size(82, 54);
@@ -387,6 +417,7 @@
             // 
             // b203_22
             // 
+            this.b203_22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b203_22.Location = new System.Drawing.Point(18, 136);
             this.b203_22.Name = "b203_22";
             this.b203_22.Size = new System.Drawing.Size(82, 54);
@@ -396,6 +427,7 @@
             // 
             // b203_21
             // 
+            this.b203_21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b203_21.Location = new System.Drawing.Point(18, 48);
             this.b203_21.Name = "b203_21";
             this.b203_21.Size = new System.Drawing.Size(82, 54);

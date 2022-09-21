@@ -1,4 +1,5 @@
-﻿using PersonalstudyroomMangement.Properties;
+﻿using Microsoft.Win32;
+using PersonalstudyroomMangement.Properties;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -17,6 +18,7 @@ namespace PersonalstudyroomMangement
         public static List<Registration> allregistration = new List<Registration>();
         public static List<Registration> expiredmembers = new List<Registration>();
         public static List<User> users = new List<User>();
+        public static List<seatMng> nowseats = new List<seatMng>();
         static DataManage()
         {
             userLoad();
@@ -92,6 +94,7 @@ namespace PersonalstudyroomMangement
                 foreach (DataRow item in DBregisteration.dt.Rows)
                 {
                     seat.roomNum = int.Parse(item["roomNum"].ToString());
+                    seat.seatNum = int.Parse(item["seatNum"].ToString());
                     seat.endday = DateTime.Parse(item["endday"].ToString());
                     expiredmembers.Add(seat);
                 }
@@ -160,10 +163,27 @@ namespace PersonalstudyroomMangement
             catch (Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
-                MessageBox.Show("등록테이블");
             }
+        }
+        public static void seatcolorQuery(int seatNum)
+        {
+            try
+            {
+                DBseatMng.seatMngselectQuery(seatNum);
+                //nowseats.Clear();
+                foreach (DataRow item in DBseatMng.dt.Rows)
+                {
+                    seatMng mng = new seatMng();
+                    mng.seatNum = int.Parse(item["seatNum"].ToString());
+                    mng.endday = item["endday"].ToString() == "" ? new DateTime() : DateTime.Parse(item["endday"].ToString());
+                    nowseats.Add(mng);
+                }
+            }
+            catch (Exception)
+            {
 
-
+            }
+            
         }
         public static void printLog(string contents)
         {
@@ -212,9 +232,14 @@ namespace PersonalstudyroomMangement
             }
         }
 
-        internal static void refundQuery(int registerNum, string Description,int refundpay)
+        public static void refundQuery(int registerNum, string Description,int refundpay)
         {
             DBregisteration.registerupdateQuery(registerNum, Description, DateTime.Now, refundpay);
         }
+        public static void seatInfo(int seatNum, string userId, DateTime startday, DateTime endday)
+        {
+            DBseatMng.seatupdateQuery(seatNum, userId, startday, endday);
+        }
     }
+
 }

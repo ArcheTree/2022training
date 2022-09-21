@@ -26,7 +26,7 @@ namespace PersonalstudyroomMangement
             conn = new SqlConnection(conn.ConnectionString);
             conn.Open();
         }
-        public static void seatMngselectQuery()
+        public static void seatMngselectQuery(int seatNum)
         {
             try
             {
@@ -35,8 +35,8 @@ namespace PersonalstudyroomMangement
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
 
-                cmd.CommandText = "select * from seatMng order by seatNum";
-
+                cmd.CommandText = "select * from seatMng where seatNum=@p1";
+                cmd.Parameters.AddWithValue("@p1", seatNum);
 
                 da = new SqlDataAdapter(cmd);
                 ds = new DataSet();
@@ -55,5 +55,36 @@ namespace PersonalstudyroomMangement
             }
 
         }
+        public static void seatupdateQuery(int seatNum, string userId, DateTime startday, DateTime endday)
+        {
+            try
+            {
+                ConnectDB();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                string sqlcommand = "";
+
+                sqlcommand = "update seatMng set userId = @p1, startday=@p2, endday= @p3 where seatNum=@p4";
+                cmd.Parameters.AddWithValue("@p1", userId);
+                cmd.Parameters.AddWithValue("@p2", startday);
+                cmd.Parameters.AddWithValue("@p3", endday);
+                cmd.Parameters.AddWithValue("@p4", seatNum);
+
+                cmd.CommandText = sqlcommand;
+                cmd.ExecuteNonQuery();
+
+
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
     }
 }

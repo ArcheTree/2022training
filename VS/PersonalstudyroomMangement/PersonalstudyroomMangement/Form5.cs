@@ -138,7 +138,7 @@ namespace PersonalstudyroomMangement
                     DataManage.registrations.Add(registrations);
 
                     DataManage.Save(textBox_id.Text, roomNum, seatNum, DateTime.Now, dateTimePicker_start.Value, dateTimePicker_end.Value, billing, "");
-
+                    DataManage.seatInfo(seatNum, textBox_id.Text, dateTimePicker_start.Value, dateTimePicker_end.Value);
                     string contents = $"ID : {textBox_id.Text}님이 {roomNum}호 {seatNum}번에 \n" +
                         $"{dateTimePicker_start.Value}~{dateTimePicker_end.Value}까지 이용하십니다. \n 결제 금액은 {billing}원입니다.";
 
