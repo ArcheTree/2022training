@@ -59,7 +59,7 @@ namespace PersonalstudyroomMangement
                 {
                     label_money.Text = "8,000원";
                     billing = 8000;
-                    dateTimePicker_end.Value = dateTimePicker_start.Value.AddDays(1);
+                    dateTimePicker_end.Value = dateTimePicker_start.Value;
                 }
                 else if (domainUpDown_day.SelectedItem.Equals("7일(1주일)"))
                 {
@@ -86,7 +86,7 @@ namespace PersonalstudyroomMangement
                 {
                     label_money.Text = "6,000원";
                     billing = 6000;
-                    dateTimePicker_end.Value = dateTimePicker_start.Value.AddDays(1);
+                    dateTimePicker_end.Value = dateTimePicker_start.Value;
                 }
                 else if (domainUpDown_day.SelectedItem.Equals("7일(1주일)"))
                 {
@@ -186,7 +186,7 @@ namespace PersonalstudyroomMangement
 
                 WriteLog(contents);
                 MessageBox.Show(contents);
-                Close();            
+                Close();     
             }
         }
     }

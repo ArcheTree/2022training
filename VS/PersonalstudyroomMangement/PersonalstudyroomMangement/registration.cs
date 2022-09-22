@@ -15,7 +15,6 @@ namespace PersonalstudyroomMangement
         public DateTime takeDay { get; set; }
         public int pay { get; set; }
 
-
         public DateTime startday { get; set; }
         public DateTime endday { get; set; }
 

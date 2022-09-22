@@ -43,7 +43,7 @@ namespace PersonalstudyroomMangement
                     car.Name = item["name"].ToString();
                     car.Phone = item["phone"].ToString();
                     car.birth = DateTime.Parse(item["birth"].ToString());
-                    car.registerationday = DateTime.Parse(item["registrationDay"].ToString());
+                    car.registerationday = DateTime.Parse(item["registerationDay"].ToString());
                     users.Add(car);
                 }
             }

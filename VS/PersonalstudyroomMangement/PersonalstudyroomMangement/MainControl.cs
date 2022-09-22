@@ -22,6 +22,7 @@ namespace PersonalstudyroomMangement
             label_all_empty.Text = (int.Parse(label_all_total.Text) - int.Parse(label_all_now.Text)).ToString();
             double share = double.Parse(label_all_now.Text) / double.Parse(label_all_total.Text) * 100;
             label_all_share.Text = Math.Round(share, 2).ToString() + "%";
+
         }
     }
 }

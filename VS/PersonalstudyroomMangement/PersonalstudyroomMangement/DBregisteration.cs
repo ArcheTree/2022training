@@ -37,14 +37,14 @@ namespace PersonalstudyroomMangement
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "select * from Registeration where takeday between @p1 and @p2 order by registerNum";
+                cmd.CommandText = "select * from registerInfo where takeday between @p1 and @p2 order by registerNum";
                 
                 cmd.Parameters.AddWithValue("@p1", onday);
                 cmd.Parameters.AddWithValue("@p2", overday);
            
                 da = new SqlDataAdapter(cmd);
                 ds = new DataSet();
-                da.Fill(ds, "Registeration");
+                da.Fill(ds, "registerInfo");
                 dt = ds.Tables[0];
 
             }
@@ -66,11 +66,11 @@ namespace PersonalstudyroomMangement
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "select * from Registeration where endday between CONVERT(date,GETDATE()) AND CONVERT(date,GETDATE()+7)";
+                cmd.CommandText = "select * from registeration where endday between CONVERT(date,GETDATE()) AND CONVERT(date,GETDATE()+7)";
 
                 da = new SqlDataAdapter(cmd);
                 ds = new DataSet();
-                da.Fill(ds, "Registeration");
+                da.Fill(ds, "registeration");
                 dt = ds.Tables[0];
 
             }
@@ -93,12 +93,12 @@ namespace PersonalstudyroomMangement
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
 
-                cmd.CommandText = "select * from Registeration where endday >= CONVERT(date,GETDATE()-2) order by endday";
+                cmd.CommandText = "select * from registeration where endday >= CONVERT(date,GETDATE()-2) order by endday";
              
 
                 da = new SqlDataAdapter(cmd);
                 ds = new DataSet();
-                da.Fill(ds, "Registeration");
+                da.Fill(ds, "registeration");
                 dt = ds.Tables[0];
             }
             catch (Exception ex)
@@ -123,19 +123,19 @@ namespace PersonalstudyroomMangement
 
                 if (Query == "roomNum")
                 {
-                    cmd.CommandText = "select * from Registeration where endday >= CONVERT(date,GETDATE()) AND roomNum = @p1";
+                    cmd.CommandText = "select * from registeration where endday >= CONVERT(date,GETDATE()) AND roomNum = @p1";
                 }
                 else if (Query == "userId")
                 {
-                    cmd.CommandText = "select * from Registeration where endday >= CONVERT(date,GETDATE()) AND userId = @p1";
+                    cmd.CommandText = "select * from registeration where endday >= CONVERT(date,GETDATE()) AND userId = @p1";
                 }
                 else if (Query == "seatNum")
                 {
-                    cmd.CommandText = "select * from Registeration where endday >= CONVERT(date,GETDATE()) AND seatNum = @p1";
+                    cmd.CommandText = "select * from registeration where endday >= CONVERT(date,GETDATE()) AND seatNum = @p1";
                 }
                 else
                 {
-                    cmd.CommandText = "select * from Registeration where endday >= CONVERT(date,GETDATE())";
+                    cmd.CommandText = "select * from registeration where endday >= CONVERT(date,GETDATE())";
                 }
 
                 cmd.Parameters.AddWithValue("@p1", view);
@@ -166,7 +166,7 @@ namespace PersonalstudyroomMangement
                 cmd.CommandType = CommandType.Text;
                 string sqlcommand = "";
 
-                    sqlcommand = "update Registeration set endday=@p2, description= @p3, refundpay = @p4  where registerNum=@p1";
+                    sqlcommand = "update registeration set endday=@p2, description= @p3, refundpay = @p4  where registerNum=@p1";
                     cmd.Parameters.AddWithValue("@p1", registerNum);
                     cmd.Parameters.AddWithValue("@p2", refundDay);
                     cmd.Parameters.AddWithValue("@p3", Description);
@@ -197,7 +197,7 @@ namespace PersonalstudyroomMangement
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.Text;
                 string sqlcommand = "";
-                sqlcommand = "insert into Registeration values(NEXT VALUE FOR dbo.PSRMngDB, @p1, @p2, @p3, @p6, @p7, @p4, @p5, null, 0)";
+                sqlcommand = "insert into registeration values(NEXT VALUE FOR dbo.PSRMngDB, @p1, @p2, @p3, @p6, @p7, @p4, @p5, null, 0)";
                 cmd.Parameters.AddWithValue("@p1", uesrid);
                 cmd.Parameters.AddWithValue("@p2", roomNum);
                 cmd.Parameters.AddWithValue("@p3", seatNum);

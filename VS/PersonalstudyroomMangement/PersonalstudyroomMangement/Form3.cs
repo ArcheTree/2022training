@@ -20,7 +20,6 @@ namespace PersonalstudyroomMangement
             InitializeComponent();
             if (DataManage.registrations.Count > 0)
             {
-                DataManage.SeatLoad();
                 dataGridView1.DataSource = DataManage.registrations;
             }
             string contents = $"이용 현황 확인";

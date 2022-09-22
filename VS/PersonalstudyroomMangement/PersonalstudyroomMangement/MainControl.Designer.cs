@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label_all_expired = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label_all_share = new System.Windows.Forms.Label();
             this.label_all_empty = new System.Windows.Forms.Label();
             this.label_all_now = new System.Windows.Forms.Label();
@@ -37,33 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label_all_expired = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -78,337 +54,117 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(70, 59);
+            this.groupBox1.Location = new System.Drawing.Point(80, 74);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(219, 416);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(250, 520);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "독서실전체";
-            // 
-            // label_all_share
-            // 
-            this.label_all_share.AutoSize = true;
-            this.label_all_share.Location = new System.Drawing.Point(136, 310);
-            this.label_all_share.Name = "label_all_share";
-            this.label_all_share.Size = new System.Drawing.Size(44, 12);
-            this.label_all_share.TabIndex = 9;
-            this.label_all_share.Text = "label10";
-            // 
-            // label_all_empty
-            // 
-            this.label_all_empty.AutoSize = true;
-            this.label_all_empty.Location = new System.Drawing.Point(136, 190);
-            this.label_all_empty.Name = "label_all_empty";
-            this.label_all_empty.Size = new System.Drawing.Size(38, 12);
-            this.label_all_empty.TabIndex = 7;
-            this.label_all_empty.Text = "label8";
-            // 
-            // label_all_now
-            // 
-            this.label_all_now.AutoSize = true;
-            this.label_all_now.Location = new System.Drawing.Point(136, 130);
-            this.label_all_now.Name = "label_all_now";
-            this.label_all_now.Size = new System.Drawing.Size(38, 12);
-            this.label_all_now.TabIndex = 6;
-            this.label_all_now.Text = "label7";
-            // 
-            // label_all_total
-            // 
-            this.label_all_total.AutoSize = true;
-            this.label_all_total.Location = new System.Drawing.Point(136, 70);
-            this.label_all_total.Name = "label_all_total";
-            this.label_all_total.Size = new System.Drawing.Size(23, 12);
-            this.label_all_total.TabIndex = 5;
-            this.label_all_total.Text = "110";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 310);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 12);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "점유비율";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 190);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 12);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "빈 자리";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 130);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 12);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "등록 수";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "총 좌석 수";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Location = new System.Drawing.Point(302, 59);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(219, 416);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "개인실";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(140, 310);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 12);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "label11";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(140, 190);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 12);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "label13";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(140, 130);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(44, 12);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "label14";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(140, 70);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(44, 12);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "label15";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(35, 310);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 12);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "점유비율";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(43, 190);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(45, 12);
-            this.label18.TabIndex = 2;
-            this.label18.Text = "빈 자리";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(43, 130);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(45, 12);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "등록 수";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(27, 70);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(61, 12);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "총 좌석 수";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.label24);
-            this.groupBox3.Controls.Add(this.label25);
-            this.groupBox3.Controls.Add(this.label26);
-            this.groupBox3.Controls.Add(this.label28);
-            this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Location = new System.Drawing.Point(540, 59);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(219, 416);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "다인실";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(140, 310);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(44, 12);
-            this.label21.TabIndex = 9;
-            this.label21.Text = "label21";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(140, 190);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(44, 12);
-            this.label23.TabIndex = 7;
-            this.label23.Text = "label23";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(140, 130);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(44, 12);
-            this.label24.TabIndex = 6;
-            this.label24.Text = "label24";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(140, 70);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(44, 12);
-            this.label25.TabIndex = 5;
-            this.label25.Text = "label25";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(35, 310);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(53, 12);
-            this.label26.TabIndex = 4;
-            this.label26.Text = "점유비율";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(43, 190);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(45, 12);
-            this.label28.TabIndex = 2;
-            this.label28.Text = "빈 자리";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(43, 130);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(45, 12);
-            this.label29.TabIndex = 1;
-            this.label29.Text = "등록 수";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(27, 70);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(61, 12);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "총 좌석 수";
+            this.groupBox1.Text = "독서실 정보";
             // 
             // label_all_expired
             // 
             this.label_all_expired.AutoSize = true;
-            this.label_all_expired.Location = new System.Drawing.Point(136, 241);
+            this.label_all_expired.Location = new System.Drawing.Point(155, 301);
             this.label_all_expired.Name = "label_all_expired";
-            this.label_all_expired.Size = new System.Drawing.Size(38, 12);
+            this.label_all_expired.Size = new System.Drawing.Size(45, 15);
             this.label_all_expired.TabIndex = 11;
             this.label_all_expired.Text = "label8";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 241);
+            this.label6.Location = new System.Drawing.Point(35, 301);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.Size = new System.Drawing.Size(67, 15);
             this.label6.TabIndex = 10;
             this.label6.Text = "만료예정";
             // 
-            // label7
+            // label_all_share
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(35, 241);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 12);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "만료예정";
+            this.label_all_share.AutoSize = true;
+            this.label_all_share.Location = new System.Drawing.Point(155, 388);
+            this.label_all_share.Name = "label_all_share";
+            this.label_all_share.Size = new System.Drawing.Size(53, 15);
+            this.label_all_share.TabIndex = 9;
+            this.label_all_share.Text = "label10";
             // 
-            // label8
+            // label_all_empty
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(140, 241);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 12);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "label8";
+            this.label_all_empty.AutoSize = true;
+            this.label_all_empty.Location = new System.Drawing.Point(155, 234);
+            this.label_all_empty.Name = "label_all_empty";
+            this.label_all_empty.Size = new System.Drawing.Size(45, 15);
+            this.label_all_empty.TabIndex = 7;
+            this.label_all_empty.Text = "label8";
             // 
-            // label9
+            // label_all_now
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(35, 241);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 12);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "만료예정";
+            this.label_all_now.AutoSize = true;
+            this.label_all_now.Location = new System.Drawing.Point(155, 162);
+            this.label_all_now.Name = "label_all_now";
+            this.label_all_now.Size = new System.Drawing.Size(45, 15);
+            this.label_all_now.TabIndex = 6;
+            this.label_all_now.Text = "label7";
             // 
-            // label10
+            // label_all_total
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(140, 241);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 12);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "label8";
+            this.label_all_total.AutoSize = true;
+            this.label_all_total.Location = new System.Drawing.Point(155, 88);
+            this.label_all_total.Name = "label_all_total";
+            this.label_all_total.Size = new System.Drawing.Size(31, 15);
+            this.label_all_total.TabIndex = 5;
+            this.label_all_total.Text = "110";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(35, 388);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 15);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "점유비율";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(45, 232);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "빈 자리";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(45, 162);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "등록 수";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 88);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "총 좌석 수";
             // 
             // MainControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox3);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainControl";
-            this.Size = new System.Drawing.Size(843, 519);
+            this.Size = new System.Drawing.Size(963, 649);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -424,29 +180,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label_all_expired;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
     }
 }

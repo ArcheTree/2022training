@@ -56,40 +56,7 @@ namespace PersonalstudyroomMangement
         }
        
         
-        public static void useridupdateQuery(string userId, string name, string phone, DateTime birth, DateTime registrationDay)
-        {
-            try
-            {
-                ConnectDB();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandType = CommandType.Text;
-                string sqlcommand = "";
-
-                    sqlcommand = "update Registration set userId=@p1, " +
-                        "name=@p2, phone=@p3," +
-                        "birth=@p4 where userId=@p8";
-
-                    cmd.Parameters.AddWithValue("@p1", userId);
-                    cmd.Parameters.AddWithValue("@p2", name);
-                    cmd.Parameters.AddWithValue("@p3", phone);
-                    cmd.Parameters.AddWithValue("@p4",
-                        DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
-                    cmd.Parameters.AddWithValue("@p8", userId);
-                cmd.CommandText = sqlcommand;
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception)
-            {
-
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-        //insert -> 자리, 등록정보 2군데 들어가도록(따로 할건지 같이 할건지)
-        //자동 delet -> 날짜가 지나면 자동 삭제
+        
         
 
  
@@ -120,32 +87,7 @@ namespace PersonalstudyroomMangement
                 conn.Close();
             }
         }
-        public static void expiredseatQuery(int seatNum)
-        {
-
-            try
-            {
-                ConnectDB();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandType = CommandType.Text;
-                string sqlcommand = "";
-                sqlcommand = "update Registration set userId='', " +
-                        "startday='', endday=null, Description=null where seatNum=@p3";
-                cmd.Parameters.AddWithValue("@p3", seatNum);
-                cmd.CommandText = sqlcommand;
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception)
-            {
-
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-
+       
         public static void modifiUserQuery(string userId, string name, string phone)
         {
             try
