@@ -85,6 +85,32 @@ namespace PersonalstudyroomMangement
                 conn.Close();
             }
         }
+        public static void autoexpiredQuery()
+        {
+            try
+            {
+                ConnectDB();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                string sqlcommand = "";
+
+                sqlcommand = "update seatMng set userId =null, startday=null, endday= null where endday < CONVERT(date,GETDATE())";
+             
+                cmd.CommandText = sqlcommand;
+                cmd.ExecuteNonQuery();
+
+
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
 
     }
 }

@@ -24,6 +24,7 @@ namespace PersonalstudyroomMangement
             userLoad();
             SeatLoad();
             exLoad();
+            DBseatMng.autoexpiredQuery();
         }
         public static void userLoad()
         {
@@ -185,6 +186,7 @@ namespace PersonalstudyroomMangement
             }
             
         }
+       
         public static void printLog(string contents)
         {
             DirectoryInfo di = new DirectoryInfo("PSRMngHistory");

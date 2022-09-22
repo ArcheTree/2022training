@@ -38,11 +38,11 @@
             this.button_personal = new System.Windows.Forms.Button();
             this.button_main = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label_timer = new System.Windows.Forms.Label();
-            this.timer_main = new System.Windows.Forms.Timer(this.components);
             this.personalControl1 = new PersonalstudyroomMangement.PersonalControl();
             this.multiControl1 = new PersonalstudyroomMangement.MultiControl();
             this.mainControl1 = new PersonalstudyroomMangement.MainControl();
+            this.label_timer = new System.Windows.Forms.Label();
+            this.timer_main = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -137,21 +137,6 @@
             this.panel2.Size = new System.Drawing.Size(843, 519);
             this.panel2.TabIndex = 2;
             // 
-            // label_timer
-            // 
-            this.label_timer.AutoSize = true;
-            this.label_timer.Location = new System.Drawing.Point(22, 606);
-            this.label_timer.Name = "label_timer";
-            this.label_timer.Size = new System.Drawing.Size(38, 12);
-            this.label_timer.TabIndex = 3;
-            this.label_timer.Text = "label1";
-            // 
-            // timer_main
-            // 
-            this.timer_main.Enabled = true;
-            this.timer_main.Interval = 1000;
-            this.timer_main.Tick += new System.EventHandler(this.timer_main_Tick);
-            // 
             // personalControl1
             // 
             this.personalControl1.Location = new System.Drawing.Point(0, 0);
@@ -173,6 +158,21 @@
             this.mainControl1.Name = "mainControl1";
             this.mainControl1.Size = new System.Drawing.Size(843, 519);
             this.mainControl1.TabIndex = 0;
+            // 
+            // label_timer
+            // 
+            this.label_timer.AutoSize = true;
+            this.label_timer.Location = new System.Drawing.Point(22, 606);
+            this.label_timer.Name = "label_timer";
+            this.label_timer.Size = new System.Drawing.Size(38, 12);
+            this.label_timer.TabIndex = 3;
+            this.label_timer.Text = "label1";
+            // 
+            // timer_main
+            // 
+            this.timer_main.Enabled = true;
+            this.timer_main.Interval = 1000;
+            this.timer_main.Tick += new System.EventHandler(this.timer_main_Tick);
             // 
             // Form1
             // 

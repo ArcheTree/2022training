@@ -116,8 +116,6 @@ namespace PersonalstudyroomMangement
                        
                         user.Name = textBox_name.Text;
                         user.Phone = textBox_phone.Text;
-                        user.birth = dateTimePicker_birth.Value;
-
 
                         DataManage.updateUesr(textBox_id.Text, textBox_name.Text, textBox_phone.Text);  //업데이트로 변경
                             
