@@ -11,3 +11,16 @@ C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\BookManage\BookManage\obj\Debu
 C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\BookManage\BookManage\obj\Debug\BookManage.pdb
 C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\BookManage\BookManage\obj\Debug\BookManage.Form2.resources
 C:\Users\KB\Desktop\ArcheTree\dsf\2022training\VS\BookManage\BookManage\obj\Debug\BookManage.Form3.resources
+E:\git\2022training\VS\BookManage\BookManage\bin\Debug\BookManage.exe.config
+E:\git\2022training\VS\BookManage\BookManage\bin\Debug\BookManage.exe
+E:\git\2022training\VS\BookManage\BookManage\bin\Debug\BookManage.pdb
+E:\git\2022training\VS\BookManage\BookManage\obj\Debug\BookManage.csproj.AssemblyReference.cache
+E:\git\2022training\VS\BookManage\BookManage\obj\Debug\BookManage.csproj.SuggestedBindingRedirects.cache
+E:\git\2022training\VS\BookManage\BookManage\obj\Debug\BookManage.Form1.resources
+E:\git\2022training\VS\BookManage\BookManage\obj\Debug\BookManage.Form2.resources
+E:\git\2022training\VS\BookManage\BookManage\obj\Debug\BookManage.Form3.resources
+E:\git\2022training\VS\BookManage\BookManage\obj\Debug\BookManage.Properties.Resources.resources
+E:\git\2022training\VS\BookManage\BookManage\obj\Debug\BookManage.csproj.GenerateResource.cache
+E:\git\2022training\VS\BookManage\BookManage\obj\Debug\BookManage.csproj.CoreCompileInputs.cache
+E:\git\2022training\VS\BookManage\BookManage\obj\Debug\BookManage.exe
+E:\git\2022training\VS\BookManage\BookManage\obj\Debug\BookManage.pdb
