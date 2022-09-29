@@ -52,10 +52,10 @@ LotShape: General shape of property -부동단 모양
        
 LandContour: Flatness of the property -부동산의 평탄도
 
-       Lvl	Near Flat/Level	
-       Bnk	Banked - Quick and significant rise from street grade to building
-       HLS	Hillside - Significant slope from side to side
-       Low	Depression
+       Lvl	   	Near Flat/Level	 -2
+       Bnk	  	Banked - Quick and significant rise from street grade to building -1  
+       HLS   	Hillside - Significant slope from side to side    - 4
+       Low	Depression -3
 		
 Utilities: Type of utilities available - 부동산의 유틸가능
 		
@@ -66,11 +66,11 @@ Utilities: Type of utilities available - 부동산의 유틸가능
 	
 LotConfig: Lot configuration - 부지 구성
 
-       Inside	Inside lot
-       Corner	Corner lot
-       CulDSac	Cul-de-sac
-       FR2	Frontage on 2 sides of property
-       FR3	Frontage on 3 sides of property
+       Inside	Inside lot - 2
+       Corner	Corner lot - 3
+       CulDSac	Cul-de-sac  - 7
+       FR2	Frontage on 2 sides of property -3
+       FR3	Frontage on 3 sides of property -6
 	
 LandSlope: Slope of property - 부동산 경사
 		
@@ -108,27 +108,27 @@ Neighborhood: Physical locations within Ames city limits - 부지 주소(인접�
 			
 Condition1: Proximity to various conditions - 다양한 조건의 근접성
 	
-       Artery	Adjacent to arterial street - 간선도로인접
-       Feedr	Adjacent to feeder street	-피터거리 인접
-       Norm	Normal	
-       RRNn	Within 200' of North-South Railroad -철도 의 200피트이네
-       RRAn	Adjacent to North-South Railroad - 철도 인접
-       PosN	Near positive off-site feature--park, greenbelt, etc.   --주위 근정적 사이트 있음
-       PosA	Adjacent to postive off-site feature  - 근정적 사이트 인접
-       RRNe	Within 200' of East-West Railroad - 200피트이네 동서 철도
-       RRAe	Adjacent to East-West Railroad - 철도 인접
+       Artery -0	Adjacent to arterial street - 간선도로인접
+       Feedr -2	Adjacent to feeder street	-피터거리 인접
+       Norm -4 	Normal	
+       RRNn -6	Within 200' of North-South Railroad -철도 의 200피트이네
+       RRAn - 4	Adjacent to North-South Railroad - 철도 인접
+       PosN -6	Near positive off-site feature--park, greenbelt, etc.   --주위 근정적 사이트 있음
+       PosA  -7	Adjacent to postive off-site feature  - 근정적 사이트 인접
+       RRNe  -5	Within 200' of East-West Railroad - 200피트이네 동서 철도
+       RRAe -1	Adjacent to East-West Railroad - 철도 인접
 	
 Condition2: Proximity to various conditions (if more than one is present)
 		
-       Artery	Adjacent to arterial street
-       Feedr	Adjacent to feeder street	
-       Norm	Normal	
-       RRNn	Within 200' of North-South Railroad
-       RRAn	Adjacent to North-South Railroad
-       PosN	Near positive off-site feature--park, greenbelt, etc.
-       PosA	Adjacent to postive off-site feature
-       RRNe	Within 200' of East-West Railroad
-       RRAe	Adjacent to East-West Railroad
+       Artery - 1	Adjacent to arterial street
+       Feedr -2	Adjacent to feeder street	
+       Norm -6	Normal	
+       RRNn - 0	Within 200' of North-South Railroad
+       RRAn  - 3 	Adjacent to North-South Railroad
+       PosN - 7	Near positive off-site feature--park, greenbelt, etc.
+       PosA - 8	Adjacent to postive off-site feature
+       RRNe - 0	Within 200' of East-West Railroad
+       RRAe  -5	Adjacent to East-West Railroad
 	
 BldgType: Type of dwelling - 주거 타입
 		

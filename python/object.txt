@@ -1,0 +1,44 @@
+
+ 12  Condition1     1455 non-null   object -삭제
+ 13  Condition2     1455 non-null   object  -삭제
+
+
+ 14  BldgType       1455 non-null   object - 삭제
+
+
+ 15  HouseStyle     1455 non-null   object - 삭제
+
+ RoofStyle      1456 non-null   object - 삭제
+ 21  RoofMatl       1456 non-null   object - 삭제
+
+ 22  Exterior1st    1456 non-null   object -삭제
+ 23  Exterior2nd    1456 non-null   object -삭제
+
+ 24  MasVnrType     1448 non-null   object  - 변경후 상제
+
+ 26  ExterQual      1456 non-null   object 
+ 27  ExterCond      1456 non-null   object 
+
+
+
+
+38  Heating        1456 non-null   object - 삭제
+ 39  HeatingQC      1456 non-null   object -삭제
+ 40  CentralAir     1456 non-null   object  -삭제
+
+ 41  Electrical     1455 non-null   object  -삭제
+
+PavedDrive     1456 non-null   object -삭제
+
+ KitchenQual    1456 non-null   object 
+
+
+
+ 53  TotRmsAbvGrd   1456 non-null   int64  -삭제
+ 54  Functional     1456 non-null   object - 삭제
+
+69  SaleType       1456 non-null   object  - 삭제
+ 70  SaleCondition  1456 non-null   object - 삭제
+
+
+

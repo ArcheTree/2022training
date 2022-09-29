@@ -1,0 +1,17 @@
+미니콘다 window 64  설치 -> prompt 실행
+
+pip install jupyterlab   ->설치
+
+jupyter-lab    ->실행
+
+미니콘다 실행시켜 놔야함
+
+pip install pandas
+pip install seaborn
+pip install tensorflow
+pip install -U scikit-learn
+
+
+https://github.com/mwaskom/seaborn-data
+
+matplotlib -> 원래 사용해야하는 가장 큰 라이브러리
